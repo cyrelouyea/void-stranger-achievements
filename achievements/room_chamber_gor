@@ -1,0 +1,5 @@
+title: Gor's chamber.
+description: Find Gor's chamber.
+
+// PATCH gml_Room_rm_secret_006_Create 1
+{+achievement}

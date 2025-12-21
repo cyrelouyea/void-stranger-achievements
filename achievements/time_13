@@ -1,0 +1,6 @@
+title: Void dweller
+description: Play for 100 hours
+
+// PATCH gml_Object_obj_inventory_Step_0 44
+if ds_list_find_value(ds_rcrds, 12) >= 100 && ds_list_find_value(ds_rcrds, 11) >= 0 && ds_list_find_value(ds_rcrds, 11) >= 0
+    {+achievement}

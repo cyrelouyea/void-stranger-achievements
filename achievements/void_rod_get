@@ -1,0 +1,5 @@
+title: Wow cool stick
+description: Get the Void Rod from the chest in B002
+
+// PATCH gml_Object_obj_chest_Alarm_0 37
+{+achievement}

@@ -1,0 +1,27 @@
+title: 25 steps!
+description: Walk a total of 25 steps
+
+// PATCH gml_Object_obj_player_Step_0 547
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 567
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 580
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 593
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 606
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 629
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 669
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 746
+if ds_list_find_value(obj_inventory.ds_rcrds, 1) >= 25
+    {+achievement}

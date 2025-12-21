@@ -1,0 +1,6 @@
+title: B254
+description: Go to B254 as Gray or Cif
+
+// PATCH gml_Room_rm_rest_area_9_Create 1
+if (global.loop == 0)
+    {+achievement}

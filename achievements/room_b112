@@ -1,0 +1,6 @@
+title: B112
+description: Go to B112 as Gray or Cif
+
+// PATCH gml_Room_rm_rest_area_4_Create 1
+if (global.loop == 0)
+    {+achievement}

@@ -1,0 +1,6 @@
+title: Void newcomer
+description: Play for 30 minutes
+
+// PATCH gml_Object_obj_inventory_Step_0 44
+if ds_list_find_value(ds_rcrds, 12) >= 0 && ds_list_find_value(ds_rcrds, 11) >= 30 && ds_list_find_value(ds_rcrds, 11) >= 0
+    {+achievement}

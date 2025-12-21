@@ -1,0 +1,5 @@
+title: 5th shortcut.
+description: Access the 5th shortcut
+
+// PATCH gml_Room_rm_mon_shortcut_005_Create 1
+{+achievement}

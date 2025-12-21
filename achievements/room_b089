@@ -1,0 +1,6 @@
+title: B089
+description: Go to B089 as Gray or Cif
+
+// PATCH gml_Room_rm_0094_Create 1
+if (global.loop == 0)
+    {+achievement}

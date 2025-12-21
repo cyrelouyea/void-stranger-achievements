@@ -1,0 +1,6 @@
+title: 32 crystals!
+description: Collect 32 memory crystals
+
+// PATCH gml_GlobalScript_scr_savetoken 24
+if ds_list_find_value(obj_inventory.ds_rcrds, 13) >= 32
+    {+achievement}

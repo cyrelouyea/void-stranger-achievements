@@ -1,0 +1,5 @@
+title: Did you just do that?!
+description: Remove a tile for the first time
+
+// PATCH gml_Object_obj_player_Step_0 831
+{+achievement}

@@ -1,0 +1,6 @@
+title: Void commoner
+description: Play for 20 hours
+
+// PATCH gml_Object_obj_inventory_Step_0 44
+if ds_list_find_value(ds_rcrds, 12) >= 20 && ds_list_find_value(ds_rcrds, 11) >= 0 && ds_list_find_value(ds_rcrds, 11) >= 0
+    {+achievement}

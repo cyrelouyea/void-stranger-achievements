@@ -1,0 +1,6 @@
+title: :exploding_head:
+description: Pick up the stairs
+
+// PATCH gml_Object_obj_player_Step_0 784
+if (floor_tile.object_index == obj_exit) 
+    {+achievement}

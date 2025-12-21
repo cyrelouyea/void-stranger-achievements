@@ -1,0 +1,6 @@
+title: B001
+description: Go to B001 as Gray or Cif
+
+// PATCH gml_Room_rm_1intro_Create 1
+if (global.loop == 0)
+    {+achievement}

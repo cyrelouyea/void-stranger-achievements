@@ -1,0 +1,8 @@
+rm_secret_001   Add
+rm_secret_002   Eus
+rm_secret_003   Bee
+rm_secret_004   Mon
+rm_secret_005   Tan
+rm_secret_006   Gor
+rm_secret_007   Lev
+rm_secret_008   Cif

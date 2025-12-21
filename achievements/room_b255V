@@ -1,0 +1,6 @@
+title: B255V
+description: Go to B255V as Gray or Cif
+
+// PATCH gml_Room_rm_voidend_Create 1
+if (global.loop == 0)
+    {+achievement}

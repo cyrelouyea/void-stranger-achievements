@@ -1,0 +1,9 @@
+title: 10000 tiles moved!
+description: Use the void rod 10000 times
+
+// PATCH gml_Object_obj_player_Step_0 114
+if ds_list_find_value(obj_inventory.ds_rcrds, 0) >= 10000
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 825
+if ds_list_find_value(obj_inventory.ds_rcrds, 0) >= 10000
+    {+achievement}

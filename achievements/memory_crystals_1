@@ -1,0 +1,6 @@
+title: First crystal!
+description: Collect 1 memory crystal
+
+// PATCH gml_GlobalScript_scr_savetoken 24
+if ds_list_find_value(obj_inventory.ds_rcrds, 13) >= 1
+    {+achievement}

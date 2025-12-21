@@ -1,0 +1,5 @@
+rm_mon_shortcut_001
+rm_mon_shortcut_002
+rm_mon_shortcut_003
+rm_mon_shortcut_004
+rm_mon_shortcut_005

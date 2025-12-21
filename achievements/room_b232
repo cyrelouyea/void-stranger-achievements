@@ -1,0 +1,6 @@
+title: B232
+description: Go to B232 as Gray or Cif
+
+// PATCH gml_Room_rm_0238_Create 1
+if (global.loop == 0)
+    {+achievement}

@@ -1,0 +1,6 @@
+title: B159 (Hard)
+description: Go to B159 as Lillie
+
+// PATCH gml_Room_rm_0163_Create 1
+if (global.loop == 1)
+    {+achievement}
