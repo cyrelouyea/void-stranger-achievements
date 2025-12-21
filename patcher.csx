@@ -185,10 +185,12 @@ foreach (Achievement achievement in achievements) {
             image_index = 0;
             target_x = 0;
             txt_color = c_gray;
+            
+            if ds_map_find_value(obj_inventory.ds_achievements, achievement_id) != undefined
+                txt_color = c_ltgray;
         }
 
-        if ds_map_find_value(obj_inventory.ds_achievements, achievement_id) != undefined
-            txt_color = c_ltgray;
+        
         
         dx = lerp(dx, target_x, 0.3);");
         importGroup.QueueAppend(obj_achievement_item.EventHandlerFor(EventType.Draw, Data), 
@@ -206,10 +208,10 @@ foreach (Achievement achievement in achievements) {
             else
                 draw_sprite(spr_ex_medal_c, image_index, x + 10, y + 9);
         
-        draw_set_alpha(bg_alpha);
-        if dx >= 1
-            draw_rectangle_color(x, y, x + dx, y + 16, bg_color, bg_color, bg_color, bg_color, false);
-        draw_set_alpha(1);");
+        // draw_set_alpha(bg_alpha);
+        // if dx >= 1
+        //     draw_rectangle_color(x, y, x + dx, y + 16, bg_color, bg_color, bg_color, bg_color, false);
+        // draw_set_alpha(1);");
     }
 
     {
@@ -226,8 +228,8 @@ foreach (Achievement achievement in achievements) {
             zoom_mode = !zoom_mode;");
         importGroup.QueueAppend(obj_achievement_zoom.EventHandlerFor(EventType.Draw, Data), 
         @"if zoom_mode {
-            draw_rectangle_color(0, 12, 224 , 144 - 12, c_black, c_black, c_black, c_black, false);
-            draw_rectangle_color(4, 12, 224 - 5, 144 - 12, c_gray, c_gray, c_gray, c_gray, true);
+            draw_rectangle_color(0, 24, 224 , 144 - 24, c_black, c_black, c_black, c_black, false);
+            draw_rectangle_color(4, 24, 224 - 5, 144 - 24, c_gray, c_gray, c_gray, c_gray, true);
 
             var description = ds_map_find_value(obj_inventory.ds_ach_descs, achievement_id);
             if description != undefined {
@@ -243,8 +245,8 @@ foreach (Achievement achievement in achievements) {
                 draw_set_valign(fa_center);
                 draw_set_halign(fa_center);
                 var datetime_str = string(""{0} {1}"", date_date_string(dt), date_time_string(dt));
-                draw_text_ext_color(224 / 2, 144 - 24, datetime_str, 4, 200, c_gray, c_gray, c_gray, c_gray, 1);
-                draw_sprite(spr_ex_medal, image_index, 224 / 2, 24);
+                draw_text_ext_color(224 / 2, 144 - 36, datetime_str, 4, 200, c_gray, c_gray, c_gray, c_gray, 1);
+                draw_sprite(spr_ex_medal, image_index, 224 / 2, 36);
             }
         }");
 
@@ -360,7 +362,7 @@ foreach (Achievement achievement in achievements) {
         draw_set_font(fnt_past2);
         draw_set_valign(fa_center);
         draw_set_halign(fa_center);
-        draw_text_color(224 / 2, 144 - 28, string(""{0} / {1}"", page + 1, nb_pages), c_gray, c_gray, c_gray, c_gray, 1);
+        draw_text_color(224 / 2, 144 - 28, string(""{0} of {1}"", page + 1, nb_pages), c_gray, c_gray, c_gray, c_gray, 1);
         
         draw_set_font(fnt_past2);
         draw_set_valign(fa_center);
