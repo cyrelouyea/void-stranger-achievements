@@ -1,0 +1,5 @@
+title: Special brand (Blade)
+description: Activate the Blade special brand
+
+// PATCH gml_Object_obj_puumerkki_Other_11 305
+{+achievement}

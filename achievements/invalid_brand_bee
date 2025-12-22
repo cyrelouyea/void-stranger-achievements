@@ -1,0 +1,5 @@
+title: Get your own, cockroach
+description: Draw Bee's brand in the brand menu
+
+// PATCH gml_Object_obj_puumerkki_Other_11 364
+{+achievement}

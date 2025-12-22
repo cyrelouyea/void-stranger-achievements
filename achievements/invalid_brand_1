@@ -1,0 +1,5 @@
+title: A bit lacking...
+description: Draw a brand with only one pixel in the brand menu
+
+// PATCH gml_Object_obj_puumerkki_Other_11 498
+{+achievement}

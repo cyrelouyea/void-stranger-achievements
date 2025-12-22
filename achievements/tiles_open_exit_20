@@ -1,0 +1,6 @@
+title: Unlocked (20/1000)
+description: Open a total of 20 exit using switch tiles
+
+// PATCH gml_Object_obj_exit_Step_0 9
+if obj_inventory.open_exit_counter >= 20
+    {+achievement}

@@ -1,0 +1,5 @@
+title: Special brand (CC)
+description: Activate the Cif's Challenge special brand
+
+// PATCH gml_Object_obj_puumerkki_Other_11 251
+{+achievement}

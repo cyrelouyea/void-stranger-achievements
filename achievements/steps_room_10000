@@ -1,4 +1,4 @@
-title: Playtester (steps)
+title: Playtester (S)
 description: Walk 10000 steps in a single room
 
 // PATCH gml_Object_obj_player_Step_0 547

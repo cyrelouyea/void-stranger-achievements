@@ -19,6 +19,10 @@ public class Achievement {
     public PatchData[] Patches { get; set; }
 }
 
+public class Counter {
+    public string Id { get; set; }
+    public PatchData[] Patches { get; set; }
+}
 
 EnsureDataLoaded();
 
@@ -42,14 +46,43 @@ string achievementsPath = Path.GetFullPath(Path.Combine(runningDirectory, "achie
 string[] achievementsFiles = Directory.GetFiles(achievementsPath);
 Achievement[] achievements = achievementsFiles.Select(parseAchievementFile).ToArray();
 
-var patchesByFile = new Dictionary<string, List<(PatchData, Achievement)>>();
+var patchesByFile = new Dictionary<string, List<PatchData>>();
 foreach (Achievement achievement in achievements) {
     foreach (PatchData patch in achievement.Patches) {
         if (!patchesByFile.ContainsKey(patch.FileName)) {
-            patchesByFile.Add(patch.FileName, new List<(PatchData, Achievement)>());
+            patchesByFile.Add(patch.FileName, new List<PatchData>());
         }
-        patchesByFile[patch.FileName].Add((patch, achievement));
+        patchesByFile[patch.FileName].Add(new PatchData() {
+            LineNumber = patch.LineNumber,
+            FileName = patch.FileName,
+            String = patch.String.Replace("{+achievement}", $"{{ scr_get_achievement(\"{achievement.Id}\"); }}"), 
+        });
     }
+}
+
+// Load custom counters data
+string countersPath = Path.GetFullPath(Path.Combine(runningDirectory, "counters"));
+string[] countersFiles = Directory.GetFiles(countersPath);
+Counter[] counters = countersFiles.Select(parseCounterFile).ToArray();
+
+List<string> records_init = new List<string>();
+List<string> records_save_list = new List<string>();
+List<string> records_load_list = new List<string>();
+
+foreach (Counter counter in counters) {
+    foreach (PatchData patch in counter.Patches) {
+        if (!patchesByFile.ContainsKey(patch.FileName)) {
+            patchesByFile.Add(patch.FileName, new List<PatchData>());
+        }
+        patchesByFile[patch.FileName].Add(new PatchData() {
+            LineNumber = patch.LineNumber,
+            FileName = patch.FileName,
+            String = patch.String.Replace("{{counter}}", $"obj_inventory.{counter.Id}_counter"), 
+        });
+    }
+    records_init.Add($"{counter.Id}_counter = 0;");
+    records_save_list.Add($"ini_write_real(\"Counters\", \"{counter.Id}\", obj_inventory.{counter.Id}_counter);");
+    records_load_list.Add($"obj_inventory.{counter.Id}_counter = ini_read_real(\"Counters\", \"{counter.Id}\", 0);");
 }
 
 
@@ -65,6 +98,7 @@ foreach (Achievement achievement in achievements) {
         codeString += $"ds_map_set(obj_inventory.ds_ach_titles, \"{achievement.Id}\", \"{achievement.Header.Title}\");\n";
         codeString += $"ds_map_set(obj_inventory.ds_ach_descs, \"{achievement.Id}\", \"{achievement.Header.Description}\");\n";
     }
+    codeString += string.Join('\n', records_init);
     importGroup.QueueReplace(code, codeString);
 }
 
@@ -73,14 +107,24 @@ foreach (Achievement achievement in achievements) {
         Code = UndertaleCode.CreateEmptyEntry(Data, "gml_GlobalScript_scr_load_achievements"),
     };
     Data.GlobalInitScripts.Add(scr_load_achievements);
-    importGroup.QueueReplace(scr_load_achievements.Code, @"function scr_load_achievements() {
+
+    var codeStr = @"function scr_load_achievements() {
         var filename = ""achievements.vs"";
         if (file_exists(filename)) {
+            var _tmp_ds_achievement = ds_map_create();
             ini_open(filename);
-            ds_map_read(obj_inventory.ds_achievements, ini_read_string(""Save"", ""data"", """"));
+            ds_map_read(_tmp_ds_achievement, ini_read_string(""Save"", ""data"", """"));
+            {{records_load_str}}
             ini_close();
+
+            var keys = ds_map_keys_to_array(_tmp_ds_achievement);
+            for (var i = 0; i < array_length(keys) ; i++) {
+                ds_map_replace(obj_inventory.ds_achievements, keys[i],ds_map_find_value(_tmp_ds_achievement, keys[i]));
+            }
         }
-    }");
+    }";
+    codeStr = codeStr.Replace("{{records_load_str}}", string.Join('\n', records_load_list));
+    importGroup.QueueReplace(scr_load_achievements.Code, codeStr);
 
     
     UndertaleCode code = Data.GameObjects.ByName("obj_init").EventHandlerFor(EventType.Create, (uint) 0, Data);
@@ -95,11 +139,15 @@ foreach (Achievement achievement in achievements) {
         Code = UndertaleCode.CreateEmptyEntry(Data, "gml_GlobalScript_scr_save_achievements"),
     };
     Data.GlobalInitScripts.Add(scr_save_achievements);
-    importGroup.QueueReplace(scr_save_achievements.Code, @"function scr_save_achievements() {
+
+    var codeStr = @"function scr_save_achievements() {
         ini_open(""achievements.vs"");
         ini_write_string(""Save"", ""data"", ds_map_write(obj_inventory.ds_achievements));
+        {{records_save_str}}
         ini_close();
-    }");
+    }";
+    codeStr = codeStr.Replace("{{records_save_str}}", string.Join('\n', records_save_list));
+    importGroup.QueueReplace(scr_save_achievements.Code, codeStr);
 
     UndertaleCode code = Data.Code.ByName("gml_GlobalScript_exit_game");
     var decompileContext = new DecompileContext(globalDecompileContext, code, decompilerSettings);
@@ -114,7 +162,7 @@ foreach (Achievement achievement in achievements) {
     };
     Data.GlobalInitScripts.Add(scr_get_achievement);
     importGroup.QueueReplace(scr_get_achievement.Code, @"function scr_get_achievement(achievement_id) {
-        if ds_map_find_value(obj_inventory.ds_achievements, achievement_id) != undefined
+        if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
             return;
         
         ds_map_replace(obj_inventory.ds_achievements, achievement_id, date_current_datetime());
@@ -186,7 +234,7 @@ foreach (Achievement achievement in achievements) {
             target_x = 0;
             txt_color = c_gray;
             
-            if ds_map_find_value(obj_inventory.ds_achievements, achievement_id) != undefined
+            if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
                 txt_color = c_ltgray;
         }
 
@@ -199,10 +247,10 @@ foreach (Achievement achievement in achievements) {
         draw_set_halign(fa_left);
         var title = ds_map_find_value(obj_inventory.ds_ach_titles, achievement_id);
 
-        if title != undefined
+        if !is_undefined(title)
             draw_text_color(x + 24, y + 8, title, txt_color, txt_color, txt_color, txt_color, 1);
         
-        if ds_map_find_value(obj_inventory.ds_achievements, achievement_id) != undefined
+        if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
             if hovered
                 draw_sprite(spr_ex_medal, image_index, x + 10, y + 9);
             else
@@ -231,22 +279,31 @@ foreach (Achievement achievement in achievements) {
             draw_rectangle_color(0, 24, 224 , 144 - 24, c_black, c_black, c_black, c_black, false);
             draw_rectangle_color(4, 24, 224 - 5, 144 - 24, c_gray, c_gray, c_gray, c_gray, true);
 
-            var description = ds_map_find_value(obj_inventory.ds_ach_descs, achievement_id);
-            if description != undefined {
+            var title = ds_map_find_value(obj_inventory.ds_ach_titles, achievement_id);
+            if !is_undefined(title) {
                 draw_set_font(fnt_past2);
                 draw_set_valign(fa_center);
                 draw_set_halign(fa_center);
-                draw_text_ext_color(224 / 2, 144 / 2 - 8, description, 0, 200, c_ltgray, c_ltgray, c_ltgray, c_ltgray, 1);
+                draw_text_ext_color(224 / 2, 30, title, 8, 200, c_white, c_white, c_white, c_white, 1);
+            }
+
+            var description = ds_map_find_value(obj_inventory.ds_ach_descs, achievement_id);
+            if !is_undefined(description) {
+                draw_set_font(fnt_past2);
+                draw_set_valign(fa_center);
+                draw_set_halign(fa_center);
+                draw_text_ext_color(224 / 2, 144 / 2, description, 10, 200, c_ltgray, c_ltgray, c_ltgray, c_ltgray, 1);
             }
 
             var dt = ds_map_find_value(obj_inventory.ds_achievements, achievement_id);
-            if dt != undefined {
+            if !is_undefined(dt) {
                 draw_set_font(fnt_past2);
                 draw_set_valign(fa_center);
                 draw_set_halign(fa_center);
                 var datetime_str = string(""{0} {1}"", date_date_string(dt), date_time_string(dt));
                 draw_text_ext_color(224 / 2, 144 - 36, datetime_str, 4, 200, c_gray, c_gray, c_gray, c_gray, 1);
-                draw_sprite(spr_ex_medal, image_index, 224 / 2, 36);
+                draw_sprite(spr_ex_medal, image_index, 16, 36);
+                draw_sprite(spr_ex_medal, image_index, 224 - 16, 36);
             }
         }");
 
@@ -271,12 +328,12 @@ foreach (Achievement achievement in achievements) {
         for (var i = 0 ; i < items_per_page; i++) {
             array_push(achievement_items, instance_create_depth(12, 2 + i * 18 , depth - 1, obj_achievement_item));
         }
-        instance_create_depth(0, 0, depth - 2, obj_achievement_zoom)
+        instance_create_depth(0, 0, depth - 2, obj_achievement_zoom);
         array_sort(achievement_ids, true);
         nb_achievements_got = 0;
         achievement_dates = ds_map_values_to_array(obj_inventory.ds_achievements);
         for (var i = 0 ; i < array_length(achievement_dates); i++) {
-            if achievement_dates[i] != undefined {
+            if !is_undefined(achievement_dates[i]) {
                 nb_achievements_got++;
             }
         }
@@ -416,15 +473,15 @@ foreach (Achievement achievement in achievements) {
     }
 }
 
-{ // Apply achievements patches
-    foreach (KeyValuePair<string, List<(PatchData, Achievement)>> entry in patchesByFile) {
+{ // Apply achievements and counters patches
+    foreach (KeyValuePair<string, List<PatchData>> entry in patchesByFile) {
         UndertaleCode code = Data.Code.ByName(entry.Key);
         var decompileContext = new DecompileContext(globalDecompileContext, code, decompilerSettings);
         List<string> codeLines = decompileContext.DecompileToString().Split('\n').ToList();
 
-        entry.Value.Sort((a, b) => b.Item1.LineNumber - a.Item1.LineNumber);
-        foreach (var (patch, achievement) in entry.Value) {
-            codeLines.InsertRange(patch.LineNumber - 1, patch.String.Replace("{+achievement}", $"{{ scr_get_achievement(\"{achievement.Id}\"); }}").Split('\n'));
+        entry.Value.Sort((a, b) => b.LineNumber - a.LineNumber);
+        foreach (var patch in entry.Value) {
+            codeLines.InsertRange(patch.LineNumber - 1, patch.String.Split('\n'));
         }
         
         importGroup.QueueReplace(entry.Key, string.Join('\n', codeLines));
@@ -434,6 +491,17 @@ foreach (Achievement achievement in achievements) {
 
 importGroup.Import();
 
+
+Counter parseCounterFile(string counterFile) {
+    string text = File.ReadAllText(counterFile);
+	string targetPattern = @"// PATCH ([^\n\r]+)";
+	string[] sections = Regex.Split(text, targetPattern);
+
+    return new Counter() {
+        Id = Path.GetFileNameWithoutExtension(counterFile),
+        Patches = parsePatches(sections),
+    };
+}
 
 Achievement parseAchievementFile(string achievementFile) {
     string text = File.ReadAllText(achievementFile);

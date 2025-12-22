@@ -1,5 +1,5 @@
-FORMAT = """title: {lord_name}'s chamber.
-description: Find {lord_name}'s chamber.
+FORMAT = """title: {lord_name}'s chamber
+description: Find {lord_name}'s chamber
 
 // PATCH gml_Room_{room_name}_Create 1
 {{+achievement}}

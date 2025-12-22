@@ -1,0 +1,5 @@
+title: Denied
+description: Draw Lev's brand in the brand menu
+
+// PATCH gml_Object_obj_puumerkki_Other_11 388
+{+achievement}

@@ -1,0 +1,5 @@
+title: Special brand (Cif)
+description: Activate the Cif special brand
+
+// PATCH gml_Object_obj_puumerkki_Other_11 229
+{+achievement}

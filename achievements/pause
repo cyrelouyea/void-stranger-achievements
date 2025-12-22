@@ -1,0 +1,8 @@
+title: Break taker
+description: Pause the game
+
+// PATCH gml_Object_obj_pause_Step_0 58
+{+achievement}
+
+// PATCH gml_Object_obj_pause_Step_0 107
+{+achievement}

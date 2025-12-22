@@ -1,0 +1,5 @@
+title: Special brand (EX)
+description: Activate the EX special brand
+
+// PATCH gml_Object_obj_puumerkki_Other_11 261
+{+achievement}

@@ -1,0 +1,6 @@
+title: *Kaboom* (30/1000)
+description: Detonate a total of 30 bomb tiles
+
+// PATCH gml_Object_obj_explofloor_vanish_Create_0 10
+if obj_inventory.bomb_floor_counter >= 30
+    {+achievement}

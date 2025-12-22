@@ -1,0 +1,8 @@
+// PATCH gml_Object_obj_deathfloor_Step_2 3
+{{counter}} += 1
+
+// PATCH gml_Object_obj_deathfloor_Step_2 17
+{{counter}} += 1
+
+// PATCH gml_Object_obj_deathfloor_Step_2 38
+{{counter}} += 1

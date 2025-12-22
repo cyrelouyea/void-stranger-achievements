@@ -1,0 +1,6 @@
+title: Locksmith
+description: Open a total of 1000 exit using switch tiles
+
+// PATCH gml_Object_obj_exit_Step_0 9
+if obj_inventory.open_exit_counter >= 1000
+    {+achievement}

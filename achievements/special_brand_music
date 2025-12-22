@@ -1,0 +1,5 @@
+title: Special brand (Music)
+description: Activate the Music special brand
+
+// PATCH gml_Object_obj_puumerkki_Other_11 240
+{+achievement}

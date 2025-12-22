@@ -1,0 +1,5 @@
+title: Fine... Here, have some.
+description: Receive food from Gor 
+
+// PATCH gml_Object_obj_locust_collect_Step_0 15
+{+achievement}

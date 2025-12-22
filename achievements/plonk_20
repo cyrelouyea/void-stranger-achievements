@@ -1,0 +1,6 @@
+title: Plonk! (20/100)
+description: Plonk a total of 20 entities
+
+// PATCH gml_Object_obj_plonk_Create_0 1
+if obj_inventory.plonk_counter >= 20
+    {+achievement}

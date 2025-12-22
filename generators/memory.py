@@ -20,7 +20,7 @@ ORDINALS = {
     7: "seventh",
     8: "eighth",
     9: "ninth",
-    10: "last",
+    10: "final",
 }
 
 

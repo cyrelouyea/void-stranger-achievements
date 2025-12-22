@@ -1,0 +1,14 @@
+title: *Psssshhh* (40/1000)
+description: Activate a total of 40 instant death tiles
+
+// PATCH gml_Object_obj_deathfloor_Step_2 13
+if obj_inventory.death_floor_counter >= 40
+    {+achievement}
+
+// PATCH gml_Object_obj_deathfloor_Step_2 34
+if obj_inventory.death_floor_counter >= 40
+    {+achievement}
+
+// PATCH gml_Object_obj_deathfloor_Step_2 66
+if obj_inventory.death_floor_counter >= 40
+    {+achievement}

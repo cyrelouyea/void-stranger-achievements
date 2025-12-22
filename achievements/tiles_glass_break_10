@@ -1,0 +1,6 @@
+title: *Kssshhhk* (10/1000)
+description: Break a total of 10 glass tiles
+
+// PATCH gml_Object_obj_glassfloor_Step_0 97
+if obj_inventory.glass_break_counter >= 10
+    {+achievement}

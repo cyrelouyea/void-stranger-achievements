@@ -1,5 +1,5 @@
-title: Lev's chamber.
-description: Find Lev's chamber.
+title: Lev's chamber
+description: Find Lev's chamber
 
 // PATCH gml_Room_rm_secret_007_Create 1
 {+achievement}

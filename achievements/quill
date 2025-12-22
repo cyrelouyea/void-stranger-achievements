@@ -1,0 +1,6 @@
+title: Quill
+description: Make a quill appear on screen
+
+// PATCH gml_Object_obj_quill_Create_0 1
+{+achievement}
+

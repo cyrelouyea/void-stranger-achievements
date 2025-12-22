@@ -1,0 +1,11 @@
+title: *Psssshhh*
+description: Activate an instant death tile
+
+// PATCH gml_Object_obj_deathfloor_Step_2 3
+{+achievement}
+
+// PATCH gml_Object_obj_deathfloor_Step_2 17
+{+achievement}
+
+// PATCH gml_Object_obj_deathfloor_Step_2 38
+{+achievement}

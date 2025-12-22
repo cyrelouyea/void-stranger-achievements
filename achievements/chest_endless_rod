@@ -1,0 +1,5 @@
+title: Per aspera...
+description: Reveal the true form of the Void Rod
+
+// PATCH gml_Object_obj_sealchest_Step_0 171
+{+achievement}

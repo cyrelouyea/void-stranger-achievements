@@ -1,0 +1,5 @@
+// PATCH gml_Object_obj_enemy_cr_Create_0 1
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_cr_segment_Create_0 1
+{{counter}} += 1

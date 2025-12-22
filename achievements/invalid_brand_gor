@@ -1,0 +1,5 @@
+title: How bothersome
+description: Draw Gor's brand in the brand menu
+
+// PATCH gml_Object_obj_puumerkki_Other_11 382
+{+achievement}

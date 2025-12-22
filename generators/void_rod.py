@@ -1,7 +1,7 @@
 FORMAT = """title: {title}
 description: Use the void rod {number} times
 
-// PATCH gml_Object_obj_player_Step_0 114
+// PATCH gml_Object_obj_player_Step_0 1144
 if ds_list_find_value(obj_inventory.ds_rcrds, 0) >= {number}
     {{+achievement}}
 // PATCH gml_Object_obj_player_Step_0 825

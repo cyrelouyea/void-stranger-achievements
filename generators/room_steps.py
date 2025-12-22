@@ -30,12 +30,12 @@ if ds_grid_get(obj_inventory.ds_player_info, 3, 0) >= {steps}
 STEPS_LIMIT = [
     100, 500,
     1_000, 2_000, 3_000, 4_000, 5_000,
-    6_000, 7_000, 8_000, 10_000
+    6_000, 7_000, 8_000, 9_000, 10_000
 ]
 
 TITLES = {
     1_000: "Walk, then think",
-    10_000: "Playtester (steps)",
+    10_000: "Playtester (S)",
 }
 
 for nb_steps in STEPS_LIMIT:

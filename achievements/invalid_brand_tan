@@ -1,0 +1,5 @@
+title: Just leave me be...
+description: Draw Tan's brand in the brand menu
+
+// PATCH gml_Object_obj_puumerkki_Other_11 376
+{+achievement}

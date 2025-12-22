@@ -1,0 +1,5 @@
+title: *Kssshhhk*
+description: Break a glass tile
+
+// PATCH gml_Object_obj_glassfloor_Step_0 93
+{+achievement}

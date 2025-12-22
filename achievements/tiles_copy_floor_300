@@ -1,0 +1,10 @@
+title: *Bwooop* (300/1000)
+description: Spawn a total of 300 shades with copy tiles
+
+// PATCH gml_Object_obj_enemy_cr_Create_0 1
+if obj_inventory.copy_floor_counter >= 300
+    {+achievement}
+
+// PATCH gml_Object_obj_enemy_cr_segment_Create_0 1
+if obj_inventory.copy_floor_counter >= 300
+    {+achievement}

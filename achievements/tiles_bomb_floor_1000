@@ -1,0 +1,6 @@
+title: Living detonator
+description: Detonate a total of 1000 bomb tiles
+
+// PATCH gml_Object_obj_explofloor_vanish_Create_0 10
+if obj_inventory.bomb_floor_counter >= 1000
+    {+achievement}

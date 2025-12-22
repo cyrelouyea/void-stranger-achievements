@@ -1,0 +1,5 @@
+title: Generous thief
+description: Receive locust idols from the Void Rod thief 
+
+// PATCH gml_Object_obj_locust_collect_Step_0 10
+{+achievement}

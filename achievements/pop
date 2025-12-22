@@ -1,0 +1,9 @@
+title: Bloom
+description: Pop a lotus flower in the brand menu
+
+// PATCH gml_Object_obj_dustparticle_Step_0 9
+{
+    {+achievement}
+
+// PATCH gml_Object_obj_dustparticle_Step_0 10
+}

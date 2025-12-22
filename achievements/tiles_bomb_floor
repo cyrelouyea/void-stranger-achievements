@@ -1,0 +1,5 @@
+title: *Kaboom*
+description: Detonate a bomb floor
+
+// PATCH gml_Object_obj_explofloor_vanish_Create_0 1
+{+achievement}

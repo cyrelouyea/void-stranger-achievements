@@ -1,4 +1,4 @@
-FORMAT = """title: {ordinal} shortcut.
+FORMAT = """title: {ordinal} shortcut
 description: Access the {ordinal} shortcut
 
 // PATCH gml_Room_{room_name}_Create 1

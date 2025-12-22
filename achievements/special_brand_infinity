@@ -1,0 +1,5 @@
+title: Special brand (Infinity)
+description: Activate the Infinity special brand
+
+// PATCH gml_Object_obj_puumerkki_Other_11 294
+{+achievement}
