@@ -1,0 +1,12 @@
+title: the one thing that I can control
+description: Listen to Voided
+
+// PATCH gml_Object_obj_voidsong_Step_0 245
+{-achievement}
+{+achievement}
+// PATCH gml_Object_obj_voidsong_Step_0 318
+{-achievement}
+{+achievement}
+// PATCH gml_Object_obj_voidsong_Step_0 356
+{-achievement}
+{+achievement}

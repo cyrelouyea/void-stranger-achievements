@@ -1,0 +1,27 @@
+title: Playground
+description: Step on the HUD
+
+// PATCH gml_Object_obj_player_Step_0 547
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 567
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 580
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 593
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 606
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 629
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 669
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 746
+if y >= 136 && instance_exists(obj_floor_voidrod)
+    {+achievement}

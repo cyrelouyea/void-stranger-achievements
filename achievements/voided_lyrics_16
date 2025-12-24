@@ -1,0 +1,6 @@
+title: Toss the key oh please be kind
+description: Listen to Voided
+
+// PATCH gml_Object_obj_voidsong_Step_0 272
+{-achievement}
+{+achievement}

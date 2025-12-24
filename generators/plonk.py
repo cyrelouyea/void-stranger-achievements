@@ -1,7 +1,7 @@
 FORMAT = """title: {title}
 description: Plonk a total of {number} entit{plural}
 
-// PATCH gml_Object_obj_plonk_Create_0 1
+// PATCH gml_Object_obj_player_Step_0 866
 if obj_inventory.plonk_counter >= {number}
     {{+achievement}}
 """

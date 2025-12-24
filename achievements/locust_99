@@ -1,0 +1,6 @@
+title: Locust hoarder
+description: Max out your locust value
+
+// PATCH gml_Object_obj_game_Step_0 1
+if global.infinity_check == 0 && ds_grid_get(obj_inventory.ds_player_info, 1, 1) == 99
+    {+achievement}

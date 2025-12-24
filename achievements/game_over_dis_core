@@ -1,0 +1,5 @@
+title: You've come too far
+description: Be forced to eat the fruit
+
+// PATCH gml_Object_obj_gameover_Step_0 67
+{+achievement}

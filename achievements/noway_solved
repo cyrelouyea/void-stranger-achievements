@@ -1,0 +1,5 @@
+title: NO WAY!!
+description: Solve the NO WAY jigsaw puzzle
+
+// PATCH gml_Object_obj_puzzlepieces_Step_0 141
+{+achievement}

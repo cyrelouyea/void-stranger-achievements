@@ -1,6 +1,6 @@
 title: Plonk! (50/100)
 description: Plonk a total of 50 entities
 
-// PATCH gml_Object_obj_plonk_Create_0 1
+// PATCH gml_Object_obj_player_Step_0 866
 if obj_inventory.plonk_counter >= 50
     {+achievement}

@@ -1,0 +1,6 @@
+title: The fourth dream
+description: Start watching Gray's fourth dream
+
+// PATCH gml_Room_rm_dreamIV_001_Create 1
+if !instance_exists(obj_rest)
+{+achievement}

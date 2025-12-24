@@ -1,0 +1,5 @@
+title: Endless void
+description: Refuse the fruit
+
+// PATCH gml_Object_obj_gameover_Step_0 39
+{+achievement}

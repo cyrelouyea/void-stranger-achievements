@@ -1,0 +1,5 @@
+title: NOOOOOOOOO (WAY)
+description: Take a screenshot after solving the NO WAY puzzle
+
+// PATCH gml_Object_obj_puzzlepieces_Step_0 143
+{+achievement}

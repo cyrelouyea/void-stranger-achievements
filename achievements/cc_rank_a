@@ -1,0 +1,6 @@
+title: A Rank
+description: Get A Rank in Cif's Challenge
+
+// PATCH gml_Object_obj_cc_check_Step_0 602
+if grade == 2
+{+achievement}

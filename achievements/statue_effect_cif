@@ -1,0 +1,5 @@
+title: A simple memory will remain
+description: Restart from the beginning with only a simple memory
+
+// PATCH gml_Object_obj_cif_reset_Step_0 116
+{+achievement}

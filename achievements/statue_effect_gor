@@ -1,0 +1,5 @@
+title: Immovable
+description: Make a statue immovable
+
+// PATCH gml_Object_obj_boulder_Step_0 408
+{+achievement}

@@ -1,0 +1,6 @@
+title: Do you remember why you're here?
+description: Start watching Gray's final dream while being VOIDed
+
+// PATCH gml_Room_rm_dreamIX_void_Create 1
+if !instance_exists(obj_rest)
+{{+achievement}}

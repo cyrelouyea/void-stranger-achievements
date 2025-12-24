@@ -1,0 +1,5 @@
+title: No Hit
+description: Get the NO HIT bonus in Cif's Challenge
+
+// PATCH gml_Object_obj_cc_check_Step_0 405
+{+achievement}

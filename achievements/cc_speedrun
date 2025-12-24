@@ -1,0 +1,6 @@
+title: Speed Runner
+description: Complete Cif's Challenge in less than 5 minutes
+
+// PATCH gml_Object_obj_cc_check_Step_0 381
+if finaltime < 60 * 5
+    {+achievement}

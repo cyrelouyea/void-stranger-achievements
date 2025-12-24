@@ -1,0 +1,5 @@
+title: Ksi shi shi (3)
+description: Find the dubious merchant in B086
+
+// PATCH gml_Object_obj_npc_mon_Create_0 107
+{+achievement}

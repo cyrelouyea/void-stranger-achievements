@@ -1,0 +1,5 @@
+title: No Pit
+description: Get the NO PIT bonus in Cif's Challenge
+
+// PATCH gml_Object_obj_cc_check_Step_0 411
+{+achievement}

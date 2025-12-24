@@ -1,9 +1,0 @@
-title: V6000
-description: Use the void rod 6000 times in a single room
-
-// PATCH gml_Object_obj_player_Step_0 1144
-if ds_grid_get(obj_inventory.ds_player_info, 3, 1) >= 6000
-    {+achievement}
-// PATCH gml_Object_obj_player_Step_0 825
-if ds_grid_get(obj_inventory.ds_player_info, 3, 1) >= 6000
-    {+achievement}

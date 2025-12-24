@@ -1,0 +1,5 @@
+title: One wrong move...
+description: Use your void rod one too many time.
+
+// PATCH gml_Object_obj_boulder_Alarm_1 27
+{+achievement}

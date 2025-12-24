@@ -1,0 +1,5 @@
+title: Ksi shi s-
+description: \"Kill\" the dubious merchant
+
+// PATCH gml_Object_obj_npc_mon_Step_0 196
+{+achievement}

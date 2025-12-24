@@ -1,0 +1,6 @@
+title: Gray's memories #6 (Solved)
+description: Solve the jigsaw puzzle #6 
+
+// PATCH gml_Object_obj_puzzlepieces_Step_0 139
+if room == rm_graysmemories_006
+    {+achievement}

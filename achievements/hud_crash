@@ -1,0 +1,5 @@
+title: B*** screen
+description: Make the game crash
+
+// PATCH gml_GlobalScript_scr_errorcrash 3
+{+achievement}

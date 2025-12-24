@@ -1,0 +1,5 @@
+title: Golden
+description: Turn to gold
+
+// PATCH gml_Object_obj_player_golden_Create_0 1
+{+achievement}

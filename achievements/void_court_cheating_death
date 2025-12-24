@@ -1,0 +1,5 @@
+title: Cheating Death
+description: Be accused of cheating death in Court
+
+// PATCH gml_Object_obj_player_Other_4 5
+{+achievement}

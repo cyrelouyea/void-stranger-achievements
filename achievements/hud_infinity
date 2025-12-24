@@ -1,0 +1,5 @@
+title: -Infinity
+description: Try to store infinity
+
+// PATCH gml_Object_obj_infinity_meltdown_Create_0 1
+{+achievement}

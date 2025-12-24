@@ -1,0 +1,6 @@
+title: Gray's memories #2 (Solved)
+description: Solve the jigsaw puzzle #2 
+
+// PATCH gml_Object_obj_puzzlepieces_Step_0 139
+if room == rm_graysmemories_002
+    {+achievement}

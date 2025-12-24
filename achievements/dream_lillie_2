@@ -1,0 +1,6 @@
+title: The second dream (Hard)
+description: Start watching Lillie's second dream
+
+// PATCH gml_Room_rm_ldreamI_001_Create 1
+if !instance_exists(obj_rest)
+{+achievement}

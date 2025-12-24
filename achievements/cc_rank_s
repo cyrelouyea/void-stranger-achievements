@@ -1,0 +1,6 @@
+title: S Rank
+description: Get S Rank in Cif's Challenge
+
+// PATCH gml_Object_obj_cc_check_Step_0 602
+if grade == 3
+{+achievement}

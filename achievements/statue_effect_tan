@@ -1,0 +1,5 @@
+title: Make them go away...
+description: Make a one-eyed statue self-explode
+
+// PATCH gml_Object_obj_boulder_Step_0 639
+{+achievement}

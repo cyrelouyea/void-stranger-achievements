@@ -10,9 +10,7 @@ if ds_grid_get(obj_inventory.ds_player_info, 3, 1) >= {number}
 """
 
 VOID_LIMIT = [
-    100, 500,
-    1_000, 2_000, 3_000, 4_000, 5_000,
-    6_000, 7_000, 8_000, 9_000, 10_000
+    100, 1_000, 10_000
 ]
 
 TITLES = {

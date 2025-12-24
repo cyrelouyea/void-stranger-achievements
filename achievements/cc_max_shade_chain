@@ -1,0 +1,6 @@
+title: Do the conga!
+description: Get a score of 2560 from a single shade in Cif's Challenge
+
+// PATCH gml_Object_obj_cc_check_Step_0 105
+if shadow_score == 2560
+    {+achievement}

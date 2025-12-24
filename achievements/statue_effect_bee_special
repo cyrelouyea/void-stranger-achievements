@@ -1,0 +1,5 @@
+title: Locust warp???
+description: Find a way to locust warp without a statue 
+
+// PATCH gml_Object_obj_npc_bee_Alarm_7 1
+{+achievement}

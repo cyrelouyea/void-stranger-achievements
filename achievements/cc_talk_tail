@@ -1,0 +1,5 @@
+title: Have fun!
+description: Talk to Tail during Cif's Challenge
+
+// PATCH gml_Object_obj_npc_tail_Step_0 475
+{+achievement}

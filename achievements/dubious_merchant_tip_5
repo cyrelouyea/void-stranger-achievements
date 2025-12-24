@@ -1,0 +1,5 @@
+title: Here's your tip! (5)
+description: Buy the first tip from the merchant in B196
+
+// PATCH gml_Object_obj_npc_mon_Step_0 486
+{+achievement}

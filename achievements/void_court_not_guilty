@@ -1,0 +1,5 @@
+title: Not Guilty
+description: Plead not guilty in the Void Court
+
+// PATCH gml_Object_obj_demoncourt_Step_0 52
+{+achievement}

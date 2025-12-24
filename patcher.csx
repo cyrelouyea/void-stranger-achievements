@@ -55,7 +55,9 @@ foreach (Achievement achievement in achievements) {
         patchesByFile[patch.FileName].Add(new PatchData() {
             LineNumber = patch.LineNumber,
             FileName = patch.FileName,
-            String = patch.String.Replace("{+achievement}", $"{{ scr_get_achievement(\"{achievement.Id}\"); }}"), 
+            String = patch.String
+                .Replace("{+achievement}", $"{{ scr_get_achievement(\"{achievement.Id}\"); }}")
+                .Replace("{-achievement}", $"{{ scr_remove_achievement(\"{achievement.Id}\"); }}"), 
         });
     }
 }
@@ -171,8 +173,21 @@ foreach (Counter counter in counters) {
         with (obj_notification)
             y -= 16
 
-        var notification = instance_create_layer(0, 0, ""Text"", obj_notification);
+        var notification = instance_create_depth(0, 0, -300, obj_notification);
         notification.title = ds_map_find_value(obj_inventory.ds_ach_titles, achievement_id)
+    }");
+}
+
+{ // Global function to call when you remove an achievement
+    UndertaleGlobalInit scr_remove_achievement = new UndertaleGlobalInit() {
+        Code = UndertaleCode.CreateEmptyEntry(Data, "gml_GlobalScript_scr_remove_achievement"),
+    };
+    Data.GlobalInitScripts.Add(scr_remove_achievement);
+    importGroup.QueueReplace(scr_remove_achievement.Code, @"function scr_remove_achievement(achievement_id) {
+        if is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
+            return;
+        
+        ds_map_replace(obj_inventory.ds_achievements, achievement_id, undefined);
     }");
 }
 
@@ -203,7 +218,9 @@ foreach (Counter counter in counters) {
     draw_set_halign(fa_center);
     draw_text_color(x + 112, y + 136, title, c_white, c_white, c_white, c_white, 1);
     draw_sprite(spr_ex_medal, image_index, x + 10, y + 136);
-    draw_sprite(spr_ex_medal, image_index, x + 224-10, y + 136);");
+    draw_sprite(spr_ex_medal, image_index, x + 224-10, y + 136);
+    draw_set_valign(fa_top);
+    draw_set_halign(fa_left);");
 }
 
 
@@ -533,7 +550,7 @@ PatchData[] parsePatches(string[] sections) {
 
 HeaderData parseHeader(string header) {
     Dictionary<string, string> map = new Dictionary<string, string>();
-
+    
     foreach (string section in Regex.Split(header, @"[\n\r]+")) {
         string[] keyAndValue = Regex.Split(section, @":\s+");
         map[keyAndValue[0]] = keyAndValue[1];

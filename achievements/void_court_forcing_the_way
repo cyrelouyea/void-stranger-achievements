@@ -1,0 +1,5 @@
+title: Greed
+description: Be accused of forcing the way in court
+
+// PATCH gml_Object_obj_player_Other_4 81
+{+achievement}

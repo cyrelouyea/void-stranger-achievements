@@ -1,0 +1,6 @@
+title: The second dream
+description: Start watching Gray's second dream
+
+// PATCH gml_Room_rm_dreamII_001_Create 1
+if !instance_exists(obj_rest)
+{+achievement}

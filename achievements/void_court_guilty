@@ -1,0 +1,5 @@
+title: An honest fool
+description: Plead guilty in the Void Court
+
+// PATCH gml_Object_obj_demoncourt_Step_0 63
+{+achievement}

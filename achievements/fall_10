@@ -1,0 +1,6 @@
+title: AaaaaaAAAA- (10/250)
+description: Fall a total of 10 times
+
+// PATCH gml_Object_obj_player_Step_0 1826
+if ds_list_find_value(obj_inventory.ds_rcrds, 6) >= 10
+    {+achievement}

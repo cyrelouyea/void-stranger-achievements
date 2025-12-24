@@ -1,0 +1,5 @@
+title: Locust warp
+description: Spend locusts to skip rooms with a certain statue
+
+// PATCH gml_Object_obj_boulder_Alarm_5 1
+{+achievement}

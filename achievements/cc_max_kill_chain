@@ -1,0 +1,6 @@
+title: SSStylish!!!
+description: Max out the kill multiplier (x16) in Cif's Challenge
+
+// PATCH gml_GlobalScript_scr_cc_scorevalue 57
+if global.cc_multiplier == 16
+    {+achievement}

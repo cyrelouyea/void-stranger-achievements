@@ -1,0 +1,5 @@
+title: Game over
+description: Find what happens after you've fallen
+
+// PATCH gml_Object_obj_gameover_Create_0 1
+{+achievement}

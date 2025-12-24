@@ -1,0 +1,6 @@
+title: One toss and I'll forever be blind
+description: Listen to Voided
+
+// PATCH gml_Object_obj_voidsong_Step_0 268
+{-achievement}
+{+achievement}

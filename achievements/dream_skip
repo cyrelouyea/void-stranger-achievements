@@ -1,0 +1,5 @@
+title: Light sleeper
+description: Skip and wake up from a dream
+
+// PATCH gml_GlobalScript_scr_skip_dream 3
+{+achievement}

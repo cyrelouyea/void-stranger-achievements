@@ -1,0 +1,6 @@
+title: My walls stay strong
+description: Listen to Voided
+
+// PATCH gml_Object_obj_voidsong_Step_0 294
+{-achievement}
+{+achievement}
