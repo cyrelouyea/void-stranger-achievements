@@ -1,0 +1,6 @@
+title: NLYOFE
+description: ------- --- ----- in the sixth domain
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 5 && obj_player.x >= 120 && ds_grid_get(obj_inventory.ds_equipment, 0, 0) != 0 && global.memory_toggle && mural_damage < 7
+{+achievement}

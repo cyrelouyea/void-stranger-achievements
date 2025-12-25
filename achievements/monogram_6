@@ -1,0 +1,6 @@
+title: Monogram #6
+description: Find the sixth monogram
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 16
+{+achievement}

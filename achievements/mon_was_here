@@ -1,0 +1,6 @@
+title: HWM EAO RSN E
+description: Inspect the strange carvings in Mon's chamber
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 10
+{+achievement}

@@ -1,0 +1,5 @@
+title: Per aspera ad astra
+description: Bump the screen with the DIS Logo
+
+// PATCH gml_Object_obj_tot_mural_Step_0 6
+{+achievement}

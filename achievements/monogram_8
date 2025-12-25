@@ -1,0 +1,6 @@
+title: Monogram #8
+description: Find the first monogram
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 18
+{+achievement}

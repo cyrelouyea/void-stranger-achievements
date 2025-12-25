@@ -1,0 +1,6 @@
+title: Your brand
+description: Inspect the mural in the last domain while VOIDed
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 19
+{+achievement}

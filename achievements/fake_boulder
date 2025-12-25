@@ -1,0 +1,5 @@
+title: Quantum tunnelling
+description: Go through a fake boulder
+
+// PATCH gml_Object_obj_fakewall_Step_0 6
+{+achievement}

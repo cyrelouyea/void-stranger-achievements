@@ -1,0 +1,5 @@
+title: First mural
+description: Inspect the mural in the first domain
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 0
+{+achievement}

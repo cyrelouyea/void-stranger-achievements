@@ -1,0 +1,6 @@
+title: ----- mural
+description: ------- --- ----- in the sixth domain
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 5 && obj_player.x >= 120
+{+achievement}

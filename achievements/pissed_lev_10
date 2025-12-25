@@ -1,0 +1,18 @@
+title: One wrong move... (10/500)
+description: Activate Lev's statues a total of 10 times
+
+// PATCH gml_Object_obj_player_Alarm_8 16
+if obj_inventory.pissed_lev_counter >= 10
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Alarm_8 32
+if obj_inventory.pissed_lev_counter >= 10
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Other_17 16
+if obj_inventory.pissed_lev_counter >= 10
+    {+achievement}
+
+// PATCH gml_Object_obj_boulder_Alarm_7 7
+if obj_inventory.pissed_lev_counter >= 10
+    {+achievement}

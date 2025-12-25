@@ -1,0 +1,6 @@
+title: Fifth mural
+description: Inspect the mural in the fifth domain
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 4
+{+achievement}

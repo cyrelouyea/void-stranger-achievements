@@ -1,0 +1,3 @@
+MURALS = [
+    (0, "ONLYAMEMORYREMAINS")
+]

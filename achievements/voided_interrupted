@@ -1,0 +1,6 @@
+title: I hold on I hol- what?
+description: Interrupt Voided
+
+// PATCH gml_Object_obj_exit_Step_0 113
+with (obj_voidsong)
+{+achievement}

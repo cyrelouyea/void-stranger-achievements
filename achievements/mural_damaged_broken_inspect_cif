@@ -1,0 +1,6 @@
+title: Remote memory unit
+description: Inspect a collapsed broken mural as Cif
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if mural_broken && mural_damage >= 7 && global.stranger == 2
+{+achievement}

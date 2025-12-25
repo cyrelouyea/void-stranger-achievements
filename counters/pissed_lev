@@ -1,0 +1,7 @@
+// PATCH gml_Object_obj_boulder_Create_0 1
+prev_lev_is_pissed = false
+
+// PATCH gml_Object_obj_boulder_Step_0 55
+if b_form == 1 && !prev_lev_is_pissed && lev_is_pissed
+    {{counter}} += 1
+prev_lev_is_pissed = lev_is_pissed

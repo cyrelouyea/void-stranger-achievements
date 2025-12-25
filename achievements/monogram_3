@@ -1,0 +1,6 @@
+title: Monogram #3
+description: Find the third monogram
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 13
+{+achievement}

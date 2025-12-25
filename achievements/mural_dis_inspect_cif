@@ -1,0 +1,6 @@
+title: DIS continues to elude us
+description: Inspect the last domain mural as Cif
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 8 && global.stranger == 2
+{+achievement}

@@ -1,0 +1,6 @@
+title: Only dust remains
+description: Collapse a damaged mural 
+
+// PATCH gml_Object_obj_player_Step_0 513
+if mural_damage >= 7 
+{+achievement}

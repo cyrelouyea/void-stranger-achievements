@@ -1,0 +1,6 @@
+title: Seventh mural
+description: Inspect the mural in the seventh domain
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 6
+{+achievement}

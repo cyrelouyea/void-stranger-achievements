@@ -1,0 +1,6 @@
+title: ONLYAENVYREMAINS
+description: Decipher the mural in the seventh domain
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 6 && ds_grid_get(obj_inventory.ds_equipment, 0, 0) != 0 && global.memory_toggle
+{+achievement}

@@ -1,0 +1,6 @@
+title: Monogram #2
+description: Find the second monogram
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 12
+{+achievement}

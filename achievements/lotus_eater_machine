@@ -1,0 +1,6 @@
+title: Lotophages
+description: Inspect a tree as Cif
+
+// PATCH gml_Object_obj_rest_Step_0 277
+if global.stranger == 2
+{+achievement}

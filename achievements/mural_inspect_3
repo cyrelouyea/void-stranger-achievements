@@ -1,0 +1,6 @@
+title: Fourth mural
+description: Inspect the mural in the fourth domain
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 3
+{+achievement}

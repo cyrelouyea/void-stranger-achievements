@@ -1,0 +1,6 @@
+title: Second mural
+description: Inspect the mural in the second domain
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if inscription == 1
+{+achievement}
