@@ -1,0 +1,5 @@
+title: Princess' tantrum
+description: Select \"Check\" in the first dream battle 
+
+// PATCH gml_Object_obj_dream_battle_Step_0 227
+{+achievement}

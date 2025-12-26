@@ -1,5 +1,5 @@
 title: Gambling addiction
-description: Skip more than 100 rooms with locust warps
+description: Skip 100 rooms or more with locust warps
 
 // PATCH gml_GlobalScript_scr_roomselect 50
 if room_number - ds_grid_get(obj_inventory.ds_player_info, 1, 2) >= 100

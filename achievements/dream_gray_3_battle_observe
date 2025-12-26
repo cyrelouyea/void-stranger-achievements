@@ -1,0 +1,5 @@
+title: A grave mistake
+description: Select \"Check\" in the third dream battle 
+
+// PATCH gml_Object_obj_dreamIII_battle_Step_0 222
+{+achievement}

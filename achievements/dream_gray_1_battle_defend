@@ -1,0 +1,5 @@
+title: Spoilsport
+description: Bore Lily profoundly during the fight in the first dream
+
+// PATCH gml_Object_obj_dream_battle_Alarm_7 21
+{+achievement}

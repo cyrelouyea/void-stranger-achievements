@@ -1,0 +1,6 @@
+title: I don't want to die! Not like this!
+description: Exhaust all of Johann's lines before Gray kills him
+
+// PATCH gml_Object_obj_cutscene_dreamIX_sacrifice_part2_Step_0 768
+if !instance_exists(active_textbox) || active_textbox.page >= 21
+    {+achievement}

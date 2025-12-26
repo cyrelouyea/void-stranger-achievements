@@ -1,0 +1,5 @@
+title: Curiosity
+description: Read Lily's letter in the fifth dream
+
+// PATCH gml_Object_obj_dream_letter_Step_0 110
+{+achievement}

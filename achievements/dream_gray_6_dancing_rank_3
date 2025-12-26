@@ -1,0 +1,5 @@
+title: You little brat!
+description: Miss everything in the dancing minigame
+
+// PATCH gml_Object_obj_rhythm_Alarm_3 29
+{+achievement}

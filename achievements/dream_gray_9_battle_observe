@@ -1,0 +1,5 @@
+title: Smiling monster
+description: Select \"Check\" in the last dream battle 
+
+// PATCH gml_Object_obj_battle_dreamXI_Step_0 212
+{+achievement}

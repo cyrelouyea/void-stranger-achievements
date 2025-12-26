@@ -1,0 +1,5 @@
+title: Devotion without purpose
+description: Reach B255 and fall while VOIDed
+
+// PATCH gml_Object_obj_cutscene_grayend_Step_0 408
+{+achievement}

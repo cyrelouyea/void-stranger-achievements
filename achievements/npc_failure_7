@@ -1,0 +1,6 @@
+title: The seventh failure
+description: Find the failure in the seventh domain
+
+// PATCH gml_Object_obj_npc_failure_007_Create_0 1
+if scr_f_check() != 0 && !global.failure
+{+achievement}

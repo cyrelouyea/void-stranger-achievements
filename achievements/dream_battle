@@ -1,0 +1,14 @@
+title: If FromSoftware made Undertale
+description: Start any RPG fight
+
+// PATCH gml_Object_obj_battle_lev_Create_0 1
+{+achievement}
+
+// PATCH gml_Object_obj_dream_battle_Create_0 1
+{+achievement}
+
+// PATCH gml_Object_obj_dreamIII_battle_Create_0 1
+{+achievement}
+
+// PATCH gml_Object_obj_battle_dreamXI_Create_0 1
+{+achievement}

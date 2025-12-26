@@ -1,0 +1,6 @@
+title: The first failure
+description: Find the failure in the first domain
+
+// PATCH gml_Object_obj_npc_failure_001_Create_0 1
+if scr_f_check() != 0 && !global.failure
+{+achievement}

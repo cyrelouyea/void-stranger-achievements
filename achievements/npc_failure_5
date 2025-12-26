@@ -1,0 +1,6 @@
+title: The fifth failure
+description: Find the failure in the fifth domain
+
+// PATCH gml_Object_obj_npc_failure_005_Create_0 1
+if scr_f_check() != 0 && !global.failure
+{+achievement}

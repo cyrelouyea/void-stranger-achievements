@@ -1,0 +1,6 @@
+title: Let there be light
+description: Open the curtains in the first dream
+
+// PATCH gml_Object_obj_curtains_Alarm_1 9
+if obj_prin_blanket.wake >= 2
+{+achievement}

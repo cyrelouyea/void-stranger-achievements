@@ -1,0 +1,6 @@
+title: Princess Lily
+description: Meet Lily in the first dream
+
+// PATCH gml_Object_obj_cutscene_prin_reveal_Alarm_3 21
+if scene == 2
+{+achievement}

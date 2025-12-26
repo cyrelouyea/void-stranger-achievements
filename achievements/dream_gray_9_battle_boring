@@ -1,0 +1,5 @@
+title: Boring...
+description: Bore Bee to death in the last dream battle 
+
+// PATCH gml_Object_obj_battle_dreamXI_Step_0 345
+{+achievement}

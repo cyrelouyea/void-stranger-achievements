@@ -1,0 +1,6 @@
+title: THE MOST REPUGNANT OF ALL
+description: Talk to the failure in the fourth domain
+
+// PATCH gml_Object_obj_npc_failure_004_Alarm_0 1
+if (ds_grid_get(obj_inventory.ds_equipment, 0, 0) == 1 && global.memory_toggle == true)
+{+achievement}

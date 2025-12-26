@@ -1,0 +1,5 @@
+title: Poor feet
+description: Get a lot of MISS in the dancing minigame
+
+// PATCH gml_Object_obj_rhythm_Alarm_3 21
+{+achievement}

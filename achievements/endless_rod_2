@@ -1,0 +1,6 @@
+title: Limitless
+description: Keep 2 tiles or more in the Void Rod
+
+// PATCH gml_Object_obj_player_Step_0 792
+if itile >= 2
+{+achievement}

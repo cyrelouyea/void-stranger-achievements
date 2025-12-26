@@ -1,0 +1,5 @@
+title: You can have this one...
+description: Lose against Lily in the first dream
+
+// PATCH gml_Object_obj_dream_battle_Alarm_7 14
+{+achievement}

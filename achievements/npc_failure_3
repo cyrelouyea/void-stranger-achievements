@@ -1,0 +1,6 @@
+title: The third failure
+description: Find the failure in the third domain
+
+// PATCH gml_Object_obj_npc_failure_003_Create_0 1
+if scr_f_check() != 0 && !global.failure
+{+achievement}

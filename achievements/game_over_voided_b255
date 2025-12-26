@@ -1,0 +1,6 @@
+title: Most objectively pure and skilled gamer
+description: Get VOIDed in B255 as Gray
+
+// PATCH gml_Object_obj_orange_Alarm_3 1
+if room == rm_finalrest
+{+achievement}

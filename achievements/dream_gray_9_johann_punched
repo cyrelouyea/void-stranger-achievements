@@ -1,0 +1,5 @@
+title: Lord killer
+description: Punch and kill Johann in the last dream
+
+// PATCH gml_Object_obj_cutscene_dreamIX_sacrifice_part2_Step_0 808
+{+achievement}

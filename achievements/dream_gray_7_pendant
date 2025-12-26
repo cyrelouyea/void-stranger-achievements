@@ -1,0 +1,5 @@
+title: An important wedding gift
+description: Give the pendant to Lily in the sevent dream
+
+// PATCH gml_Object_obj_cutscene_dreamVII_dress_Step_0 105
+{+achievement}

@@ -1,0 +1,6 @@
+title: Playtester (R)
+description: Keep 100 tiles or more in the Void Rod
+
+// PATCH gml_Object_obj_player_Step_0 792
+if itile >= 100
+{+achievement}

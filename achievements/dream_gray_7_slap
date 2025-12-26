@@ -1,0 +1,5 @@
+title: *slap*
+description: Slap Johann in the seventh dream
+
+// PATCH gml_Object_obj_cutscene_dreamVII_johann_Step_0 92
+{+achievement}

@@ -1,0 +1,6 @@
+title: Golden (5/100)
+description: Turn to gold a total of 5 times
+
+// PATCH gml_Object_obj_player_golden_Create_0 2
+if obj_inventory.gold_counter >= 5
+{+achievement}

@@ -1,0 +1,6 @@
+title: Cowards!
+description: Fail to call henchmen in the third dream battle 
+
+// PATCH gml_Object_obj_dreamIII_battle_Step_0 212
+if battle_turn == 4
+{+achievement}

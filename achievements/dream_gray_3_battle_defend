@@ -1,0 +1,6 @@
+title: Henchmen
+description: Use henchmen as a shield in the third dream battle 
+
+// PATCH gml_Object_obj_dreamIII_battle_Step_0 212
+if battle_turn != 4
+{+achievement}

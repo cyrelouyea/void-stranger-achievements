@@ -1,0 +1,6 @@
+title: The sixth failure
+description: Find the failure in the sixth domain
+
+// PATCH gml_Object_obj_npc_failure_006_Create_0 1
+if scr_f_check() != 0 && !global.failure
+{+achievement}

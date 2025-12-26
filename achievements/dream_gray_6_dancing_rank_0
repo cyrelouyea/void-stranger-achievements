@@ -1,0 +1,5 @@
+title: Full Combo
+description: Perfect the dancing minigame
+
+// PATCH gml_Object_obj_rhythm_Alarm_3 5
+{+achievement}

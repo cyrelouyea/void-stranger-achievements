@@ -1,0 +1,5 @@
+title: Kneel before me!
+description: Lose against Lily in the first dream
+
+// PATCH gml_Object_obj_dream_battle_Alarm_7 7
+{+achievement}

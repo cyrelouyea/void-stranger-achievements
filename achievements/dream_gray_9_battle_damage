@@ -1,0 +1,5 @@
+title: Did it break already?
+description: Fail to damage Bee in the last dream battle
+
+// PATCH gml_Object_obj_battle_dreamXI_Alarm_5 30
+{+achievement}

@@ -1,0 +1,5 @@
+title: Ego hurt
+description: Damage Bee in the last dream battle
+
+// PATCH gml_Object_obj_battle_dreamXI_Alarm_5 38
+{+achievement}
