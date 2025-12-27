@@ -1,0 +1,8 @@
+title: That's Cute
+description: Start Void Stranger Lilith
+
+// PATCH gml_Object_obj_cutscene_intro_2_Step_0 94
+{+achievement}
+
+// PATCH gml_Object_obj_cutscene_intro_2_Step_0 149
+{+achievement}

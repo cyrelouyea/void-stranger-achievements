@@ -1,0 +1,6 @@
+title: ET06
+description: Go to trailer room no. 1
+
+// PATCH gml_Room_rm_trailer_006_Create 1
+if ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000
+    {+achievement}

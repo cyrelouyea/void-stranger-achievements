@@ -1,0 +1,6 @@
+title: Do not cover
+description: Inspect the radiator in Gray's house
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 12
+{+achievement}

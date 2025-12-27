@@ -1,0 +1,6 @@
+title: Pills
+description: Inspect the toilet in the bathroom
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 3
+{+achievement}

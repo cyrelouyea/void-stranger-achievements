@@ -1,0 +1,6 @@
+title: Frozen
+description: Inspect the clock in the bathroom
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 4
+{+achievement}

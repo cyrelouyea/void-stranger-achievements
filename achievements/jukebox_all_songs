@@ -1,0 +1,6 @@
+title: Disc Jockey
+description: Loop through all of the jukebox's music
+
+// PATCH gml_Object_obj_boulder_Step_0 98
+if ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000 && global.jukebox_song > 13 
+{+achievement}

@@ -1,0 +1,5 @@
+title: Recycle bin
+description: Throw the letter to Lillie in the trash
+
+// PATCH gml_Object_obj_lettertolillie_Alarm_3 1
+{+achievement}

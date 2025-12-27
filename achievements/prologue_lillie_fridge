@@ -1,0 +1,6 @@
+title: Ugh...!
+description: Inspect the fridge in Gray's house
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 1
+{+achievement}

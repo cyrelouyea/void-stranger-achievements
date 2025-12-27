@@ -1,0 +1,6 @@
+title: G R O O V Y
+description: Change the music with the jukebox
+
+// PATCH gml_Object_obj_boulder_Step_0 92
+if ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000
+{+achievement}

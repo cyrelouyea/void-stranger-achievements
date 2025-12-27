@@ -1,0 +1,6 @@
+title: Speen
+description: Witness ZERO Judge not taking the portal at the start of Void Stranger -Cif-
+
+// PATCH gml_Object_obj_cutscene_epilogue_part2_Step_0 421
+if zero_goof == 0
+{+achievement}

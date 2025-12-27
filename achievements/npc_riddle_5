@@ -1,0 +1,6 @@
+title: Another hint (5)
+description: Find the fifth riddle orb
+
+// PATCH gml_Object_obj_npc_riddle_Create_0 87
+if room == rm_0251 && j_check != 0 && !global.failure && tip_location == 0 && tip_number <= 5
+{+achievement}

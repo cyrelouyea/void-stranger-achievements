@@ -1,0 +1,6 @@
+title: Another hint (2)
+description: Find the second riddle orb
+
+// PATCH gml_Object_obj_npc_riddle_Create_0 87
+if room == rm_0078 && j_check != 0 && !global.failure && tip_location == 0 && tip_number <= 5
+{+achievement}

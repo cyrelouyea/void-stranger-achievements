@@ -1,0 +1,6 @@
+title: G**** thumb
+description: Inspect the flower pot in Lillie's room
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 10
+{+achievement}

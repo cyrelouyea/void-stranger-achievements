@@ -1,0 +1,6 @@
+title: Sink
+description: Inspect the sink in the bathroom
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 2
+{+achievement}

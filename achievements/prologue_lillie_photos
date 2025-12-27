@@ -1,0 +1,6 @@
+title: Simple memories will remain
+description: Inspect the photos in Gray's house
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 0
+{+achievement}

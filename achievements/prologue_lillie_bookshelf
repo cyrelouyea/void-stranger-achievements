@@ -1,0 +1,6 @@
+title: Bookshelf
+description: Inspect the bookshelf in Gray's house
+
+// PATCH gml_Object_obj_flavourtext_Alarm_0 1
+if description == 8
+{+achievement}

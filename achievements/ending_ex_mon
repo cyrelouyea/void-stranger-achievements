@@ -1,0 +1,6 @@
+title: I do not take credit!
+description: Find Mon in the fifth shortcut after escaping Elysium
+
+// PATCH gml_Object_obj_cutscene_un_mon_Step_0 80
+if ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000
+{+achievement}

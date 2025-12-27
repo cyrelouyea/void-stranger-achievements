@@ -1,0 +1,6 @@
+title: Somehow they feel familiar to you
+description: Be unable to decipher a mural as Lillie
+
+// PATCH gml_Object_obj_mural_Step_0 646
+if global.stranger == 1 && inscription >= 0 && inscription <= 7 && (ds_grid_get(obj_inventory.ds_equipment, 0, 0) == 0 || global.memory_toggle == false)
+{+achievement}

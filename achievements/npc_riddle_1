@@ -1,0 +1,6 @@
+title: Another hint (1)
+description: Find the first riddle orb
+
+// PATCH gml_Object_obj_npc_riddle_Create_0 87
+if room == rm_0055 && j_check != 0 && !global.failure && tip_location == 0 && tip_number <= 5
+{+achievement}

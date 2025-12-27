@@ -1,0 +1,9 @@
+title: Void Stranger Gray
+description: Start Void Stranger Gray
+
+// PATCH gml_Object_obj_cutscene_intro_Step_0 90
+{+achievement}
+
+// PATCH gml_Object_obj_cutscene_intro_Step_0 123
+if skipping > 112
+{+achievement}

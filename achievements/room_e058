@@ -1,0 +1,6 @@
+title: E058
+description: Go to E058
+
+// PATCH gml_Room_rm_test2_044_Create 1
+if ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000
+    {+achievement}
