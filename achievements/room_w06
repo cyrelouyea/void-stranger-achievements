@@ -1,0 +1,5 @@
+title: W06
+description: Find room no. 6 in the White Void
+
+// PATCH gml_Room_rm_u_0006_Create 1
+{+achievement}

@@ -1,0 +1,5 @@
+title: Heart of DIS
+description: Reach Heart of DIS
+
+// PATCH gml_Room_rm_dis_room_ready_Create 1
+{+achievement}

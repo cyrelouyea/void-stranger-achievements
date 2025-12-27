@@ -1,0 +1,8 @@
+title: The rest is up to you
+description: Defeat Cif
+
+// PATCH gml_Object_obj_cif_drone_Other_12 1
+{+achievement}
+
+// PATCH gml_Object_obj_cif_death_Step_0 140
+{+achievement}

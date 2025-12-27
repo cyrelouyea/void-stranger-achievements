@@ -1,0 +1,5 @@
+title: W03
+description: Find room no. 3 in the White Void
+
+// PATCH gml_Room_rm_u_0003_Create 1
+{+achievement}

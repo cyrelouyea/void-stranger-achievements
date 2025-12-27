@@ -1,0 +1,5 @@
+title: W12
+description: Find room no. 12 in the White Void
+
+// PATCH gml_Room_rm_u_0012_Create 1
+{+achievement}

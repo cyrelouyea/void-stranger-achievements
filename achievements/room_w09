@@ -1,0 +1,5 @@
+title: W09
+description: Find room no. 9 in the White Void
+
+// PATCH gml_Room_rm_u_0009_Create 1
+{+achievement}

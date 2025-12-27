@@ -1,0 +1,5 @@
+title: The Gate
+description: Reach The Gate
+
+// PATCH gml_Room_rm_dis_gate_Create 1
+{+achievement}

@@ -1,0 +1,5 @@
+title: W11
+description: Find room no. 11 in the White Void
+
+// PATCH gml_Room_rm_u_0011_Create 1
+{+achievement}

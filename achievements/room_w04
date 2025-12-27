@@ -1,0 +1,5 @@
+title: W04
+description: Find room no. 4 in the White Void
+
+// PATCH gml_Room_rm_u_0004_Create 1
+{+achievement}

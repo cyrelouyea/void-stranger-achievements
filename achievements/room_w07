@@ -1,0 +1,5 @@
+title: W07
+description: Find room no. 7 in the White Void
+
+// PATCH gml_Room_rm_u_0007_Create 1
+{+achievement}

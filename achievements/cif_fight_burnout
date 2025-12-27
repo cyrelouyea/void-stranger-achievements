@@ -1,0 +1,5 @@
+title: Farewell, Add.
+description: Defeat Cif the hard way
+
+// PATCH gml_Object_obj_cif_death_Step_0 125
+{+achievement}

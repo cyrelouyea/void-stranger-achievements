@@ -1,0 +1,8 @@
+title: Then I realized it.
+description: Fight against Cif's true form
+
+// PATCH gml_Object_obj_cif_message_Step_0 11
+if cm_n == 30 {
+    {-achievement}
+    {+achievement}
+}

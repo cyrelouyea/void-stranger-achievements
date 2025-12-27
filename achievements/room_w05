@@ -1,0 +1,5 @@
+title: W05
+description: Find room no. 5 in the White Void
+
+// PATCH gml_Room_rm_u_0005_Create 1
+{+achievement}

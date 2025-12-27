@@ -1,0 +1,5 @@
+title: W14
+description: Find room no. 14 in the White Void
+
+// PATCH gml_Room_rm_u_0014_Create 1
+{+achievement}

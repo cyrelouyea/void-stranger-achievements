@@ -1,0 +1,6 @@
+title: Déjà-vu
+description: Fail the riddle in room D26
+
+// PATCH gml_Object_obj_exit_Alarm_0 417
+if !correct_code
+    {+achievement}

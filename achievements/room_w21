@@ -1,0 +1,5 @@
+title: W21
+description: Find room no. 21 in the White Void
+
+// PATCH gml_Room_rm_u_0021_Create 1
+{+achievement}

@@ -1,0 +1,5 @@
+title: W24
+description: Find room no. 24 in the White Void
+
+// PATCH gml_Room_rm_u_0024_Create 1
+{+achievement}

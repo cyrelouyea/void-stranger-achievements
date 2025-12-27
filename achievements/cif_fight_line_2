@@ -1,0 +1,8 @@
+title: You created me and my sisters...
+description: Fight against Cif's true form
+
+// PATCH gml_Object_obj_cif_message_Step_0 11
+if cm_n == 2 {
+    {-achievement}
+    {+achievement}
+}

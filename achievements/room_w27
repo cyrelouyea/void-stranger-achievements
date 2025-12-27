@@ -1,0 +1,5 @@
+title: W27
+description: Find room no. 27 in the White Void
+
+// PATCH gml_Room_rm_u_0027_Create 1
+{+achievement}

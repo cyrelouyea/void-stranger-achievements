@@ -271,12 +271,7 @@ foreach (Counter counter in counters) {
             if hovered
                 draw_sprite(spr_ex_medal, image_index, x + 10, y + 9);
             else
-                draw_sprite(spr_ex_medal_c, image_index, x + 10, y + 9);
-        
-        // draw_set_alpha(bg_alpha);
-        // if dx >= 1
-        //     draw_rectangle_color(x, y, x + dx, y + 16, bg_color, bg_color, bg_color, bg_color, false);
-        // draw_set_alpha(1);");
+                draw_sprite(spr_ex_medal_c, image_index, x + 10, y + 9);");
     }
 
     {
@@ -346,6 +341,7 @@ foreach (Counter counter in counters) {
             array_push(achievement_items, instance_create_depth(12, 2 + i * 18 , depth - 1, obj_achievement_item));
         }
         instance_create_depth(0, 0, depth - 2, obj_achievement_zoom);
+        ordered_by_date = false
         array_sort(achievement_ids, true);
         nb_achievements_got = 0;
         achievement_dates = ds_map_values_to_array(obj_inventory.ds_achievements);
@@ -353,8 +349,7 @@ foreach (Counter counter in counters) {
             if !is_undefined(achievement_dates[i]) {
                 nb_achievements_got++;
             }
-        }
-        ");
+        }");
         importGroup.QueueAppend(obj_achievements_list.EventHandlerFor(EventType.Step, Data), 
         @"input_left_p = scr_input_check_pressed(0);
         input_right_p = scr_input_check_pressed(1);
@@ -362,6 +357,8 @@ foreach (Counter counter in counters) {
         input_down_p = scr_input_check_pressed(3);
         input_enter_p = scr_input_check_pressed(4);
         input_enter = scr_input_check(4);
+        input_pause_p = scr_input_check_pressed(5);
+
         
         if input_enter_p {
             if selected_index == items_per_page {
@@ -381,6 +378,25 @@ foreach (Counter counter in counters) {
         }
 
         if !obj_achievement_zoom.zoom_mode {
+            if input_pause_p {
+                ordered_by_date = !ordered_by_date
+                if ordered_by_date {
+                    array_sort(achievement_ids, function (current, next) {
+                        var date1 = ds_map_find_value(obj_inventory.ds_achievements, next);
+                        var date2 = ds_map_find_value(obj_inventory.ds_achievements, current);
+                        if is_undefined(date1) {
+                            date1 = date_create_datetime(1971, 1, 1, 0, 0, 0);
+                        }
+                        if is_undefined(date2) {
+                            date2 = date_create_datetime(1971, 1, 1, 0, 0, 0)
+                        }
+                        return date_compare_datetime(date1, date2); 
+                    });
+                } else {
+                    array_sort(achievement_ids, true);
+                }
+            }
+
             if selected_index < items_per_page {
                 if input_right_p {
                     page += 1;

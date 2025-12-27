@@ -1,0 +1,5 @@
+title: W17
+description: Find room no. 17 in the White Void
+
+// PATCH gml_Room_rm_u_0017_Create 1
+{+achievement}

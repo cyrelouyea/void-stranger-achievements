@@ -1,0 +1,8 @@
+title: I gazed the stars.
+description: Fight against Cif's true form
+
+// PATCH gml_Object_obj_cif_message_Step_0 11
+if cm_n == 24 {
+    {-achievement}
+    {+achievement}
+}

@@ -1,0 +1,5 @@
+title: Second thoughts
+description: Take the stairs in D28.5 to return to D28 
+
+// PATCH gml_Object_obj_exit_Alarm_0 479
+{+achievement}
