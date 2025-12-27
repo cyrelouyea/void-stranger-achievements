@@ -73,5 +73,5 @@ LINES = [
 
 
 for index, line in enumerate(LINES):
-    with open(f"achievements/cif_fight_line_{index}", "w") as f:
+    with open(f"achievements/cif_fight_line_{str(index).rjust(2, '0')}", "w") as f:
         f.write(FORMAT.format(number=index, line=line))

@@ -95,10 +95,12 @@ foreach (Counter counter in counters) {
     codeString += "ds_achievements = ds_map_create();\n";
     codeString += "ds_ach_titles = ds_map_create();\n";
     codeString += "ds_ach_descs = ds_map_create();\n";
+    codeString += "ds_ach_revealed = ds_map_create();\n";
     foreach (var achievement in achievements) {
         codeString += $"ds_map_set(obj_inventory.ds_achievements, \"{achievement.Id}\", undefined);\n";
         codeString += $"ds_map_set(obj_inventory.ds_ach_titles, \"{achievement.Id}\", \"{achievement.Header.Title}\");\n";
         codeString += $"ds_map_set(obj_inventory.ds_ach_descs, \"{achievement.Id}\", \"{achievement.Header.Description}\");\n";
+        codeString += $"ds_map_set(obj_inventory.ds_ach_revealed, \"{achievement.Id}\", false);\n";
     }
     codeString += string.Join('\n', records_init);
     importGroup.QueueReplace(code, codeString);
@@ -238,8 +240,9 @@ foreach (Counter counter in counters) {
         bg_color = c_white;
         bg_alpha = 0.5;
         txt_color = c_gray;
-        dx = 0
-        target_x = 0");
+        target_x = 0;
+        revealed = false;
+        reveal_counter = 0;");
         importGroup.QueueAppend(obj_achievement_item.EventHandlerFor(EventType.Step, Data), 
         @"if hovered {
             image_speed = 0.2;
@@ -254,24 +257,40 @@ foreach (Counter counter in counters) {
             if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
                 txt_color = c_ltgray;
         }
-
-        
-        
-        dx = lerp(dx, target_x, 0.3);");
+        ");
         importGroup.QueueAppend(obj_achievement_item.EventHandlerFor(EventType.Draw, Data), 
         @"draw_set_font(fnt_past2);
         draw_set_valign(fa_center);
         draw_set_halign(fa_left);
         var title = ds_map_find_value(obj_inventory.ds_ach_titles, achievement_id);
 
-        if !is_undefined(title)
-            draw_text_color(x + 24, y + 8, title, txt_color, txt_color, txt_color, txt_color, 1);
+        if hovered && reveal_counter > 0 {
+            draw_rectangle_color(
+                224 / 2 - (reveal_counter / 60) * 224 / 2, y, 
+                224 / 2 + (reveal_counter / 60) * 224 / 2 , y + 16, 
+                c_gray, c_gray, c_gray, c_gray, false);
+        }
+
+        if !is_undefined(title) {
+            var dx = 24;
+            if hovered && obj_achievements_list.hold_reveal_counter > 0 {
+                draw_set_halign(fa_center);
+                title = ""HOLD TO REVEAL"";
+                dx = 224 / 2 - 8
+            }
+            else if !revealed
+                title = ""???""
+
+            draw_text_color(x + dx, y + 8, title, txt_color, txt_color, txt_color, txt_color, 1);
+        }
         
         if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
             if hovered
                 draw_sprite(spr_ex_medal, image_index, x + 10, y + 9);
             else
-                draw_sprite(spr_ex_medal_c, image_index, x + 10, y + 9);");
+                draw_sprite(spr_ex_medal_c, image_index, x + 10, y + 9);
+                
+        ");
     }
 
     {
@@ -282,10 +301,16 @@ foreach (Counter counter in counters) {
         importGroup.QueueAppend(obj_achievement_zoom.EventHandlerFor(EventType.Create, Data), 
         @"zoom_mode = false;
         achievement_id = """";
-        image_speed = 0.2");
+        image_speed = 0.2;
+        revealed = false;");
         importGroup.QueueAppend(obj_achievement_zoom.EventHandlerFor(EventType.Step, Data), 
-        @"if scr_input_check_pressed(4)
-            zoom_mode = !zoom_mode;");
+        @"if scr_input_check_pressed(4) {
+            if revealed {
+                zoom_mode = !zoom_mode;
+            } else {
+
+            }
+        }");
         importGroup.QueueAppend(obj_achievement_zoom.EventHandlerFor(EventType.Draw, Data), 
         @"if zoom_mode {
             draw_rectangle_color(0, 24, 224 , 144 - 24, c_black, c_black, c_black, c_black, false);
@@ -336,6 +361,7 @@ foreach (Counter counter in counters) {
         achievement_ids = ds_map_keys_to_array(obj_inventory.ds_achievements);
         nb_achievements = array_length(achievement_ids);
         nb_pages = nb_achievements div items_per_page;
+        hold_reveal_counter = 0;
         achievement_items = [];
         for (var i = 0 ; i < items_per_page; i++) {
             array_push(achievement_items, instance_create_depth(12, 2 + i * 18 , depth - 1, obj_achievement_item));
@@ -358,7 +384,6 @@ foreach (Counter counter in counters) {
         input_enter_p = scr_input_check_pressed(4);
         input_enter = scr_input_check(4);
         input_pause_p = scr_input_check_pressed(5);
-
         
         if input_enter_p {
             if selected_index == items_per_page {
@@ -377,50 +402,63 @@ foreach (Counter counter in counters) {
             }
         }
 
-        if !obj_achievement_zoom.zoom_mode {
-            if input_pause_p {
-                ordered_by_date = !ordered_by_date
-                if ordered_by_date {
-                    array_sort(achievement_ids, function (current, next) {
-                        var date1 = ds_map_find_value(obj_inventory.ds_achievements, next);
-                        var date2 = ds_map_find_value(obj_inventory.ds_achievements, current);
-                        if is_undefined(date1) {
-                            date1 = date_create_datetime(1971, 1, 1, 0, 0, 0);
-                        }
-                        if is_undefined(date2) {
-                            date2 = date_create_datetime(1971, 1, 1, 0, 0, 0)
-                        }
-                        return date_compare_datetime(date1, date2); 
-                    });
-                } else {
-                    array_sort(achievement_ids, true);
-                }
-            }
+        if input_enter {
+            if selected_index < items_per_page 
+            && !achievement_items[selected_index].revealed {
+                hold_reveal_counter++;
 
-            if selected_index < items_per_page {
-                if input_right_p {
-                    page += 1;
-                    if audio_is_playing(snd_pageturn)
-                        audio_stop_sound(snd_pageturn);
-                    audio_play_sound(snd_pageturn, 1, false, 1, 0.5);
-                } else if input_left_p {
-                    page -= 1;
-                    
-                    if audio_is_playing(snd_pageturn)
-                        audio_stop_sound(snd_pageturn);
-                    audio_play_sound(snd_pageturn, 1, false, 1, 0.5);
+                if hold_reveal_counter > 60 {
+                    hold_reveal_counter = 0
+                    ds_map_replace(obj_inventory.ds_ach_revealed, achievement_items[selected_index].achievement_id, true);
+                    audio_play_sound(snd_reveal, 1, false);
                 }
             }
+        } else {
+            hold_reveal_counter = 0;
             
-            if input_down_p {
-                selected_index += 1;
-                audio_play_sound(snd_menu_1, 1, false);
-            } else if input_up_p {
-                selected_index -= 1;
-                audio_play_sound(snd_menu_1, 1, false);
-            }        
-        }
+            if !obj_achievement_zoom.zoom_mode {
+                if input_pause_p {
+                    ordered_by_date = !ordered_by_date
+                    if ordered_by_date {
+                        array_sort(achievement_ids, function (current, next) {
+                            var date1 = ds_map_find_value(obj_inventory.ds_achievements, next);
+                            var date2 = ds_map_find_value(obj_inventory.ds_achievements, current);
+                            if is_undefined(date1) {
+                                date1 = date_create_datetime(1971, 1, 1, 0, 0, 0);
+                            }
+                            if is_undefined(date2) {
+                                date2 = date_create_datetime(1971, 1, 1, 0, 0, 0)
+                            }
+                            return date_compare_datetime(date1, date2); 
+                        });
+                    } else {
+                        array_sort(achievement_ids, true);
+                    }
+                }
 
+                if selected_index < items_per_page {
+                    if input_right_p {
+                        page += 1;
+                        if audio_is_playing(snd_pageturn)
+                            audio_stop_sound(snd_pageturn);
+                        audio_play_sound(snd_pageturn, 1, false, 1, 0.5);
+                    } else if input_left_p {
+                        page -= 1;
+                        if audio_is_playing(snd_pageturn)
+                            audio_stop_sound(snd_pageturn);
+                        audio_play_sound(snd_pageturn, 1, false, 1, 0.5);
+                    }
+                }
+                
+                if input_down_p {
+                    selected_index += 1;
+                    audio_play_sound(snd_menu_1, 1, false);
+                } else if input_up_p {
+                    selected_index -= 1;
+                    audio_play_sound(snd_menu_1, 1, false);
+                }        
+            }
+        }
 
         if page < 0 {
             page += nb_pages;
@@ -440,12 +478,21 @@ foreach (Counter counter in counters) {
         }
 
         for (var i = 0 ; i < items_per_page; i++) {
-            achievement_items[i].achievement_id = achievement_ids[i + page * items_per_page];
+            var achievement_id = achievement_ids[i + page * items_per_page];
+            achievement_items[i].achievement_id = achievement_id;
             achievement_items[i].hovered = selected_index == i;
+            achievement_items[i].revealed = (
+                !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
+                || ds_map_find_value(obj_inventory.ds_ach_revealed, achievement_id)
+            );
+            achievement_items[i].reveal_counter = hold_reveal_counter;
             if (selected_index == i) {
-                obj_achievement_zoom.achievement_id = achievement_ids[i + page * items_per_page];
+                obj_achievement_zoom.achievement_id = achievement_id;
+                obj_achievement_zoom.revealed = achievement_items[i].revealed;
             }
-        }");
+        }
+        
+        ");
         importGroup.QueueAppend(obj_achievements_list.EventHandlerFor(EventType.Draw, Data), 
         @"draw_rectangle_color(0, 0, 224, 144, c_black, c_black, c_black, c_black, false);
 

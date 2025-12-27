@@ -1,0 +1,5 @@
+title: Secret Lair
+description: Go to Secret Lair
+
+// PATCH gml_Room_rm_mon_001_Create 1
+{+achievement}

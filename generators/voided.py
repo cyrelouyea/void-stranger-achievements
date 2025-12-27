@@ -51,12 +51,12 @@ number = 1
 for  (lyric, linenumber) in LYRICS:
     if lyric in lyrics_done:
         file_number = lyrics_done[lyric]
-        with open(f"achievements/voided_lyrics_{file_number}", "a") as f:
+        with open(f"achievements/voided_lyrics_{str(file_number).rjust(2, '0')}", "a") as f:
             f.write(FORMAT_ADD.format(
                 linenumber=linenumber
             ))
     else:
-        with open(f"achievements/voided_lyrics_{number}", "w") as f:
+        with open(f"achievements/voided_lyrics_{str(number).rjust(2, '0')}", "w") as f:
             f.write(FORMAT.format(
                 lyric=lyric,
             ))

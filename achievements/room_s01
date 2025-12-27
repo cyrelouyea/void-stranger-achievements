@@ -1,0 +1,5 @@
+title: Stinky Hole
+description: Go to Stinky Hole
+
+// PATCH gml_Room_rm_bee_001_Create 1
+{+achievement}

@@ -1,0 +1,5 @@
+title: M09
+description: Go to M09
+
+// PATCH gml_Room_rm_mon_010_Create 1
+{+achievement}
