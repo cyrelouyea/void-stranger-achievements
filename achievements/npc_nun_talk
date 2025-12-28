@@ -2,5 +2,4 @@ title: Please don't kill me!
 description: Talk to the nun
 
 // PATCH gml_Object_obj_npc_nun_Alarm_0 1
-if !(global.loop == 1 || global.stranger != 0)
 {+achievement}

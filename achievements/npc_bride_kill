@@ -1,0 +1,14 @@
+title: Bride killer
+description: Kill or let the bride die
+
+// PATCH gml_Object_obj_npc_bride_Step_0 31
+{+achievement}
+
+// PATCH gml_Object_obj_npc_bride_Step_0 41
+{+achievement}
+
+// PATCH gml_Object_obj_npc_bride_Step_0 51
+{+achievement}
+
+// PATCH gml_Object_obj_npc_bride_Step_0 206
+{+achievement}

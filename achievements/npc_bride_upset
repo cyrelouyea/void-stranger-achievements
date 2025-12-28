@@ -1,0 +1,6 @@
+title: Leave me alone!
+description: Upset the bride
+
+// PATCH gml_Object_obj_npc_bride_Step_0 96
+if bully > 2 && emotional_state != 4
+{+achievement}

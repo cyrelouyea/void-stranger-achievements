@@ -1,0 +1,5 @@
+title: Is this my punishment?
+description: Complete the interaction with the bride
+
+// PATCH gml_Object_obj_npc_bride_Step_0 583
+{+achievement}

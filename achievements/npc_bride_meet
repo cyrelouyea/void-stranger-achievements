@@ -1,0 +1,6 @@
+title: The Bride
+description: Find the bride
+
+// PATCH gml_Object_obj_npc_bride_Create_0 1
+if !(global.loop == 1 || global.stranger != 0)
+{+achievement}

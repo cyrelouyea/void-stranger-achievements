@@ -1,0 +1,5 @@
+title: Please don't kill me!
+description: Talk to the bride
+
+// PATCH gml_Object_obj_npc_bride_Alarm_0 1
+{+achievement}
