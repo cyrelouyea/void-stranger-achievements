@@ -1,0 +1,5 @@
+title: Better keep moving
+description: Make a starving man collapse
+
+// PATCH gml_Object_obj_npc_famished_Step_0 100
+{+achievement}

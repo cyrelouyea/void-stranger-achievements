@@ -1,0 +1,6 @@
+title: Smell... Food... Give.
+description: Find a starving man
+
+// PATCH gml_Object_obj_npc_famished_Create_0 1
+if !(global.loop == 1 || global.stranger >= 2)
+{+achievement}

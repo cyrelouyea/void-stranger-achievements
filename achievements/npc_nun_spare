@@ -1,0 +1,5 @@
+title: Do you believe in ***?
+description: Complete the interaction with the nun
+
+// PATCH gml_Object_obj_npc_nun_Step_0 411
+{+achievement}

@@ -1,0 +1,6 @@
+title: The Nun
+description: Find the nun
+
+// PATCH gml_Object_obj_npc_nun_Create_0 1
+if !(global.loop == 1 || global.stranger != 0)
+{+achievement}

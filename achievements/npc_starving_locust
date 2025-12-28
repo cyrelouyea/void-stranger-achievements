@@ -1,0 +1,6 @@
+title: Taste... Nothing...
+description: Feed a starving man
+
+// PATCH gml_Object_obj_npc_famished_Step_0 450
+if collapsed == false
+{+achievement}

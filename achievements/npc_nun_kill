@@ -1,0 +1,14 @@
+title: Nun killer
+description: Kill or let the nun die
+
+// PATCH gml_Object_obj_npc_nun_Step_0 15
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nun_Step_0 25
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nun_Step_0 35
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nun_Step_0 146
+{+achievement}

@@ -1,0 +1,14 @@
+title: Fuel for DIS
+description: Kill a starving man
+
+// PATCH gml_Object_obj_npc_famished_Step_0 119
+{+achievement}
+
+// PATCH gml_Object_obj_npc_famished_Step_0 123
+{+achievement}
+
+// PATCH gml_Object_obj_npc_famished_Step_0 132
+{+achievement}
+
+// PATCH gml_Object_obj_npc_famished_Step_0 156
+{+achievement}
