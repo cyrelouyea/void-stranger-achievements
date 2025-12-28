@@ -1,0 +1,32 @@
+title: Treasure hunter killer
+description: Kill the treasure hunter
+
+// PATCH gml_Object_obj_enemy_nm_Step_0 126
+{+achievement} 
+
+// PATCH gml_Object_obj_enemy_nm_Step_0 132
+{+achievement} 
+
+// PATCH gml_Object_obj_npc_nomad_Step_0 18
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nomad_Step_0 28
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nomad_Step_0 38
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nomad_Step_0 149
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nomad2_Step_0 27
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nomad2_Step_0 31
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nomad2_Step_0 40
+{+achievement}
+
+// PATCH gml_Object_obj_npc_nomad2_Step_0 145
+{+achievement}

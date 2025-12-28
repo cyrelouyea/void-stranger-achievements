@@ -1,0 +1,5 @@
+title: Stick bugged lol
+description: Find the timid creature in BR NULL
+
+// PATCH gml_Object_obj_sf_Create_0 1
+{+achievement}

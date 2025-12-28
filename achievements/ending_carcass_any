@@ -1,0 +1,5 @@
+title: Leaving this waking world
+description: Accept the call of the bell
+
+// PATCH gml_Object_obj_orb_Step_0 305
+{+achievement}

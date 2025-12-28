@@ -1,0 +1,6 @@
+title: The Worm
+description: Find the worm-like creature in B105
+
+// PATCH gml_Object_obj_npc_unknown_Create_0 1
+if global.loop != 0
+{+achievement}

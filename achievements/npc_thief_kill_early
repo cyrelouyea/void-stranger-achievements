@@ -1,0 +1,8 @@
+title: That was an accident
+description: Kill the thief and get back your rod before B110
+
+// PATCH gml_Object_obj_enemy_nm_Step_0 126
+{+achievement} 
+
+// PATCH gml_Object_obj_enemy_nm_Step_0 132
+{+achievement} 

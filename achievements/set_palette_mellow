@@ -1,0 +1,5 @@
+title: MELLOW
+description: Set the palette color to MELLOW
+
+// PATCH gml_GlobalScript_change_palette 38
+{+achievement}

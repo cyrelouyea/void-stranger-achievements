@@ -1,0 +1,5 @@
+title: Chase after her
+description: Have your Void Rod stolen by the treasure hunter 
+
+// PATCH gml_Object_obj_npc_nomad_Step_0 363
+{+achievement}

@@ -1,7 +1,0 @@
-title: Color enjoyer
-description: Change the palette color in the settings
-
-// PATCH gml_GlobalScript_change_palette 41
-// TO FIX
-if global.s_g_pal != arg0
-    {+achievement}

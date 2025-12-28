@@ -1,0 +1,5 @@
+title: PAPÉ DIS
+description: Talk to the worm-like creature
+
+// PATCH gml_Object_obj_npc_unknown_Alarm_0 1
+{+achievement}

@@ -1,0 +1,5 @@
+title: A glimpse into the distant past
+description: Get the carcass ending as Gray or Lillie
+
+// PATCH gml_Object_obj_un_credits_Create_0 1
+{+achievement}

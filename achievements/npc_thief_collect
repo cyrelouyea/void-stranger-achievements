@@ -1,0 +1,5 @@
+title: Try to not lose it again!
+description: Get the Void Rod back from the thief
+
+// PATCH gml_Object_obj_player_Step_0 2320
+{+achievement}

@@ -1,0 +1,5 @@
+title: We're always looking for answers
+description: Get the carcass ending in Elysium
+
+// PATCH gml_Object_obj_cutscene_un_ex_Step_0 61
+{+achievement}

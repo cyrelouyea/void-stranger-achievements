@@ -1,0 +1,5 @@
+title: Carcass
+description: Find the carcass in BR NULL
+
+// PATCH gml_Object_obj_orb_Step_0 6
+{+achievement}

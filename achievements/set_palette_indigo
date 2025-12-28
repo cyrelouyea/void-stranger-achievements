@@ -1,0 +1,5 @@
+title: I***
+description: Set the palette color to I***
+
+// PATCH gml_GlobalScript_change_palette 30
+{+achievement}

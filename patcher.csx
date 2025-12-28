@@ -104,6 +104,7 @@ foreach (Counter counter in counters) {
     UndertaleCode code = Data.GameObjects.ByName("obj_inventory").EventHandlerFor(EventType.Create, (uint) 0, Data);
     var decompileContext = new DecompileContext(globalDecompileContext, code, decompilerSettings);
     var codeString = decompileContext.DecompileToString();
+    codeString += "achievements_loaded = false;\n";
     codeString += "ds_achievements = ds_map_create();\n";
     codeString += "ds_ach_titles = ds_map_create();\n";
     codeString += "ds_ach_descs = ds_map_create();\n";
@@ -140,6 +141,7 @@ foreach (Counter counter in counters) {
                 }
             }
         }
+        obj_inventory.achievements_loaded = true;
     }";
     codeStr = codeStr.Replace("{{records_load_str}}", string.Join('\n', records_load_list));
     importGroup.QueueReplace(scr_load_achievements.Code, codeStr);
@@ -180,7 +182,11 @@ foreach (Counter counter in counters) {
     };
     Data.GlobalInitScripts.Add(scr_get_achievement);
     importGroup.QueueReplace(scr_get_achievement.Code, @"function scr_get_achievement(achievement_id, delay = 0) {
-        if (delay == 0) {
+        if !instance_exists(obj_inventory) || !obj_inventory.achievements_loaded {
+            return;
+        }
+
+        if delay == 0 {
             if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
                 return;
             

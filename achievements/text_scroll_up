@@ -1,0 +1,10 @@
+title: Wait, what did you say?
+description: Scroll the text up
+
+// PATCH gml_Object_obj_textbox_Step_0 80
+if (initial_text_y != 0)
+{+achievement}
+
+// PATCH gml_Object_obj_textbox_persistent_Step_0 76
+if (initial_text_y != 0)
+{+achievement}
