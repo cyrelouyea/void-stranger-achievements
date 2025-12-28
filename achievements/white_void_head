@@ -1,0 +1,5 @@
+title: Your journey isn't over yet
+description: Talk to the giant head at the end of the White Void
+
+// PATCH gml_Object_obj_npc_dr_ab___on_Alarm_0 1
+{+achievement}

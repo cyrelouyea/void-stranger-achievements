@@ -1,0 +1,6 @@
+title: WARNING! PLEASE READ:
+description: Get the prompt \"Begin anew? (This will reset your progress)\"
+
+// PATCH gml_Object_obj_npc_dr_ab___on_Alarm_3 1
+{-achievement}
+{+achievement}

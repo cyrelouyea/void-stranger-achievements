@@ -52,11 +52,23 @@ foreach (Achievement achievement in achievements) {
         if (!patchesByFile.ContainsKey(patch.FileName)) {
             patchesByFile.Add(patch.FileName, new List<PatchData>());
         }
+
+        var newString = Regex
+            .Replace(patch.String, @"\{\+achievement(:(?<time>\d+))?\}",
+                m => {
+                    var time = m.Groups["time"].Value;
+                    if (time != "") {
+                        return $"{{ scr_get_achievement(\"{achievement.Id}\", {time}); }}";
+                    } else {
+                        return $"{{ scr_get_achievement(\"{achievement.Id}\"); }}";
+                    }
+                }
+            );
+
         patchesByFile[patch.FileName].Add(new PatchData() {
             LineNumber = patch.LineNumber,
             FileName = patch.FileName,
-            String = patch.String
-                .Replace("{+achievement}", $"{{ scr_get_achievement(\"{achievement.Id}\"); }}")
+            String = newString
                 .Replace("{-achievement}", $"{{ scr_remove_achievement(\"{achievement.Id}\"); }}"), 
         });
     }
@@ -123,7 +135,9 @@ foreach (Counter counter in counters) {
 
             var keys = ds_map_keys_to_array(_tmp_ds_achievement);
             for (var i = 0; i < array_length(keys) ; i++) {
-                ds_map_replace(obj_inventory.ds_achievements, keys[i],ds_map_find_value(_tmp_ds_achievement, keys[i]));
+                if ds_map_exists(obj_inventory.ds_achievements, keys[i]) {
+                    ds_map_replace(obj_inventory.ds_achievements, keys[i], ds_map_find_value(_tmp_ds_achievement, keys[i]));
+                }
             }
         }
     }";
@@ -165,18 +179,23 @@ foreach (Counter counter in counters) {
         Code = UndertaleCode.CreateEmptyEntry(Data, "gml_GlobalScript_scr_get_achievement"),
     };
     Data.GlobalInitScripts.Add(scr_get_achievement);
-    importGroup.QueueReplace(scr_get_achievement.Code, @"function scr_get_achievement(achievement_id) {
-        if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
-            return;
-        
-        ds_map_replace(obj_inventory.ds_achievements, achievement_id, date_current_datetime());
+    importGroup.QueueReplace(scr_get_achievement.Code, @"function scr_get_achievement(achievement_id, delay = 0) {
+        if (delay == 0) {
+            if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
+                return;
+            
+            ds_map_replace(obj_inventory.ds_achievements, achievement_id, date_current_datetime());
 
-        // TO DO: notification push
-        with (obj_notification)
-            y -= 16
+            with (obj_notification)
+                y -= 16;
 
-        var notification = instance_create_depth(0, 0, -300, obj_notification);
-        notification.title = ds_map_find_value(obj_inventory.ds_ach_titles, achievement_id)
+            var notification = instance_create_depth(0, 0, -300, obj_notification);
+            notification.title = ds_map_find_value(obj_inventory.ds_ach_titles, achievement_id);
+        } else {
+            var notification = instance_create_depth(0, 0, -300, obj_notification_delay);
+            notification.achievement_id = achievement_id;
+            notification.alarm[0] = delay;
+        }
     }");
 }
 
@@ -191,6 +210,28 @@ foreach (Counter counter in counters) {
         
         ds_map_replace(obj_inventory.ds_achievements, achievement_id, undefined);
     }");
+}
+
+{ // Object to delay notification
+    var obj_notification_delay = new UndertaleGameObject() {
+        Name = Data.Strings.MakeString("obj_notification_delay"),
+        Persistent = true
+    };
+    Data.GameObjects.Add(obj_notification_delay);
+    importGroup.QueueAppend(obj_notification_delay.EventHandlerFor(EventType.Create, Data), 
+    @"achievement_id = """";");
+    importGroup.QueueAppend(obj_notification_delay.EventHandlerFor(EventType.Alarm, (uint) 0, Data), 
+    @"if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
+        return;
+    
+    ds_map_replace(obj_inventory.ds_achievements, achievement_id, date_current_datetime());
+
+    with (obj_notification)
+        y -= 16;
+
+    var notification = instance_create_depth(0, 0, -300, obj_notification);
+    notification.title = ds_map_find_value(obj_inventory.ds_ach_titles, achievement_id);
+    instance_destroy();");
 }
 
 { // Achievement notification object
@@ -551,6 +592,15 @@ foreach (Counter counter in counters) {
             break;");
         importGroup.QueueReplace(obj_menu_Step_0, string.Join('\n', codeLines));
     }
+}
+
+{ // White Void also resets achievements 
+    var key = "gml_Object_obj_npc_dr_ab___on_Other_12";
+    UndertaleCode obj_npc_dr_ab___on_Other_12 = Data.Code.ByName(key);
+    var decompileContext = new DecompileContext(globalDecompileContext, obj_npc_dr_ab___on_Other_12, decompilerSettings);
+    var codeLines = decompileContext.DecompileToString().Split('\n');
+    codeLines[13] = "obj_inventory.ds_achievements = ds_map_create();";
+    importGroup.QueueReplace(key, string.Join('\n', codeLines));
 }
 
 { // Apply achievements and counters patches
