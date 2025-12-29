@@ -1,0 +1,6 @@
+title: Euthanasia (+)
+description: Kill Tan without using the wings while keeping all the other enemies alive
+
+// PATCH gml_Object_obj_enemy_tan_Step_0 419
+if !global.wings_used && instance_number(obj_enemy_ch) == 5
+{+achievement}

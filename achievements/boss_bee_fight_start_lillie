@@ -1,0 +1,6 @@
+title: MISERABLE LITTLE INSECT!
+description: Find Bee in DIS as Lillie
+
+// PATCH gml_Object_obj_cutscene_true_beebattle_Step_0 95
+if global.stranger == 1
+{+achievement}

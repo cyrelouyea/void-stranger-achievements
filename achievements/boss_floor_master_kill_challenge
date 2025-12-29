@@ -1,0 +1,6 @@
+title: Dancing Queen (+)
+description: Kill the talking floor monster without the wings while using the Void Rod only once
+
+// PATCH gml_Object_obj_enemy_floormaster_Step_0 291
+if !global.wings_used && ds_grid_get(obj_inventory.ds_player_info, 3, 1) <= 1
+{+achievement}

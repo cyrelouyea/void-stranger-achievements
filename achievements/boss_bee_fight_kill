@@ -1,0 +1,5 @@
+title: Insecticidal
+description: Kill Bee in DIS
+
+// PATCH gml_Object_obj_enemy_bee_Step_0 377
+{+achievement}

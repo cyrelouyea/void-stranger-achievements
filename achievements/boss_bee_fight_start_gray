@@ -1,0 +1,6 @@
+title: FEEBLE MORTAL!
+description: Find Bee in DIS as Gray
+
+// PATCH gml_Object_obj_cutscene_true_beebattle_Step_0 95
+if global.stranger == 0
+{+achievement}
