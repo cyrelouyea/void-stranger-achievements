@@ -1,5 +1,5 @@
 FORMAT = """title: {title}
-description: Activate Lev's statues a total of {number} times
+description: Activate a screw-you statue a total of {number} times
 
 // PATCH gml_Object_obj_player_Alarm_8 16
 if obj_inventory.pissed_lev_counter >= {number}

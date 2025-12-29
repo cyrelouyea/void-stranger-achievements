@@ -1,0 +1,6 @@
+title: Never give up
+description: Interact with the sister in B224
+
+// PATCH gml_Object_obj_npc_ykko_Step_0 555
+if talk_count >= 2
+{+achievement}

@@ -1,0 +1,6 @@
+title: The Sister
+description: Find the sister
+
+// PATCH gml_Object_obj_npc_ykko_Other_4 118
+if x >= 0
+{+achievement}

@@ -1,0 +1,5 @@
+title: Begone, demon!
+description: Talk to the old man
+
+// PATCH gml_Object_obj_npc_oldman_Alarm_0 1
+{+achievement}

@@ -1,0 +1,6 @@
+title: Give up already.
+description: Talk to the mimic in B167 as Lillie
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 616
+if global.stranger == 1
+{+achievement}

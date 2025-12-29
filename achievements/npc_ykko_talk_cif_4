@@ -1,0 +1,6 @@
+title: Are theirs as big as yours?
+description: Interact with the sister in B168
+
+// PATCH gml_Object_obj_npc_ykko_Step_0 523
+if talk_count >= 0
+{+achievement}

@@ -1,0 +1,6 @@
+title: You'll find her
+description: Talk to the sister as Gray
+
+// PATCH gml_Object_obj_npc_ykko_Alarm_0 1
+if global.stranger == 0
+{+achievement}

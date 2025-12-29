@@ -1,0 +1,6 @@
+title: How do you sleep with those?
+description: Interact with the sister in B112
+
+// PATCH gml_Object_obj_npc_ykko_Step_0 516
+if talk_count >= 0
+{+achievement}

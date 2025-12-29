@@ -1,0 +1,6 @@
+title: Do you need something?
+description: Talk to a mimic as Gray
+
+// PATCH gml_Object_obj_enemy_cm_Alarm_0 1
+if !special_mimic && global.stranger == 0 && global.ex_check == 0
+{+achievement}

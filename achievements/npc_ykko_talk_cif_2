@@ -1,0 +1,6 @@
+title: Big horn lady!
+description: Interact with the sister in B084
+
+// PATCH gml_Object_obj_npc_ykko_Step_0 509
+if talk_count >= 0
+{+achievement}

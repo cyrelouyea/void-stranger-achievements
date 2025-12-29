@@ -1,0 +1,6 @@
+title: I believe in you.
+description: Talk to the mimic in B167 as Gray
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 616
+if global.stranger == 0
+{+achievement}

@@ -1,0 +1,5 @@
+title: Sister killer
+description: Kill the sister
+
+// PATCH gml_Object_obj_npc_ykko_Step_0 152
+{+achievement}

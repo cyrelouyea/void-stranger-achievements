@@ -1,5 +1,5 @@
 title: One wrong move...
-description: Activate a Lev statue
+description: Activate a screw you statue
 
 // PATCH gml_Object_obj_player_Alarm_8 16
 {+achievement}

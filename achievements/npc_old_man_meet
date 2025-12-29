@@ -1,0 +1,6 @@
+title: The Old Man
+description: Find the old man
+
+// PATCH gml_Object_obj_npc_oldman_Create_0 1
+if (global.stranger == 1)
+{+achievement}

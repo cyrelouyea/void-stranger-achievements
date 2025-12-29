@@ -1,0 +1,11 @@
+title: Old man killer
+description: Kill the old man
+
+// PATCH gml_Object_obj_npc_oldman_Step_0 25
+{+achievement}
+
+// PATCH gml_Object_obj_npc_oldman_Step_0 35
+{+achievement}
+
+// PATCH gml_Object_obj_npc_oldman_Step_0 157
+{+achievement}

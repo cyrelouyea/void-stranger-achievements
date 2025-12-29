@@ -1,0 +1,6 @@
+title: Cute drone
+description: Talk to a mimic as Cif
+
+// PATCH gml_Object_obj_enemy_cm_Alarm_0 1
+if !special_mimic && global.stranger == 2
+{+achievement}
