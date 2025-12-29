@@ -1,0 +1,11 @@
+title: Wife k-killer
+description: Kill N-Ninnie
+
+// PATCH gml_Object_obj_npc_friend_Step_0 223
+{+achievement}
+
+// PATCH gml_Object_obj_npc_friend_Step_0 236
+{+achievement}
+
+// PATCH gml_Object_obj_npc_friend_Step_0 361
+{+achievement}

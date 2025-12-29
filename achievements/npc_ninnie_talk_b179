@@ -1,0 +1,5 @@
+title: It doesn't seem too b-bad
+description: T-Talk to Ninnie in B179
+
+// PATCH gml_Object_obj_npc_friend_Step_0 637
+{+achievement}

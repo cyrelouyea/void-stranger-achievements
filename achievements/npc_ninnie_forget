@@ -1,0 +1,65 @@
+title: Did I forget s-someone?
+description: Leave Ninnie b-behind
+
+// PATCH gml_Object_obj_exit_Alarm_0 70
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 0)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 83
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 96
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 109
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 122
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 135
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+    
+// PATCH gml_Object_obj_exit_Alarm_0 148
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 171
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 184
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 200
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 213
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 226
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 288
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 460
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) == 1)
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 2042
+if (ds_grid_get(obj_inventory.ds_player_info, 16, 3) != 0)
+    {+achievement}
+
+// PATCH gml_Object_obj_exit_Alarm_0 47
+{+achievement}

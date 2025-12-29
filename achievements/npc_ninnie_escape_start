@@ -1,0 +1,5 @@
+title: I won't be a h-hindrance to you.
+description: Start h-helping Ninnie escape.
+
+// PATCH gml_Object_obj_npc_friend_Step_0 1145
+{+achievement}

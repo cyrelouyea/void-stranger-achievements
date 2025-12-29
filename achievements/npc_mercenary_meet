@@ -1,0 +1,10 @@
+title: The Mercenary
+description: Find the mercenary
+
+// PATCH gml_Object_obj_enemy_nm_b_Create_0 1
+if global.loop == 1 && global.stranger == 1 && ds_grid_get(obj_inventory.ds_player_info, 14, 0) == 0 && ds_grid_get(obj_inventory.ds_equipment, 0, 2) != 3
+{+achievement} 
+
+// PATCH gml_Object_obj_npc_randobandit_Create_0 1
+if global.loop == 1 && global.stranger == 1 && ds_grid_get(obj_inventory.ds_player_info, 14, 0) == 0 && ds_grid_get(obj_inventory.ds_equipment, 0, 2) != 3
+{+achievement}

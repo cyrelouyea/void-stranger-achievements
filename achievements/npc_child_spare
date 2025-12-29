@@ -1,0 +1,5 @@
+title: We can make this, together?
+description: Leave the room without killing the child
+
+// PATCH gml_Object_obj_npc_spawner_Other_5 3
+{+achievement}

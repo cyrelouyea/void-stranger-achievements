@@ -1,0 +1,6 @@
+title: Just stop already!
+description: Upset the thief
+
+// PATCH gml_Object_obj_npc_nomad2_Step_0 57
+if bully > 2
+{+achievement}

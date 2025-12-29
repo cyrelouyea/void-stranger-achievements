@@ -1,0 +1,5 @@
+title: You know m-magic?
+description: Use the Void Rod in f-front of Ninnie
+
+// PATCH gml_Object_obj_npc_friend_Step_0 170
+{+achievement}

@@ -1,0 +1,5 @@
+title: You look kinda familiar...
+description: Talk to the mercenary
+
+// PATCH gml_Object_obj_npc_randobandit_Alarm_0 1
+{+achievement}

@@ -1,0 +1,5 @@
+title: S-sounds painful...
+description: T-Talk to Ninnie in B176
+
+// PATCH gml_Object_obj_npc_friend_Step_0 604
+{+achievement}

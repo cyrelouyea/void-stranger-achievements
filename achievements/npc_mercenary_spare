@@ -1,0 +1,5 @@
+title: Consider yourself lucky
+description: Clear the path for the mercenary
+
+// PATCH gml_Object_obj_npc_randobandit_Other_11 15
+{+achievement}

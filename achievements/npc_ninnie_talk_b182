@@ -1,0 +1,5 @@
+title: B-Be careful!
+description: T-Talk to Ninnie in B182
+
+// PATCH gml_Object_obj_npc_friend_Step_0 677
+{+achievement}

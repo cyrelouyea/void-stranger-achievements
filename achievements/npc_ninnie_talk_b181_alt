@@ -1,0 +1,5 @@
+title: I t-thought I'd lost you...
+description: T-Talk to Ninnie in B181 after almost leaving her behind
+
+// PATCH gml_Object_obj_npc_friend_Step_0 656
+{+achievement}

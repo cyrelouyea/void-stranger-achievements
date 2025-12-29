@@ -1,0 +1,5 @@
+title: Y-You can do it!
+description: T-Talk to Ninnie in B178
+
+// PATCH gml_Object_obj_npc_friend_Step_0 627
+{+achievement}

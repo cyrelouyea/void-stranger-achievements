@@ -1,0 +1,5 @@
+title: P-please be gentle!
+description: T-Talk to Ninnie in B183 before killing the stalker
+
+// PATCH gml_Object_obj_npc_friend_Step_0 686
+{+achievement}

@@ -1,0 +1,6 @@
+title: How did you follow me?
+description: Use Ninnie to push a button
+
+// PATCH gml_Object_obj_exit_Alarm_0 43
+if instance_place(x, y, obj_floorswitch)
+{+achievement}

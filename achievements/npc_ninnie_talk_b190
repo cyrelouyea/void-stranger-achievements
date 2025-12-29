@@ -1,0 +1,5 @@
+title: A-Ack!
+description: T-Talk to Ninnie in B190
+
+// PATCH gml_Object_obj_npc_friend_Step_0 779
+{+achievement}

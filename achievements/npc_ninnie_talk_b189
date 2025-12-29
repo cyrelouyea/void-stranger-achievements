@@ -1,0 +1,5 @@
+title: If only the e-exit was on this side
+description: T-Talk to Ninnie in B189
+
+// PATCH gml_Object_obj_npc_friend_Step_0 771
+{+achievement}

@@ -1,0 +1,5 @@
+title: You c-can handle both of those!
+description: T-Talk to Ninnie in B188 before killing the stalker and the screw-you statue
+
+// PATCH gml_Object_obj_npc_friend_Step_0 755
+{+achievement}

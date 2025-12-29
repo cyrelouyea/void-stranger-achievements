@@ -1,0 +1,5 @@
+title: Giant b-beaver!
+description: T-Talk to Ninnie in B175
+
+// PATCH gml_Object_obj_npc_friend_Step_0 595
+{+achievement}

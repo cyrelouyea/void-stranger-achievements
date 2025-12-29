@@ -1,0 +1,5 @@
+title: S-See you.
+description: Have someone important sacrificed herself for you
+
+// PATCH gml_Object_obj_npc_friend_Create_0 24
+{+achievement}

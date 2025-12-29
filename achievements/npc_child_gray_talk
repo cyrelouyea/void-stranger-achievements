@@ -1,0 +1,6 @@
+title: Are you one of those creeps?
+description: Talk to the lost child as Gray
+
+// PATCH gml_Object_obj_npc_child_Alarm_0 1
+if global.stranger == 0
+{+achievement}

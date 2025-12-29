@@ -1,0 +1,5 @@
+title: D-don't give up!
+description: T-Talk to Ninnie in B191
+
+// PATCH gml_Object_obj_npc_friend_Step_0 789
+{+achievement}

@@ -1,0 +1,5 @@
+title: I'm good, t-thanks
+description: T-Talk to Ninnie in B186
+
+// PATCH gml_Object_obj_npc_friend_Step_0 736
+{+achievement}

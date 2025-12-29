@@ -1,0 +1,5 @@
+title: P-Probably be much easier alone...
+description: T-Talk to Ninnie in B174
+
+// PATCH gml_Object_obj_npc_friend_Step_0 585
+{+achievement}

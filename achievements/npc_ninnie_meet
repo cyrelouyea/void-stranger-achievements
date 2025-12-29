@@ -1,0 +1,6 @@
+title: A-Another human?
+description: F-Find Ninnie
+
+// PATCH gml_Object_obj_npc_friend_Create_0 1
+if global.stranger == 1 && !global.voider && room == rm_0177
+{+achievement}
