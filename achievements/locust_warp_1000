@@ -1,0 +1,6 @@
+title: Puzzle hater
+description: Skip a total of 1000 rooms with locust warps
+
+// PATCH gml_GlobalScript_scr_roomselect 51
+if obj_inventory.locust_warp_counter >= 1000
+{+achievement}

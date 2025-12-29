@@ -1,6 +1,6 @@
-title: Gambling addiction
-description: Skip 100 rooms or more with a single locust warp
+title: Puzzle hater (100/1000)
+description: Skip a total of 100 rooms with locust warps
 
-// PATCH gml_GlobalScript_scr_roomselect 50
-if arg1 != 0 && room_number - ds_grid_get(obj_inventory.ds_player_info, 1, 2) >= 100
-    {+achievement}
+// PATCH gml_GlobalScript_scr_roomselect 51
+if obj_inventory.locust_warp_counter >= 100
+{+achievement}
