@@ -1,0 +1,11 @@
+title: Puzzle m-master (B177)
+description: Solve B177 with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod. Y-You can't abandon Ninnie!
+
+// PATCH gml_Object_obj_exit_Alarm_0 40
+if global.loop == 1 && room == rm_0181 && !global.endless_used && !global.sword_used && !global.wings_used {
+    with (obj_npc_friend) {
+        if friend_state == 1 && f_path_exists {
+            {+achievement}
+        }
+    }
+}

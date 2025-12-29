@@ -1,0 +1,5 @@
+title: ~Meow~ (9)
+description: Find the ninth hidden cat in Cif's Chat-llenge
+
+// PATCH gml_Object_obj_cc_cat_Create_0 144
+{+achievement}

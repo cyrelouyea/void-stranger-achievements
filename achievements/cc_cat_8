@@ -1,0 +1,5 @@
+title: ~Meow~ (8)
+description: Find the eighth hidden cat in Cif's Chat-llenge
+
+// PATCH gml_Object_obj_cc_cat_Create_0 129
+{+achievement}

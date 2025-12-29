@@ -1,5 +1,5 @@
 title: All cats
-description: Find all hidden cats in Cif's Challenge
+description: Find all hidden cats in a single Cif's Chat-llenge run
 
 // PATCH gml_Object_obj_cc_cat_Create_0 154
 if global.cc_cat == "000000000"

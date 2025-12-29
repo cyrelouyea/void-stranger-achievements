@@ -1,0 +1,6 @@
+title: Puzzle master (B065)
+description: Solve B065 with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod.
+
+// PATCH gml_Object_obj_exit_Alarm_0 40
+if global.loop == 1 && room == rm_0066 && !global.endless_used && !global.sword_used && !global.wings_used
+{+achievement}

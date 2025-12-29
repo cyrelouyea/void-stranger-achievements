@@ -1,0 +1,5 @@
+title: ~Meow~ (5)
+description: Find the fifth hidden cat in Cif's Chat-llenge
+
+// PATCH gml_Object_obj_cc_cat_Create_0 84
+{+achievement}
