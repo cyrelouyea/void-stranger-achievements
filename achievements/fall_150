@@ -1,6 +1,6 @@
-title: AaaaaaAAAA- (150/250)
+title: AaaaaaAAAA (150/250)
 description: Fall a total of 150 times
 
-// PATCH gml_Object_obj_player_Step_0 1826
-if ds_list_find_value(obj_inventory.ds_rcrds, 6) >= 150
+// PATCH gml_Object_obj_player_Step_0 1702
+if obj_inventory.fall_counter >= 150
     {+achievement}

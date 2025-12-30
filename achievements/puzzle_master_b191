@@ -1,10 +1,16 @@
 title: Puzzle m-master (B191)
-description: Solve B191 with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod. Y-You can't abandon Ninnie!
+description: Solve B191 with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod. All chests must be opened. Y-You can't abandon Ninnie!
 
 // PATCH gml_Object_obj_exit_Alarm_0 40
 if global.loop == 1 && room == rm_0197 && !global.endless_used && !global.sword_used && !global.wings_used {
+    var all_empty = true;
+    with (obj_chest_small) {
+        if !empty
+            all_empty = false;
+    }
+    
     with (obj_npc_friend) {
-        if friend_state == 1 && f_path_exists {
+        if all_empty && friend_state == 1 && f_path_exists {
             {+achievement}
         }
     }

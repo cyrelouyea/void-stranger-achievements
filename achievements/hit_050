@@ -1,0 +1,6 @@
+title: Ouch! (50/500)
+description: Get hit a total of 50 times
+
+// PATCH gml_Object_obj_player_Step_0 1833
+if obj_inventory.hit_counter >= 50
+    {+achievement}

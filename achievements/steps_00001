@@ -1,0 +1,34 @@
+title: Baby step
+description: Walk a total of 1 step
+
+// PATCH gml_Object_obj_player_Step_0 547
+if obj_inventory.step_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 567
+if obj_inventory.step_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 580
+if obj_inventory.step_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 593
+if obj_inventory.step_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 606
+if obj_inventory.step_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 629
+if obj_inventory.step_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 669
+if obj_inventory.step_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 746
+if obj_inventory.step_counter >= 1
+    {+achievement}

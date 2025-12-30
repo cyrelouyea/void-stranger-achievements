@@ -1,5 +1,5 @@
-title: Tile maker
-description: Activate the effect of an Eus statue
+title: Tile layer
+description: Create a tile from the effect of a certain statue
 
 // PATCH gml_Object_obj_boulder_Step_0 830
 {+achievement}

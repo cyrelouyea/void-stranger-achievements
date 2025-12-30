@@ -1,6 +1,6 @@
 title: Insecticidal (+)
-description: Kill Bee in DIS without using the upgraded rod or your wings
+description: Kill Bee in DIS without using the Void Rod or your wings
 
 // PATCH gml_Object_obj_enemy_bee_Step_0 377
-if !global.endless_used && !global.wings_used
+if !global.wings_used && ds_grid_get(obj_inventory.ds_player_info, 3, 1) <= 0
 {+achievement}

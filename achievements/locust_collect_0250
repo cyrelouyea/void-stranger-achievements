@@ -1,0 +1,26 @@
+title: Yummy! (250/1000)
+description: Find a total of 250 locust idols
+
+// PATCH gml_Object_obj_chest_small_Alarm_0 26
+if obj_inventory.locust_collect_counter >= 250
+{+achievement}
+
+// PATCH gml_Object_obj_chest_small_Alarm_0 79
+if obj_inventory.locust_collect_counter >= 250
+{+achievement}
+
+// PATCH gml_Object_obj_locust_collect_Step_0 12
+if obj_inventory.locust_collect_counter >= 250
+{+achievement}
+
+// PATCH gml_Object_obj_locust_collect_Step_0 17
+if obj_inventory.locust_collect_counter >= 250
+{+achievement}
+
+// PATCH gml_Object_obj_locust_collect_Step_0 22
+if obj_inventory.locust_collect_counter >= 250
+{+achievement}
+
+// PATCH gml_Object_obj_chest_small_Alarm_0 111
+if obj_inventory.locust_collect_counter >= 250
+{+achievement}

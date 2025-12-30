@@ -1,6 +1,6 @@
 title: Thrill seeker
 description: Fall a total of 250 times
 
-// PATCH gml_Object_obj_player_Step_0 1826
-if ds_list_find_value(obj_inventory.ds_rcrds, 6) >= 250
+// PATCH gml_Object_obj_player_Step_0 1702
+if obj_inventory.fall_counter >= 250
     {+achievement}

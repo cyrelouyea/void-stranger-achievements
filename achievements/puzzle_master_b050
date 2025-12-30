@@ -1,6 +1,15 @@
 title: Puzzle master (B050)
-description: Solve B050 with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod.
+description: Solve B050 with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod. All chests must be opened.
 
 // PATCH gml_Object_obj_exit_Alarm_0 40
-if global.loop == 1 && room == rm_0051 && !global.endless_used && !global.sword_used && !global.wings_used
-{+achievement}
+if global.loop == 1 && room == rm_0051 && !global.endless_used && !global.sword_used && !global.wings_used {
+    var all_empty = true;
+    with (obj_chest_small) {
+        if !empty
+            all_empty = false;
+    }
+
+    if (all_empty) {
+        {+achievement}
+    }
+}

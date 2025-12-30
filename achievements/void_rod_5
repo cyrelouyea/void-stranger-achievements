@@ -1,9 +1,0 @@
-title: 5 tiles moved!
-description: Use the void rod 5 times
-
-// PATCH gml_Object_obj_player_Step_0 1144
-if ds_list_find_value(obj_inventory.ds_rcrds, 0) >= 5
-    {+achievement}
-// PATCH gml_Object_obj_player_Step_0 825
-if ds_list_find_value(obj_inventory.ds_rcrds, 0) >= 5
-    {+achievement}

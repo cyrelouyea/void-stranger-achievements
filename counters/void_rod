@@ -1,0 +1,5 @@
+// PATCH gml_Object_obj_player_Step_0 1144
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 825
+{{counter}} += 1

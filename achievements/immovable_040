@@ -1,0 +1,10 @@
+title: Immovable (40/150)
+description: Make a certain statue immovable a total of 40 times
+
+// PATCH gml_Object_obj_boulder_Step_0 409
+if obj_inventory.immovable_counter >= 40
+{+achievement}
+
+// PATCH gml_Object_obj_boulder_Step_0 213
+if obj_inventory.immovable_counter >= 40
+{+achievement}

@@ -1,0 +1,6 @@
+title: Make them go away... (300/500)
+description: Make a one-eyed statue self-explode a total of 300 times
+
+// PATCH gml_Object_obj_boulder_Step_0 640
+if obj_inventory.tan_explode_counter >= 300
+{+achievement}

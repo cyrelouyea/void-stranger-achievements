@@ -1,0 +1,8 @@
+// PATCH gml_Object_obj_player_Step_0 1246
+{{counter}} += 1
+
+// PATCH gml_Object_obj_npc_gor_Alarm_3 4
+{{counter}} += 1
+
+// PATCH gml_Object_obj_gor_cube_Step_0 14
+{{counter}} += 1

@@ -1,0 +1,23 @@
+// PATCH gml_Object_obj_player_Step_0 546
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 566
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 579
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 592
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 605
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 628
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 668
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_Step_0 745
+{{counter}} += 1

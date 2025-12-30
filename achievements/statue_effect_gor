@@ -1,5 +1,8 @@
 title: Immovable
-description: Make a statue immovable
+description: Make a certain statue immovable
 
 // PATCH gml_Object_obj_boulder_Step_0 408
+{+achievement}
+
+// PATCH gml_Object_obj_boulder_Step_0 212
 {+achievement}

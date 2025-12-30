@@ -1,0 +1,9 @@
+title: 300 tiles moved!
+description: Use the void rod 300 times
+
+// PATCH gml_Object_obj_player_Step_0 1145
+if obj_inventory.void_rod_counter >= 300
+    {+achievement}
+// PATCH gml_Object_obj_player_Step_0 826
+if obj_inventory.void_rod_counter >= 300
+    {+achievement}

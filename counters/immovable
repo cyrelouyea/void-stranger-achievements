@@ -1,0 +1,5 @@
+// PATCH gml_Object_obj_boulder_Step_0 408
+{{counter}} += 1
+
+// PATCH gml_Object_obj_boulder_Step_0 212
+{{counter}} += 1

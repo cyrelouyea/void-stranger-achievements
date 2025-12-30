@@ -1,0 +1,10 @@
+title: Don't ask how I know (20/500)
+description: Use the Void Memory a total of 20 times
+
+// PATCH gml_Object_obj_player_Step_0 1220
+if obj_inventory.memory_counter >= 20
+    {+achievement}
+
+// PATCH gml_Object_obj_mural_Step_0 658
+if obj_inventory.memory_counter >= 20
+    {+achievement}

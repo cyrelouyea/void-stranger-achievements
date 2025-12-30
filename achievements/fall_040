@@ -1,0 +1,6 @@
+title: AaaaaaAAAA (40/250)
+description: Fall a total of 40 times
+
+// PATCH gml_Object_obj_player_Step_0 1702
+if obj_inventory.fall_counter >= 40
+    {+achievement}

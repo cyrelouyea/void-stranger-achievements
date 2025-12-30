@@ -1,0 +1,10 @@
+title: Just leap and believe!
+description: Use the wings a total of 1 times
+
+// PATCH gml_Object_obj_player_Step_0 652
+if obj_inventory.wings_counter >= 1
+    {+achievement}
+
+// PATCH gml_Object_obj_player_Step_0 2354
+if obj_inventory.wings_counter >= 1
+    {+achievement}

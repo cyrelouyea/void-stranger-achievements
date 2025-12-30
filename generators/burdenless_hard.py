@@ -1,17 +1,32 @@
 FORMAT_NORMAL = """title: Puzzle master ({room_number})
-description: Solve {room_number} with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod.
-
-// PATCH gml_Object_obj_exit_Alarm_0 40
-if global.loop == 1 && room == {room_name} && !global.endless_used && !global.sword_used && !global.wings_used
-{{+achievement}}"""
-
-FORMAT_NINNIE = """title: Puzzle m-master ({room_number})
-description: Solve {room_number} with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod. Y-You can't abandon Ninnie!
+description: Solve {room_number} with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod. All chests must be opened.
 
 // PATCH gml_Object_obj_exit_Alarm_0 40
 if global.loop == 1 && room == {room_name} && !global.endless_used && !global.sword_used && !global.wings_used {{
+    var all_empty = true;
+    with (obj_chest_small) {{
+        if !empty
+            all_empty = false;
+    }}
+
+    if (all_empty) {{
+        {{+achievement}}
+    }}
+}}"""
+
+FORMAT_NINNIE = """title: Puzzle m-master ({room_number})
+description: Solve {room_number} with Lillie by taking the stairs and without using the sword, the wings or the upgraded rod. All chests must be opened. Y-You can't abandon Ninnie!
+
+// PATCH gml_Object_obj_exit_Alarm_0 40
+if global.loop == 1 && room == {room_name} && !global.endless_used && !global.sword_used && !global.wings_used {{
+    var all_empty = true;
+    with (obj_chest_small) {{
+        if !empty
+            all_empty = false;
+    }}
+    
     with (obj_npc_friend) {{
-        if friend_state == 1 && f_path_exists {{
+        if all_empty && friend_state == 1 && f_path_exists {{
             {{+achievement}}
         }}
     }}

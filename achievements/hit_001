@@ -1,0 +1,6 @@
+title: Ouch!
+description: Get hit a total of 1 times
+
+// PATCH gml_Object_obj_player_Step_0 1833
+if obj_inventory.hit_counter >= 1
+    {+achievement}
