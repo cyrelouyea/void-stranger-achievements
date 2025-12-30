@@ -1,0 +1,6 @@
+title: I just got rid of them
+description: Find and talk to Bee in B143
+
+// PATCH gml_Object_obj_npc_bee_Step_0 300
+if (room == rm_0146)
+{+achievement}

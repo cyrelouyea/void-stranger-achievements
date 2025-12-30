@@ -1,0 +1,5 @@
+title: Was this thing here before?
+description: Go to Tan's chambers as Lillie after Gray collected the sword.
+
+// PATCH gml_RoomCC_rm_secret_005_8_Create 5
+{+achievement}

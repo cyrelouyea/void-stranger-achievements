@@ -1,0 +1,5 @@
+title: Was it here before?
+description: Go to Bee's chambers as Lillie after Gray collected the wings.
+
+// PATCH gml_RoomCC_rm_secret_003_1_Create 3
+{+achievement}

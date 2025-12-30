@@ -1,0 +1,6 @@
+title: Go die or something
+description: Find and talk to Bee in B031
+
+// PATCH gml_Object_obj_npc_bee_Step_0 300
+if (room == rm_0030)
+{+achievement}
