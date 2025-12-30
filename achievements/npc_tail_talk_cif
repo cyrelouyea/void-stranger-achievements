@@ -1,0 +1,6 @@
+title: Something doesn't add up.
+description: Listen to Tail's story as Cif
+
+// PATCH gml_Object_obj_npc_tail_Step_0 618
+if global.stranger == 2 && talk_count == 3 && bully == 0 && exit_blocked == 0 && !tellnotails
+{+achievement}

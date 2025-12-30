@@ -1,0 +1,6 @@
+title: Long time no see
+description: Find Tail as Cif
+
+// PATCH gml_Object_obj_npc_tail_Create_0 1
+if global.stranger == 2 && ds_grid_get(obj_inventory.ds_player_info, 13, 0) < 2
+{+achievement}

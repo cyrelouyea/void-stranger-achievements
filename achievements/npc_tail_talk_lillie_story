@@ -1,0 +1,6 @@
+title: Take care, little one
+description: Listen to Tail's story as Lillie
+
+// PATCH gml_Object_obj_npc_tail_Step_0 618
+if global.stranger == 1 && talk_count == 2 && bully == 0 && exit_blocked == 0 && !tellnotails
+{+achievement}

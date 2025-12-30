@@ -6,3 +6,6 @@
 
 // PATCH gml_Object_obj_gor_cube_Step_0 14
 {{counter}} += 1
+
+// PATCH gml_Object_obj_npc_tail_Other_11 1
+{{counter}} += 1

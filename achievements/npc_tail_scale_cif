@@ -1,0 +1,6 @@
+title: You feel... familiar?
+description: Interact with Tail's scales as Cif
+
+// PATCH gml_Object_obj_npc_tail_tail_Alarm_0 1
+if global.stranger == 2
+{+achievement}

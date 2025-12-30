@@ -1,0 +1,5 @@
+title: It only knew pain and hunger
+description: Kill Tail
+
+// PATCH gml_Object_obj_npc_tail_Other_11 1
+{+achievement}

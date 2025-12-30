@@ -12,6 +12,10 @@ if obj_inventory.sword_counter >= {number}
 // PATCH gml_Object_obj_gor_cube_Step_0 24
 if obj_inventory.sword_counter >= {number}
     {{+achievement}}
+
+// PATCH gml_Object_obj_npc_tail_Other_11 2
+if obj_inventory.sword_counter >= {number}
+    {{+achievement}}
 """
 
 NUMBERS = [

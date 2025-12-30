@@ -1,0 +1,5 @@
+title: Please leave...
+description: Talk to Tail after it was threatened
+
+// PATCH gml_Object_obj_npc_tail_Step_0 618
+if tellnotails && global.stranger < 2

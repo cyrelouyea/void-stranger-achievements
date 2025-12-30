@@ -1,0 +1,6 @@
+title: A giant snake!
+description: Find Tail as Lillie
+
+// PATCH gml_Object_obj_npc_tail_Create_0 1
+if global.stranger == 1 && ds_grid_get(obj_inventory.ds_player_info, 13, 0) < 2
+{+achievement}

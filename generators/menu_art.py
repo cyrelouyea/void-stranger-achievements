@@ -1,5 +1,5 @@
 FORMAT = """title: Menu Art ({name})
-description: Look at the {name} menu art
+description: Look at the {name} art in the pause menu.
 
 // PATCH gml_Object_obj_menu_Step_0 21
 if ds_grid_get(ds_, 3, menu_option[page]) == {image}
