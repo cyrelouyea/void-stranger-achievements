@@ -609,6 +609,8 @@ foreach (Counter counter in counters) {
     importGroup.QueueReplace(key, string.Join('\n', codeLines));
 }
 
+importGroup.Import();
+
 { // Apply achievements and counters patches
     foreach (KeyValuePair<string, List<PatchData>> entry in patchesByFile) {
         UndertaleCode code = Data.Code.ByName(entry.Key);
