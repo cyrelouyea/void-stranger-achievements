@@ -1,0 +1,5 @@
+title: Defused!
+description: Destroy one of Mon's bomb without dying
+
+// PATCH gml_Object_obj_enemy_monbomb_Step_0 102
+{+achievement}

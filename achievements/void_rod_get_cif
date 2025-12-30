@@ -1,0 +1,5 @@
+title: Time to find Bee!
+description: Get the void rod as Cif
+
+// PATCH gml_Object_obj_chest_Alarm_3 1
+{+achievement}

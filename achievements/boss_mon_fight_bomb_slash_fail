@@ -1,0 +1,5 @@
+title: Bomberman
+description: Make one of Mon's bomb explodes 
+
+// PATCH gml_Object_obj_enemy_monbomb_Step_0 94
+{+achievement}

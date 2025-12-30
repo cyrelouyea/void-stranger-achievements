@@ -1,0 +1,5 @@
+title: Blame your fate
+description: Finish talking to Mon after the fight with Cif
+
+// PATCH gml_Object_obj_npc_monhead_Step_0 96
+{+achievement}
