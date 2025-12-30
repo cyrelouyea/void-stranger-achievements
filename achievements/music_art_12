@@ -1,0 +1,6 @@
+title: Secret Code #13
+description: Use the secret code #13 in the music room
+
+// PATCH gml_Object_obj_soundtest_Step_0 54
+if i == 12
+{+achievement}

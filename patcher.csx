@@ -182,11 +182,11 @@ foreach (Counter counter in counters) {
     };
     Data.GlobalInitScripts.Add(scr_get_achievement);
     importGroup.QueueReplace(scr_get_achievement.Code, @"function scr_get_achievement(achievement_id, delay = 0) {
-        if !instance_exists(obj_inventory) || !obj_inventory.achievements_loaded {
-            return;
-        }
-
         if delay == 0 {
+            if !instance_exists(obj_inventory) || !obj_inventory.achievements_loaded {
+                return;
+            }
+
             if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
                 return;
             
@@ -227,7 +227,11 @@ foreach (Counter counter in counters) {
     importGroup.QueueAppend(obj_notification_delay.EventHandlerFor(EventType.Create, Data), 
     @"achievement_id = """";");
     importGroup.QueueAppend(obj_notification_delay.EventHandlerFor(EventType.Alarm, (uint) 0, Data), 
-    @"if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
+    @"if !instance_exists(obj_inventory) || !obj_inventory.achievements_loaded {
+        return;
+    }
+    
+    if !is_undefined(ds_map_find_value(obj_inventory.ds_achievements, achievement_id))
         return;
     
     ds_map_replace(obj_inventory.ds_achievements, achievement_id, date_current_datetime());

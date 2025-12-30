@@ -1,0 +1,5 @@
+title: Void
+description: Start playing Void Stranger
+
+// PATCH gml_Object_obj_init_Create_0 1
+{+achievement:60}
