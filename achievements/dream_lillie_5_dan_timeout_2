@@ -1,0 +1,6 @@
+title: No regrets
+description: Talk about Dan's ex-wife
+
+// PATCH gml_Object_obj_cutscene_ldreamIV_datestart_Step_0 627
+if scene == 3011
+{+achievement}

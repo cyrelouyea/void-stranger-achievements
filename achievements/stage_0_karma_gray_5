@@ -1,0 +1,7 @@
+title: If we wish to escape their fate...
+description: Get the special karma dialogue as Gray during transition to Stage 0
+
+// PATCH gml_Object_obj_ex_add_transform_Step_0 497 
+if global.voider == false && global.justice >= 1024 && global.stranger == 0 && vdlss_count == 3 && vdlss_counter == 0{
+{-achievement}
+{+achievement}}

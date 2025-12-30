@@ -1,0 +1,6 @@
+title: Car
+description: Get in Gray's car in the sixth dream
+
+// PATCH gml_Object_obj_cutscene_ldreamV_driving_Step_0 142
+if counter == 240
+{+achievement}

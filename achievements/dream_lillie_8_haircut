@@ -1,0 +1,5 @@
+title: New haircut!
+description: Look at Lillie's new haircut in the eighth dream
+
+// PATCH gml_Object_obj_cutscene_ldreamVII_haircut_Step_0 363
+{+achievement}

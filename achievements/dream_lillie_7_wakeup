@@ -1,0 +1,5 @@
+title: :lillieball:
+description: Watch Gray wake Lillie up in the seventh dream
+
+// PATCH gml_Object_obj_cutscene_ldreamVI_grounded_Step_0 37
+{+achievement}

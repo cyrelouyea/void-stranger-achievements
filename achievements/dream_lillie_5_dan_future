@@ -1,0 +1,6 @@
+title: Leaving everything behind
+description: Talk about the future with Dan
+
+// PATCH gml_Object_obj_cutscene_ldreamIV_datestart_Step_0 627
+if scene == 2011
+{+achievement}
