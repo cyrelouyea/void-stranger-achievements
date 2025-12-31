@@ -1,0 +1,8 @@
+title: Stalker
+description: Find a mimic
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 148
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 152
+{+achievement}

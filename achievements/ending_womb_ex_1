@@ -1,0 +1,6 @@
+title: Ever so slowly
+description: Find an orb of light after crawling inside the cracked orb in your personal chamber 
+
+// PATCH gml_Object_obj_crawl_Step_0 299
+{-achievement}
+{+achievement}

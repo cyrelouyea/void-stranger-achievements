@@ -1,0 +1,31 @@
+// PATCH gml_Object_obj_enemy_cs_Step_0 52
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 58
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_ct_Step_0 80
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 122
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_cl_Step_0 42
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_cc_Step_0 42
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_co_Step_0 54
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_ch_Step_0 48
+if !place_meeting(x, y, obj_boulder)
+{{counter}} += 1

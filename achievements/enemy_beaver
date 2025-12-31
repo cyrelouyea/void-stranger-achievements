@@ -1,0 +1,26 @@
+title: Bull
+description: Find a beaver
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 86
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 92
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 105
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 111
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 127
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 133
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 146
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 152
+{+achievement}

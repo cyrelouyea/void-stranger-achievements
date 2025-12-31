@@ -1,0 +1,6 @@
+title: Yet ever...
+description: Find an orb of light after crawling inside the cracked orb in your personal chamber 
+
+// PATCH gml_Object_obj_crawl_Step_0 303
+{-achievement}
+{+achievement}

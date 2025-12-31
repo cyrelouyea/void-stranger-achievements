@@ -1,0 +1,8 @@
+title: Diamond
+description: Find an octahedron
+
+// PATCH gml_Object_obj_enemy_co_Step_0 72
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_co_Step_0 85
+{+achievement}

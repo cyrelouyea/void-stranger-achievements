@@ -1,0 +1,34 @@
+title: Squashed (5/250)
+description: Kill an enemy with a statue or a boulder a total of 5 times
+
+// PATCH gml_Object_obj_enemy_cs_Step_0 54
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 60
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_ct_Step_0 82
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 124
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cl_Step_0 44
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_cc_Step_0 44
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_co_Step_0 56
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}
+
+// PATCH gml_Object_obj_enemy_ch_Step_0 50
+if place_meeting(x, y, obj_boulder)  && obj_inventory.squashed_counter >= 5
+{+achievement}

@@ -1,0 +1,6 @@
+title: The first seal
+description: Interact with the seal in Eus's chamber 
+
+// PATCH gml_Object_obj_seal_Step_0 213
+if room == rm_secret_002 && talk_count == 0 && !severed && ds_grid_get(obj_inventory.ds_equipment, 0, 0) == 1 && global.memory_toggle
+{+achievement}

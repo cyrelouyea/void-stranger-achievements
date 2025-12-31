@@ -1,0 +1,6 @@
+title: Why would you return here...?
+description: Why...?
+
+// PATCH gml_Object_obj_confinement_Step_0 101
+if global.stranger == 0 && (line[2] == "Miksi tulit takaisin...?" || line[2] == "Why would you return here...?")
+{+achievement}

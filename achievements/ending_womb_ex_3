@@ -1,0 +1,8 @@
+title: So...
+description: Find an orb of light after crawling inside the cracked orb in your personal chamber 
+
+// PATCH gml_Object_obj_crawl_Step_0 306
+if talk_count == 7 {
+    {-achievement}
+    {+achievement}
+}

@@ -1,0 +1,6 @@
+title: Why did you abandon us?
+description: Interact with the cracked orb in your personal chamber as Cif without the Void Memory
+
+// PATCH gml_Object_obj_confinement_Step_0 101
+if global.stranger == 2 && ex_crawl == 0 && !(ds_grid_get(obj_inventory.ds_equipment, 0, 0) == 1 && global.memory_toggle)
+{+achievement}

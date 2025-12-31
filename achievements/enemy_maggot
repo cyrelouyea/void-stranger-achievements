@@ -1,0 +1,5 @@
+title: Worm
+description: Find a maggot
+
+// PATCH gml_Object_obj_enemy_cc_Step_0 60
+{+achievement}

@@ -1,0 +1,5 @@
+title: THIS DESECRATION CAN NOT CONTINUE
+description: Bump the cracked orb in your personal chamber one too many time
+
+// PATCH gml_Object_obj_confinement_Step_0 48
+{+achievement}

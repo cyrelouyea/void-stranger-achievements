@@ -1,0 +1,6 @@
+title: Hand
+description: Find a lazy eye
+
+// PATCH gml_Object_obj_enemy_ch_Step_0 63
+if cycle
+{+achievement}

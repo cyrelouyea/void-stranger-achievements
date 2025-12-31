@@ -1,0 +1,11 @@
+title: RT ALERT ALERT ALERT ALERT ALE
+description: Get the To Be Not Continued ending
+
+// PATCH gml_Object_obj_sealchest_Alarm_6 15
+{-achievement}
+{+achievement}
+
+// PATCH gml_Object_obj_sealchest_Alarm_6 31
+if imessage == 34
+{-achievement}
+{+achievement}

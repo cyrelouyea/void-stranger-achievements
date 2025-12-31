@@ -1,0 +1,5 @@
+title: Bzzz
+description: Find a fly
+
+// PATCH gml_Object_obj_enemy_cf_Step_0 70
+{+achievement}

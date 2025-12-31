@@ -1,0 +1,5 @@
+title: Spider
+description: Find the unfinished enemy in the Dev rooms
+
+// PATCH gml_Object_obj_enemy_ct_Step_0 90
+{+achievement}
