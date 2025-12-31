@@ -1,0 +1,6 @@
+title: The Craving (2)
+description: Learn more about Lord Bee with the lonely ones
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 19
+{+achievement}
