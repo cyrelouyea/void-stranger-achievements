@@ -1,0 +1,9 @@
+title: Octahedron killer (50/250)
+description: Kill a octahedron a total of 50 times
+
+// PATCH gml_Object_obj_enemy_co_Step_0 154
+if obj_inventory.octahedron_kill_counter >= 50
+{+achievement}
+// PATCH gml_Object_obj_enemy_co_Step_0 169
+if obj_inventory.octahedron_kill_counter >= 50
+{+achievement}

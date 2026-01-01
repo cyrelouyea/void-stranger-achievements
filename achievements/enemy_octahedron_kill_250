@@ -1,0 +1,9 @@
+title: Octahedron hater
+description: Kill a octahedron a total of 250 times
+
+// PATCH gml_Object_obj_enemy_co_Step_0 154
+if obj_inventory.octahedron_kill_counter >= 250
+{+achievement}
+// PATCH gml_Object_obj_enemy_co_Step_0 169
+if obj_inventory.octahedron_kill_counter >= 250
+{+achievement}

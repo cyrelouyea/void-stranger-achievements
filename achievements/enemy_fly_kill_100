@@ -1,0 +1,6 @@
+title: Fly hater
+description: Kill a fly a total of 100 times
+
+// PATCH gml_Object_obj_enemy_cf_Step_0 166
+if obj_inventory.fly_kill_counter >= 100
+{+achievement}

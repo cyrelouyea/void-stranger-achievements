@@ -1,0 +1,9 @@
+title: Leech killer (10/250)
+description: Kill a leech a total of 10 times
+
+// PATCH gml_Object_obj_enemy_cl_Step_0 166
+if obj_inventory.leech_kill_counter >= 10
+{+achievement}
+// PATCH gml_Object_obj_enemy_cl_Step_0 181
+if obj_inventory.leech_kill_counter >= 10
+{+achievement}

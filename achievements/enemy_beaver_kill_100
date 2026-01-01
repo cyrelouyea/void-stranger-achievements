@@ -1,0 +1,9 @@
+title: Beaver killer (100/250)
+description: Kill a beaver a total of 100 times
+
+// PATCH gml_Object_obj_enemy_cg_Step_0 282
+if obj_inventory.beaver_kill_counter >= 100
+{+achievement}
+// PATCH gml_Object_obj_enemy_cg_Step_0 291
+if obj_inventory.beaver_kill_counter >= 100
+{+achievement}

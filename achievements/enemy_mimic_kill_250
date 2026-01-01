@@ -1,0 +1,9 @@
+title: Mimic hater
+description: Kill a mimic a total of 250 times
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 283
+if obj_inventory.mimic_kill_counter >= 250
+{+achievement}
+// PATCH gml_Object_obj_enemy_cm_Step_0 322
+if obj_inventory.mimic_kill_counter >= 250
+{+achievement}

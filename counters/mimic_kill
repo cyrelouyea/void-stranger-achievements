@@ -1,0 +1,5 @@
+// PATCH gml_Object_obj_enemy_cm_Step_0 282
+{{counter}} += 1
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 321
+{{counter}} += 1

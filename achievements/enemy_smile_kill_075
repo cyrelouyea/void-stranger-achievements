@@ -1,0 +1,9 @@
+title: Smile killer (75/250)
+description: Kill a smile a total of 75 times
+
+// PATCH gml_Object_obj_enemy_cs_Step_0 184
+if obj_inventory.smile_kill_counter >= 75
+{+achievement}
+// PATCH gml_Object_obj_enemy_cs_Step_0 192
+if obj_inventory.smile_kill_counter >= 75
+{+achievement}

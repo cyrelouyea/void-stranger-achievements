@@ -1,0 +1,9 @@
+title: Mimic killer (20/250)
+description: Kill a mimic a total of 20 times
+
+// PATCH gml_Object_obj_enemy_cm_Step_0 283
+if obj_inventory.mimic_kill_counter >= 20
+{+achievement}
+// PATCH gml_Object_obj_enemy_cm_Step_0 322
+if obj_inventory.mimic_kill_counter >= 20
+{+achievement}

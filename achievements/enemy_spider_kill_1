@@ -1,0 +1,9 @@
+title: Spider hater
+description: Kill a spider
+
+// PATCH gml_Object_obj_enemy_ct_Step_0 147
+if obj_inventory.spider_kill_counter >= 1
+{+achievement}
+// PATCH gml_Object_obj_enemy_ct_Step_0 152
+if obj_inventory.spider_kill_counter >= 1
+{+achievement}

@@ -1,0 +1,9 @@
+title: Maggot killer (40/250)
+description: Kill a maggot a total of 40 times
+
+// PATCH gml_Object_obj_enemy_cc_Step_0 148
+if obj_inventory.maggot_kill_counter >= 40
+{+achievement}
+// PATCH gml_Object_obj_enemy_cc_Step_0 163
+if obj_inventory.maggot_kill_counter >= 40
+{+achievement}

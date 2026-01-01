@@ -1,0 +1,9 @@
+title: Eye killer (100/250)
+description: Kill a eye a total of 100 times
+
+// PATCH gml_Object_obj_enemy_ch_Step_0 85
+if obj_inventory.eye_kill_counter >= 100
+{+achievement}
+// PATCH gml_Object_obj_enemy_ch_Step_0 124
+if obj_inventory.eye_kill_counter >= 100
+{+achievement}
