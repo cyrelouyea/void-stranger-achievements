@@ -1,0 +1,11 @@
+title: Lightened
+description: Pick up one of the burden tile
+
+// PATCH gml_Object_obj_floor_memory3_Destroy_0 23
+{+achievement}
+
+// PATCH gml_Object_obj_floor_memory2_Destroy_0 23
+{+achievement}
+
+// PATCH gml_Object_obj_floor_memory1_Destroy_0 23
+{+achievement}

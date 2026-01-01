@@ -1,0 +1,50 @@
+title: Computer Scientist
+description: Pick up one of the numbered tiles
+
+// PATCH gml_Object_obj_floor_hpn_Destroy_0 12
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn_Destroy_0 29
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn_Destroy_0 44
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn_Destroy_0 67
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn2_Destroy_0 17
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn2_Destroy_0 36
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn2_Destroy_0 54
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn2_Destroy_0 77
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn3_Destroy_0 12
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn3_Destroy_0 29
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn3_Destroy_0 44
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn3_Destroy_0 67
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn4_Destroy_0 12
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn4_Destroy_0 29
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn4_Destroy_0 44
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn4_Destroy_0 67
+{+achievement}

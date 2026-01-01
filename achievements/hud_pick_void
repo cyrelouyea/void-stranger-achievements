@@ -1,0 +1,17 @@
+title: Un-VOIDed?
+description: Pick up one of the VOID tile
+
+// PATCH gml_Object_obj_floor_hp_Destroy_0 30
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn_Destroy_0 23
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn2_Destroy_0 28
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn3_Destroy_0 23
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn4_Destroy_0 23
+{+achievement}

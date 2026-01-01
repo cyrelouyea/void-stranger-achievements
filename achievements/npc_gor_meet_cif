@@ -1,0 +1,6 @@
+title: Asleep again...
+description: Find Gor as Cif
+
+// PATCH gml_Object_obj_npc_gor_Create_0 131
+if global.stranger == 2 && ds_grid_get(obj_inventory.ds_player_info, 11, 0) != 1
+{+achievement}

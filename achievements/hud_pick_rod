@@ -1,0 +1,5 @@
+title: Soft-locked?
+description: Pick up the Void Rod tile
+
+// PATCH gml_Object_obj_floor_voidrod_Destroy_0 21
+{+achievement}

@@ -1,0 +1,14 @@
+title: Segmentation fault
+description: Pick up a ?? tile
+
+// PATCH gml_Object_obj_floor_hpn_Destroy_0 61
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn2_Destroy_0 71
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn3_Destroy_0 61
+{+achievement}
+
+// PATCH gml_Object_obj_floor_hpn4_Destroy_0 61
+{+achievement}

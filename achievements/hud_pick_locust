@@ -1,0 +1,5 @@
+title: No locusts?
+description: Pick up the locust idol tile
+
+// PATCH gml_Object_obj_floor_locust_Destroy_0 23
+{+achievement}
