@@ -1,5 +1,5 @@
 title: Maggot killer (200/250)
-description: Kill a maggot a total of 200 times
+description: Kill a total of 200 maggots
 
 // PATCH gml_Object_obj_enemy_cc_Step_0 148
 if obj_inventory.maggot_kill_counter >= 200

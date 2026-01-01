@@ -32,6 +32,11 @@ FLY_NUMBERS = [
 
 SPIDER_NUMBERS = [1]
 
+PLURAL_FORM = {
+    'leech': 'leeche',
+    'fly': 'flie',
+}
+
 for name, obj, linenumbers in ENEMIES:
     numbers = DEFAULT_NUMBERS
 
@@ -46,9 +51,13 @@ for name, obj, linenumbers in ENEMIES:
             if number == max(numbers):
                 title = f"{name.capitalize()} hater"
 
+            description = f"Kill a{'n' if name.startswith(('o', 'e')) else ''} {name}"
+            if number > 1:
+                description = f"Kill a total of {number} {PLURAL_FORM.get(name, name)}s"
+
             text = FORMAT.format(
                 title=title,
-                description=f"Kill a {name}" + (f" a total of {number} times" if number > 1 else "")
+                description=description
             )
 
             for ln in linenumbers:

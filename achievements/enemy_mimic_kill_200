@@ -1,5 +1,5 @@
 title: Mimic killer (200/250)
-description: Kill a mimic a total of 200 times
+description: Kill a total of 200 mimics
 
 // PATCH gml_Object_obj_enemy_cm_Step_0 283
 if obj_inventory.mimic_kill_counter >= 200

@@ -1,5 +1,5 @@
 title: Leech killer (75/250)
-description: Kill a leech a total of 75 times
+description: Kill a total of 75 leeches
 
 // PATCH gml_Object_obj_enemy_cl_Step_0 166
 if obj_inventory.leech_kill_counter >= 75

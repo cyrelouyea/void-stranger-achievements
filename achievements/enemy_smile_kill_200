@@ -1,5 +1,5 @@
 title: Smile killer (200/250)
-description: Kill a smile a total of 200 times
+description: Kill a total of 200 smiles
 
 // PATCH gml_Object_obj_enemy_cs_Step_0 184
 if obj_inventory.smile_kill_counter >= 200

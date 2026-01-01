@@ -1,5 +1,5 @@
 title: Eye killer
-description: Kill a eye
+description: Kill an eye
 
 // PATCH gml_Object_obj_enemy_ch_Step_0 85
 if obj_inventory.eye_kill_counter >= 1

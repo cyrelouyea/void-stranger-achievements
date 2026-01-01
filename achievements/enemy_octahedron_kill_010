@@ -1,5 +1,5 @@
 title: Octahedron killer (10/250)
-description: Kill a octahedron a total of 10 times
+description: Kill a total of 10 octahedrons
 
 // PATCH gml_Object_obj_enemy_co_Step_0 154
 if obj_inventory.octahedron_kill_counter >= 10

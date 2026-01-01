@@ -1,5 +1,5 @@
 title: Eye killer (40/250)
-description: Kill a eye a total of 40 times
+description: Kill a total of 40 eyes
 
 // PATCH gml_Object_obj_enemy_ch_Step_0 85
 if obj_inventory.eye_kill_counter >= 40

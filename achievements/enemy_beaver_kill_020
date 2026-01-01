@@ -1,5 +1,5 @@
 title: Beaver killer (20/250)
-description: Kill a beaver a total of 20 times
+description: Kill a total of 20 beavers
 
 // PATCH gml_Object_obj_enemy_cg_Step_0 282
 if obj_inventory.beaver_kill_counter >= 20
