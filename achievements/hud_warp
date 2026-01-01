@@ -1,0 +1,5 @@
+title: Landlord
+description: Change the brane number to warp to another room
+
+// PATCH gml_Object_obj_floor_brane_Alarm_3 1
+{+achievement}

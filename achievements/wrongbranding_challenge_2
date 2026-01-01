@@ -1,0 +1,6 @@
+title: The most useful skip
+description: Carve Cif's brand in B023
+
+// PATCH gml_Object_obj_secret_exit_Alarm_5 80
+if room == rm_0023
+{+achievement}

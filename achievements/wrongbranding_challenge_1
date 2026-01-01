@@ -1,0 +1,6 @@
+title: The most useful skip (burdenless)
+description: Carve Cif's brand in B053 without using the wings or the upgraded rod
+
+// PATCH gml_Object_obj_secret_exit_Alarm_5 80
+if room == rm_0054 && !global.wings_used && !global.endless_used
+{+achievement}
