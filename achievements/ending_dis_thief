@@ -1,0 +1,5 @@
+title: The Treasure Hunter (End)
+description: Get the credits art for the treasure hunter
+
+// PATCH gml_Object_obj_exc_scene_003_Step_0 114
+{+achievement}

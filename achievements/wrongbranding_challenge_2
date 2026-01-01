@@ -1,6 +1,6 @@
-title: The most useful skip
-description: Carve Cif's brand in B023
+title: The biggest leap
+description: Carve Add's brand in B227
 
-// PATCH gml_Object_obj_secret_exit_Alarm_5 80
-if room == rm_0023
+// PATCH gml_Object_obj_secret_exit_Alarm_5 51
+if room == rm_0233
 {+achievement}

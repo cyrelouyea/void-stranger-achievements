@@ -1,0 +1,5 @@
+title: Smile!
+description: Finish Void Stranger Lev- as Lillie
+
+// PATCH gml_Object_obj_cutscene_lillieandgray_Step_0 54
+{+achievement}

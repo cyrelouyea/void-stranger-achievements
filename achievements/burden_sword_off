@@ -1,0 +1,6 @@
+title: Pacifist
+description: Turn off the Void Sword
+
+// PATCH gml_GlobalScript_toggle_sword 13
+if !global.sword_toggle && ds_grid_get(obj_inventory.ds_equipment, 0, 2) == 3
+    {+achievement}

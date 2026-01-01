@@ -1,0 +1,8 @@
+title: Euthanasia
+description: Kill Gor
+
+// PATCH gml_Object_obj_npc_gor_Alarm_3 1
+{+achievement}
+
+// PATCH gml_Object_obj_gor_cube_Step_0 14
+{+achievement}

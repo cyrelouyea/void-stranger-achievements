@@ -1,0 +1,6 @@
+title: End it all.
+description: Turn into an egg after Lillie's final dream
+
+// PATCH gml_Object_obj_cutscene_add_Step_0 49
+if counter == 188
+{+achievement}

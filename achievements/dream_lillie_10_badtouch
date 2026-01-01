@@ -1,0 +1,5 @@
+title: BAD TOUCH!
+description: Get a BAD TOUCH bonus in in Stop The Evil Onion Gang
+
+// PATCH gml_Object_obj_og_jewel_Other_14 1
+{+achievement}

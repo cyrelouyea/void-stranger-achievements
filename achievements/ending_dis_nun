@@ -1,0 +1,5 @@
+title: The Nun (End)
+description: Get the credits art for the nun
+
+// PATCH gml_Object_obj_exc_scene_001_Step_0 83
+{+achievement}

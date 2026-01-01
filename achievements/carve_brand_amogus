@@ -1,0 +1,24 @@
+title: sus
+description: Carve a crewmate brand
+
+// PATCH gml_Object_obj_secret_exit_Create_0 30
+str_answer_013 = "1111111111111111110111101111111111000011111111111110111111111111101111111101111011111111010010111111111111111111"
+str_answer_014 = "1111111111111111110111101111111100001111111111011111111111110111111111111101111011111111010010111111111111111111"
+
+for (var a = 0; a < 112; a += 1)
+{
+    str_value = string_char_at(str_answer_013, 1 + a);
+    var str_real = real(str_value);
+    answer_array_013[a] = str_real;
+}
+
+for (var a = 0; a < 112; a += 1)
+{
+    str_value = string_char_at(str_answer_014, 1 + a);
+    var str_real = real(str_value);
+    answer_array_014[a] = str_real;
+}
+
+// PATCH gml_Object_obj_secret_exit_Step_0 118
+if array_equals(current_array, answer_array_013) || array_equals(current_array, answer_array_014)
+    {+achievement}

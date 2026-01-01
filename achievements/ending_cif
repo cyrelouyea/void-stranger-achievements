@@ -1,0 +1,5 @@
+title: Roll credits!
+description: Finish Void Stranger Cif
+
+// PATCH gml_Object_obj_cutscene_epilogue_part3_Step_0 562
+{+achievement}

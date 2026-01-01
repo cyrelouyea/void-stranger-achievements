@@ -1,0 +1,5 @@
+title: The Lost Child (End)
+description: Get the credits art for the lost child
+
+// PATCH gml_Object_obj_exc_scene_004_Step_0 121
+{+achievement}

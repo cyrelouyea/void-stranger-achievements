@@ -1,0 +1,5 @@
+title: Void Stranger Lev-
+description: Start Void Stranger Lev-
+
+// PATCH gml_Object_obj_enter_lev_Step_0 248
+{+achievement}

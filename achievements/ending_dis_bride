@@ -1,0 +1,5 @@
+title: The Bride (End)
+description: Get the credits art for the bride
+
+// PATCH gml_Object_obj_exc_scene_002_Step_0 60
+{+achievement}

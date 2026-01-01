@@ -1,0 +1,5 @@
+title: Maybe there's still hope for us.
+description: Finish EX Mode
+
+// PATCH gml_Object_obj_goodnight_Other_12 1
+{+achievement}

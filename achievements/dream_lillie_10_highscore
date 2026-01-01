@@ -1,0 +1,6 @@
+title: You beat me!
+description: Beat Lillie's highscore (128000) in Stop The Evil Onion Gang 
+
+// PATCH gml_Object_obj_og_controller_Other_11 21
+if (current_score > 128000)
+{+achievement}

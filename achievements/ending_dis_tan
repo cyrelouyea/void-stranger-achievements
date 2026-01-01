@@ -1,0 +1,6 @@
+title: Missing ghost
+description: Get to the DIS ending credits without killing Tan
+
+// PATCH gml_Object_obj_exc_scene_005_Step_0 82
+if counter == 930 && tan_check == 0
+{+achievement}

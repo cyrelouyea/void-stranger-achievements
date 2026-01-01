@@ -1,0 +1,9 @@
+title: Awkward silence
+description: Exhaust Lillie's lines during her final meeting with Gray
+
+// PATCH gml_Object_obj_cutscene_finalmeeting_Step_0 206
+else if scene == 11 {
+    counter++
+    if counter == 240
+        {+achievement}
+}
