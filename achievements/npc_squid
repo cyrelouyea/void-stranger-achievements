@@ -1,0 +1,5 @@
+title: Squid
+description: Find the hidden giant squid in Lev's dream
+
+// PATCH gml_Object_obj_dustemiter_lev_Step_0 32
+{+achievement}

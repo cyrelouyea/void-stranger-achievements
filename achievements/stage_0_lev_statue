@@ -1,0 +1,6 @@
+title: Heartbreak
+description: Beat the giant statue at the end of Stage 0 
+
+// PATCH gml_Object_obj_ex_lev2nd_Step_0 495
+if crack_counter == 488
+{+achievement}

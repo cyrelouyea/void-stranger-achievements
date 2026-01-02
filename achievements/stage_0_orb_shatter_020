@@ -1,0 +1,6 @@
+title: Orb shatterer (20/100)
+description: Destroy with projectiles a total of 20 orbs in Stage 0
+
+// PATCH gml_Object_obj_ex_powerup_Step_0 52
+if obj_inventory.orb_shatter_counter >= 20
+{+achievement}

@@ -1,0 +1,19 @@
+title: Scratched (75/200)
+description: Get hit a total of 75 times in Stage 0 
+
+// PATCH gml_Object_obj_ex_dfenemy_missile_Step_0 64
+if obj_inventory.stage_0_hit_counter >= 75
+{+achievement}
+
+// PATCH gml_Object_obj_ex_levgiantstar_Step_0 305
+if obj_inventory.stage_0_hit_counter >= 75
+{+achievement}
+
+// PATCH gml_Object_obj_player_add_Step_0 381
+if obj_inventory.stage_0_hit_counter >= 75
+{+achievement}
+
+// PATCH gml_Object_obj_player_add_Step_0 933
+if obj_inventory.stage_0_hit_counter >= 75
+{+achievement}
+

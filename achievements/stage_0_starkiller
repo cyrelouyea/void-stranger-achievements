@@ -1,0 +1,5 @@
+title: Starkiller 
+description: Destroy the giant black star in Stage 0
+
+// PATCH gml_Object_obj_ex_levgiantstar_Step_0 14
+{+achievement}

@@ -1,0 +1,33 @@
+// PATCH gml_Object_obj_ex_dfenemy_006_Other_11	103	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_levenemy_002_Other_11	63	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_dfenemy_003_Other_11	68	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_dfenemy_002_Other_11	134	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_dfenemy_001_Other_11	63	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_levenemy_001_Other_11	63	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_lev_extra_Other_11	10
+if destroyer_id == 0	
+	{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_dfenemy_005_Other_11	69	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_lev_final_Step_0	103	    
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_dfenemy_004_Other_11	73	
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_levenemy_003_Other_11	81	
+{{counter}} += 1

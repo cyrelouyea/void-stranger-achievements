@@ -1,0 +1,6 @@
+title: You can do this!
+description: Interact with the sparkle after failing Stage 0
+
+// PATCH gml_Object_obj_flavourtext_Step_0 125
+if description == 13
+{+achievement}

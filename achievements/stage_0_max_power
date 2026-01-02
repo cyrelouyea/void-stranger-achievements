@@ -1,0 +1,6 @@
+title: Full Power
+description: Max out your level weapon in Stage 0
+
+// PATCH gml_Object_obj_ex_powerup_Step_0 250
+if powerup_level >= 3
+{+achievement}

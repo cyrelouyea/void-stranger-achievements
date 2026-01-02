@@ -1,0 +1,6 @@
+title: H o w  b o t h e r s o m e .
+description: Find Gor's body in the White Void
+
+// PATCH gml_Object_obj_menu_Step_0 428
+if gor_counter == 50
+{+achievement}

@@ -1,0 +1,6 @@
+title: Orb collector (300/500)
+description: Absorb a total of 300 orbs in Stage 0
+
+// PATCH gml_Object_obj_ex_powerup_Step_0 247
+if obj_inventory.orb_collect_counter >= 300
+{+achievement}

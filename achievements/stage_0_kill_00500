@@ -1,0 +1,46 @@
+title: Pilot fighter (500/10000)
+description: Kill a total of 500 enemies in Stage 0 
+
+// PATCH gml_Object_obj_ex_dfenemy_006_Other_11	104
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_levenemy_002_Other_11 64	
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_dfenemy_003_Other_11	69
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_dfenemy_002_Other_11	135
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_dfenemy_001_Other_11	64
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_levenemy_001_Other_11 64
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_lev_extra_Other_11 11
+if destroyer_id == 0 && obj_inventory.stage_0_kill_counter >= 500
+    {+achievement}
+
+// PATCH gml_Object_obj_ex_dfenemy_005_Other_11	70
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_lev_final_Step_0	104   
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_dfenemy_004_Other_11	74
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}
+
+// PATCH gml_Object_obj_ex_levenemy_003_Other_11 82
+if obj_inventory.stage_0_kill_counter >= 500
+{+achievement}

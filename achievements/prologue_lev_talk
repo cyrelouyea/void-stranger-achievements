@@ -1,18 +1,7 @@
 title: 
 description: \"Hear\" Lev talk after their resurrection
 
-// PATCH gml_Object_obj_cutscene_enterlev_Step_0 1447
-if scene == 3 {
-    with (obj_textbox) {
-        if scr_input_check_pressed(4) && nexttext_page && !cannotadvance && page < (array_length(text) - 1) {
-            {-achievement}
-            {+achievement}
-        }
-    }
-}
-
 // PATCH gml_Object_obj_cutscene_enterlev_Step_0 1450
 if scene == 3 {
-    {-achievement}
     {+achievement}
 }

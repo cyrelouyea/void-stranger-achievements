@@ -1,0 +1,6 @@
+title: CRADLES
+description: Interact with the thrid diamond in Lev's dream
+
+// PATCH gml_Object_obj_npc_levextra_Step_0 166
+if lev_message == 2
+{+achievement}

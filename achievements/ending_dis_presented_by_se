@@ -1,0 +1,5 @@
+title: The End?
+description: Find the mural in the DIS ending credits
+
+// PATCH gml_Object_obj_exc_presented_Step_0 8
+{+achievement}

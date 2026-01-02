@@ -1,0 +1,5 @@
+title: Banished
+description: Find Gor's body in the White Void
+
+// PATCH gml_GlobalScript_scr_creategorbody 7
+{+achievement}

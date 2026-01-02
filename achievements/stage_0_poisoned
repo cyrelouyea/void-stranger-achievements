@@ -1,0 +1,11 @@
+title: Infected
+description: Absorb one of Lev's diamond in Stage 0
+
+// PATCH gml_Object_obj_ex_levenemy_001_Step_0 269
+{+achievement}
+
+// PATCH gml_Object_obj_ex_levenemy_002_Step_0 284
+{+achievement}
+
+// PATCH gml_Object_obj_ex_levenemy_003_Step_0 192
+{+achievement}

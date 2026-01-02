@@ -1,0 +1,5 @@
+title: Orb shatterer
+description: Destroy an orb with projectiles in Stage 0
+
+// PATCH gml_Object_obj_ex_powerup_Step_0 46
+{+achievement}

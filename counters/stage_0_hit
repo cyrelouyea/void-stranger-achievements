@@ -1,0 +1,11 @@
+// PATCH gml_Object_obj_ex_dfenemy_missile_Step_0 63
+{{counter}} += 1
+
+// PATCH gml_Object_obj_ex_levgiantstar_Step_0 304
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_add_Step_0 380
+{{counter}} += 1
+
+// PATCH gml_Object_obj_player_add_Step_0 932
+{{counter}} += 1

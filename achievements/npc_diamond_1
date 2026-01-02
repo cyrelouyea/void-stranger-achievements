@@ -1,0 +1,6 @@
+title: TREES
+description: Interact with the first diamond in Lev's dream
+
+// PATCH gml_Object_obj_npc_levextra_Step_0 166
+if lev_message == 0
+{+achievement}

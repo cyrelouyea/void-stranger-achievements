@@ -1,0 +1,6 @@
+title: Summer Carnival
+description: Play Summer Carnival 'XX: 0stRanger
+
+// PATCH gml_Object_obj_stg_menu_Create_0 154
+if subtitle_speed == 1
+{+achievement}

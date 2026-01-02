@@ -1,0 +1,5 @@
+title: LOVE
+description: Reach Lev's heart 
+
+// PATCH gml_Object_obj_player_add_Step_0 1342
+{+achievement}
