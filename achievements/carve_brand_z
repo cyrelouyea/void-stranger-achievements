@@ -1,0 +1,16 @@
+title: Z
+description: Carve a Z brand
+
+// PATCH gml_Object_obj_secret_exit_Create_0 30
+str_answer_015 = "1111111111111111111000011111111110110111111111111011111111111101111111111110110111111111100001111111111111111111"
+
+for (var a = 0; a < 112; a += 1)
+{
+    str_value = string_char_at(str_answer_015, 1 + a);
+    var str_real = real(str_value);
+    answer_array_015[a] = str_real;
+}
+
+// PATCH gml_Object_obj_secret_exit_Step_0 118
+if array_equals(current_array, answer_array_015)
+    {+achievement}

@@ -1,0 +1,6 @@
+title: >^.^< 
+description: Find all hidden cats in 0stRanger
+
+// PATCH gml_Object_obj_stg_results_Step_0 146
+if global.stg_training == 0 && global.stg_mode == 1
+{+achievement}

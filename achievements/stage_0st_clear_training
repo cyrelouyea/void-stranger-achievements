@@ -1,0 +1,6 @@
+title: Time for the real deal!
+description: Clear 0stRanger's training mode
+
+// PATCH gml_Object_obj_stg_scoretally_Step_0 413
+if nr_counter == 36 && global.stg_training == 1 && score_state == 2
+{+achievement}

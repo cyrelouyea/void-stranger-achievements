@@ -1,0 +1,11 @@
+title: Score Attack
+description: Get a score of 1,991,419 or higher in 0stRanger
+
+// PATCH gml_Object_obj_stg_scoretally_Step_0 18
+if counter == 224 && current_score > 1991419 && global.stg_training == 0 && global.stg_difficulty == 0 && global.stg_mode == 1
+    {+achievement}
+
+
+// PATCH gml_Object_obj_stg_scoretally_Step_0 268
+if counter == 224 && current_score > 1991419 && global.stg_training == 0 && global.stg_difficulty == 0 && global.stg_mode == 1
+    {+achievement}

@@ -1,0 +1,5 @@
+title: Player's brand
+description: Carve Player's brand in one of the brand rooms
+
+// PATCH gml_Object_obj_secret_exit_Step_0 112
+{+achievement}

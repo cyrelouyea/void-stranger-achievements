@@ -1,0 +1,6 @@
+title: Lightning Battle
+description: Clear 0stRanger in less than 4 minutes and 30 seconds
+
+// PATCH gml_Object_obj_stg_scoretally_Step_0 42
+if counter == 128 && global.stg_training == 0 && global.stg_difficulty == 0 && global.stg_mode == 1 && time_m <= 4 && time_s <= 30
+{+achievement}

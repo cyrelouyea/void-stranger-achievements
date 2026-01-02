@@ -1,0 +1,6 @@
+title: x64
+description: Max out the score multiplier in 0stRanger
+
+// PATCH gml_Object_obj_ex_powerup_Step_0 260
+if global.stg_multiplier == 64 && global.stg_mode == 1
+{+achievement}

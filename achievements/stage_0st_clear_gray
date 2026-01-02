@@ -1,0 +1,6 @@
+title: ALL CLEAR!! (Stranger 0)
+description: Clear 0stRanger with Stranger 0
+
+// PATCH gml_Object_obj_stg_results_Create_0 1
+if global.stranger == 0 && global.stg_training == 0 && global.stg_mode == 1
+{+achievement}
