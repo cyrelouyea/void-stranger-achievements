@@ -1,0 +1,6 @@
+title: MAXIMUM
+description: Max out the medal multiplier in Cif's Challenge
+
+// PATCH gml_Object_obj_player_Step_0 1938
+if global.cc_chain == 640
+{+achievement}
