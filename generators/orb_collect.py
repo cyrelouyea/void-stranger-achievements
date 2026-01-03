@@ -8,11 +8,11 @@ if obj_inventory.orb_collect_counter >= {number}
 
 NUMBERS = [
     5, 10, 20, 30, 40, 50,
-    100, 200, 300, 400, 500
+    100, 200, 300, 400, 500,
 ]
 
 TITLES = {
-    250: "Orb devourer",
+    500: "Orb devourer",
 }
 
 for number in NUMBERS:

@@ -1,0 +1,6 @@
+title: Endless
+description: Finish Void Stranger
+
+// PATCH gml_Object_obj_sendoff_Step_0 5
+if counter == 16
+{+achievement}

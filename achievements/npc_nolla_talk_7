@@ -1,0 +1,6 @@
+title: Can you hear me now?
+description: Talk to the character in the eclipse room
+
+// PATCH gml_Object_obj_npc_nolla_Step_0 427
+if bully == 0 && room_case == 6 && talk_count == 2
+{+achievement}

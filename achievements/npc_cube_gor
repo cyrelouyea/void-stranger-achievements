@@ -1,0 +1,5 @@
+title: Is it watching you...?
+description: Find the suffering entity at the end of Stinky Hole rooms
+
+// PATCH gml_Object_obj_gor_cube_Step_0 119
+{+achievement}

@@ -16,6 +16,8 @@ LORDS = [
     ("Cif's", 80),
     ("Empty", 84),
     ("Player's", 112),
+    ("Lily's", 92),
+    ("Trailer", 88),
 ]
 
 for lord, ln in LORDS:

@@ -1,0 +1,6 @@
+title: Who?
+description: Find the character in the dev rooms
+
+// PATCH gml_Object_obj_npc_nolla_Create_0 95
+if !(intro_count == 998 || global.cc_state != 0)
+{+achievement}
