@@ -1,0 +1,5 @@
+title: Watch yo tone mf
+description: Watch Add appear after Lillie's final dream
+
+// PATCH gml_Object_obj_add_lightningstrike_Step_0 13
+{+achievement}

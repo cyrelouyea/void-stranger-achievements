@@ -1,0 +1,6 @@
+title: DIS nuts
+description: Hear ZERO Judge's explanation about DIS
+
+// PATCH gml_Object_obj_cutscene_epilogue_part2_Step_0 173
+if counter == 240
+{+achievement}

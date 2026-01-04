@@ -1,0 +1,6 @@
+title: 93% of strangers
+description: Die in B002
+
+// PATCH gml_Object_obj_gameover_Create_0 1
+if room == rm_2intro
+{+achievement}

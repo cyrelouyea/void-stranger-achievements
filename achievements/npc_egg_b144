@@ -1,0 +1,6 @@
+title: Something reeks...
+description: Talk to the lonely one in B144 when Gor is missing
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 61
+{+achievement}

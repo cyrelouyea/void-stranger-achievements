@@ -1,0 +1,6 @@
+title: For all manusya must crave...
+description: Talk to the lonely one in D05
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 48
+{+achievement}

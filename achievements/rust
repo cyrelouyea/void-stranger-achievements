@@ -1,0 +1,6 @@
+title: rust
+description: Take the stairs in B023 for the 23rd time
+
+// PATCH gml_Object_obj_exit_Step_0 67
+if room == rm_0023 && obj_inventory.b023_counter == 23
+{+achievement:16}

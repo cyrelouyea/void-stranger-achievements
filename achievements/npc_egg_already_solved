@@ -1,0 +1,6 @@
+title: I guess I'm not needed here...
+description: Talk to the lonely one after using the trick without talking to it before 
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if (special_message == 2 || special_message == 1) && b_talk_count >= 1 && !player_talk 
+{+achievement}

@@ -1,0 +1,6 @@
+title: Final tip
+description: Get Mon's free tip in D32
+
+// PATCH gml_Object_obj_npc_mon_Step_0 495
+if cif_tip && talk_count >= 3
+{+achievement}

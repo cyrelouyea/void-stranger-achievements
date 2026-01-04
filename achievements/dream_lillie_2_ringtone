@@ -1,5 +1,5 @@
 title: Despair
-description: Get Freya's call in the second dream
+description: Take Freya's call in the second dream
 
 // PATCH gml_Object_obj_cutscene_ldreamI_newhome_Step_0 127
 {+achievement}

@@ -1,0 +1,6 @@
+title: One remains...
+description: Talk to the lonely one in E015
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 94 && ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000
+{+achievement}

@@ -1,0 +1,6 @@
+title: Did anything good happen?
+description: Talk to the lonely one in B003 after using the trick
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 2 && b_talk_count >= 1 && player_talk
+{+achievement}

@@ -1,0 +1,5 @@
+title: Jerma
+description: Find Johann in the third dream
+
+// PATCH gml_Object_obj_cutscene_dreamIII_rescue_Step_0 306
+{+achievement}

@@ -1,0 +1,3 @@
+// PATCH gml_Object_obj_exit_Step_0 66
+if room == rm_0023
+{{counter}} += 1

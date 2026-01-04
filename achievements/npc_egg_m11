@@ -1,0 +1,6 @@
+title: That avaricious gaze...
+description: Talk to the lonely one in M11
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 43
+{+achievement}

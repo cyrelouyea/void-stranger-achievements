@@ -1,0 +1,10 @@
+title: Nvm, I remember now
+description: Scroll the text down
+
+// PATCH gml_Object_obj_textbox_Step_0 96
+if (initial_text_y != -(text_row * text_height))
+{+achievement}
+
+// PATCH gml_Object_obj_textbox_persistent_Step_0 93
+if (initial_text_y != -(text_row * text_height))
+{+achievement}

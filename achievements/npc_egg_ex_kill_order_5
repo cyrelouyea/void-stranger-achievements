@@ -1,0 +1,6 @@
+title: The fifth to go
+description: Get the fifth enemy to kill for E002
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 76 && ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000
+{+achievement}

@@ -1,0 +1,6 @@
+title: Cif's (Real) Challenge
+description: Complete a ALL CLEAR, NO PIT, NO HIT, all cats Cif's Challenge run
+
+// PATCH gml_Object_obj_cc_check_Step_0 600
+if bonus[1] == 1 && bonus[5] == 1 && bonus[6] == 1 && global.cc_cat == "000000000"
+{+achievement}

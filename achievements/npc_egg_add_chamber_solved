@@ -1,0 +1,6 @@
+title: Thank you for your trust...
+description: Talk to the lonely one in Add's Chamber
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 1 && b_talk_count >= 1 && player_talk
+{+achievement}
