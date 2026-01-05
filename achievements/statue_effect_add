@@ -1,5 +1,0 @@
-title: Lorn idol hater
-description: Make a lorn idol self-explode
-
-// PATCH gml_Object_obj_boulder_Other_11 10
-{+achievement}

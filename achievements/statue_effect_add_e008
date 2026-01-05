@@ -1,0 +1,6 @@
+title: You monster!
+description: Make the lorn idols in E008 explode
+
+// PATCH gml_Object_obj_boulder_Other_11 10
+if room == rm_test2_057
+{+achievement}

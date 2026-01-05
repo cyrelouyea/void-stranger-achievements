@@ -1,0 +1,6 @@
+title: Königsberg solver
+description: Make the lorn idols in D07 explode
+
+// PATCH gml_Object_obj_boulder_Other_11 10
+if room == rm_e_018
+{+achievement}

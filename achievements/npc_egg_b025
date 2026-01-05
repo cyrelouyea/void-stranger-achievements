@@ -1,0 +1,6 @@
+title: Quite knowledgeable
+description: Talk to the lonely one in B025
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 3
+{+achievement}

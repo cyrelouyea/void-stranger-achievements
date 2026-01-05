@@ -1,0 +1,6 @@
+title: Six seconds
+description: Make the lorn idols in Add's chamber explode
+
+// PATCH gml_Object_obj_boulder_Other_11 10
+if room == rm_secret_001
+{+achievement}

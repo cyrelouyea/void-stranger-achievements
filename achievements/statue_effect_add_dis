@@ -1,0 +1,6 @@
+title: Traitor slayer
+description: Make the lorn idols in the DIS? room explode
+
+// PATCH gml_Object_obj_boulder_Other_11 10
+if room == rm_e_intermission
+{+achievement}

@@ -1,0 +1,6 @@
+title: Sorry, stranger...
+description: Talk to the lonely one in the White Void
+
+// PATCH gml_Object_obj_player_Step_0 1232
+if special_message == 62
+{+achievement}

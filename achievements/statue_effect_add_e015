@@ -1,0 +1,6 @@
+title: Press EX key to continue
+description: Make the lorn idols in E015 explode
+
+// PATCH gml_Object_obj_boulder_Other_11 10
+if room == rm_test2_055
+{+achievement}
