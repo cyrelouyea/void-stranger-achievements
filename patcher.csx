@@ -576,11 +576,21 @@ foreach (Counter counter in counters) {
         importGroup.QueueReplace(key, string.Join('\n', codeLines));
     }
 
+    { // Patch language_menu to insert the achievements option
+        var key = "gml_GlobalScript_language_menu";
+        UndertaleCode language_menu = Data.Code.ByName(key);
+        var decompileContext = new DecompileContext(globalDecompileContext, language_menu, decompilerSettings);
+        var codeLines = decompileContext.DecompileToString().Split('\n');
+        codeLines[6] = "ds_grid_set(obj_menu.ds_menu_main, 0, 4, \"ACHIEVEMENTS\"); ds_grid_set(obj_menu.ds_menu_main, 0, 5, scrScript(14));";
+        importGroup.QueueReplace(key, string.Join('\n', codeLines));
+    }
+
+
     { // Add the achievement options in ds_menu_main
         UndertaleCode obj_menu_Create_0 = Data.GameObjects.ByName("obj_menu").EventHandlerFor(EventType.Create, (uint) 0, Data);
         var decompileContext = new DecompileContext(globalDecompileContext, obj_menu_Create_0, decompilerSettings);
         var codeLines = decompileContext.DecompileToString().Split('\n');
-        codeLines[32] = "ds_menu_main = create_menu_page([scrScript(12), UnknownEnum.Value_0, \"resume_game\", 821], [scrScript(84), UnknownEnum.Value_1, UnknownEnum.Value_6, 2834], [scrScript(82), UnknownEnum.Value_7, UnknownEnum.Value_9, 417], [scrScript(13), UnknownEnum.Value_1, UnknownEnum.Value_1, 823], [scrScript(14), UnknownEnum.Value_0, \"end_game\", 1402], [\"ACHIEVEMENTS\", UnknownEnum.Value_10, UnknownEnum.Value_9, spr_placeholder]);";
+        codeLines[32] = "ds_menu_main = create_menu_page([scrScript(12), UnknownEnum.Value_0, \"resume_game\", 821], [scrScript(84), UnknownEnum.Value_1, UnknownEnum.Value_6, 2834], [scrScript(82), UnknownEnum.Value_7, UnknownEnum.Value_9, 417], [scrScript(13), UnknownEnum.Value_1, UnknownEnum.Value_1, 823], [\"ACHIEVEMENTS\", UnknownEnum.Value_10, UnknownEnum.Value_9, spr_placeholder], [scrScript(14), UnknownEnum.Value_0, \"end_game\", 1402]);";
         codeLines[153] = "Value_9, Value_10";
         importGroup.QueueReplace(obj_menu_Create_0, string.Join('\n', codeLines));
     }
