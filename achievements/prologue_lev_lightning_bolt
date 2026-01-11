@@ -1,0 +1,13 @@
+title: Lightning Bolt!
+description: Watch Lev using their lightning bolt on Gray and Mon
+
+// PATCH gml_Object_obj_cutscene_enterlev_Step_0 261
+if counter == 66 + 16 {
+    {+achievement}
+    {-achievement}
+}
+
+// PATCH gml_Object_obj_cutscene_enterlev_Step_0 330
+if counter == 30 + 16 {
+    {+achievement}
+}

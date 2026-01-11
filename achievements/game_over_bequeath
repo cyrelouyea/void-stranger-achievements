@@ -1,0 +1,5 @@
+title: :bequeath:
+description: Say that you want to eat the fruit
+
+// PATCH gml_Object_obj_gameover_Alarm_1 52
+{+achievement}
