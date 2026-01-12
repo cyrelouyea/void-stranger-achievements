@@ -1,3 +1,4 @@
 cli/
 *.win
 variables.bat
+variables.sh
