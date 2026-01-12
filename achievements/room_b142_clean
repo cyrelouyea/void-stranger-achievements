@@ -1,0 +1,35 @@
+title: Renovation (Gor)
+description: Reconstruct Gor's statue room (B142)
+
+// PATCH gml_Object_obj_game_Step_0 1
+if room == rm_0145 {
+
+    var ok = true;
+    for (var px = 1; px < 13; px++) {
+        for (var py = 4; py < 7; py++) {
+            if !instance_position(8 + px * 16, 8 + py * 16, obj_floor_tile) {
+                ok = false;
+                break;
+            }
+        }
+
+        if !ok {
+            break
+        }
+    }
+
+    if ok {
+        for (var px = 1; px < 13; px++) {
+            for (var py = 0; py < 4; py++) {
+                if !instance_position(8 + px * 16, 8 + py * 16, obj_pit) {
+                    ok = false;
+                    break;
+                }
+            }
+        }
+    }
+
+    if ok && instance_position(8 + 2 * 16, 8 + 6 * 16, obj_exit) {
+        {+achievement}
+    }
+}
