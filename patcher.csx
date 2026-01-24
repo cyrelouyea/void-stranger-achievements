@@ -105,6 +105,7 @@ foreach (Counter counter in counters) {
     var decompileContext = new DecompileContext(globalDecompileContext, code, decompilerSettings);
     var codeString = decompileContext.DecompileToString();
     codeString += "achievements_loaded = false;\n";
+    codeString += "nb_achievements_got = 0\n";
     codeString += "ds_achievements = ds_map_create();\n";
     codeString += "ds_ach_titles = ds_map_create();\n";
     codeString += "ds_ach_descs = ds_map_create();\n";
@@ -118,6 +119,7 @@ foreach (Counter counter in counters) {
     codeString += string.Join('\n', records_init);
     importGroup.QueueReplace(code, codeString);
 }
+
 
 { // Load achievements data
     UndertaleGlobalInit scr_load_achievements = new UndertaleGlobalInit() {
@@ -141,7 +143,16 @@ foreach (Counter counter in counters) {
                 }
             }
         }
+
+        achievement_dates = ds_map_values_to_array(obj_inventory.ds_achievements);
+        for (var i = 0 ; i < array_length(achievement_dates); i++) {
+            if !is_undefined(achievement_dates[i]) {
+                obj_inventory.nb_achievements_got++;
+            }
+        }
+
         obj_inventory.achievements_loaded = true;
+        scr_achievement_menueyecatch();
     }";
     codeStr = codeStr.Replace("{{records_load_str}}", string.Join('\n', records_load_list));
     importGroup.QueueReplace(scr_load_achievements.Code, codeStr);
@@ -169,11 +180,21 @@ foreach (Counter counter in counters) {
     codeStr = codeStr.Replace("{{records_save_str}}", string.Join('\n', records_save_list));
     importGroup.QueueReplace(scr_save_achievements.Code, codeStr);
 
-    UndertaleCode code = Data.Code.ByName("gml_GlobalScript_exit_game");
-    var decompileContext = new DecompileContext(globalDecompileContext, code, decompilerSettings);
-    List<string> codeString = decompileContext.DecompileToString().Split('\n').ToList();
-    codeString.Insert(108, "scr_save_achievements();");
-    importGroup.QueueReplace(code, string.Join('\n', codeString));
+    {  // save achievements when exiting the game
+        UndertaleCode code = Data.Code.ByName("gml_GlobalScript_exit_game");
+        var decompileContext = new DecompileContext(globalDecompileContext, code, decompilerSettings);
+        List<string> codeString = decompileContext.DecompileToString().Split('\n').ToList();
+        codeString.Insert(108, "scr_save_achievements();");
+        importGroup.QueueReplace(code, string.Join('\n', codeString));
+    }
+
+    {  // also save achievements every time the game is saved (in case of crash) 
+        UndertaleCode code = Data.Code.ByName("gml_GlobalScript_scr_savegame");
+        var decompileContext = new DecompileContext(globalDecompileContext, code, decompilerSettings);
+        List<string> codeString = decompileContext.DecompileToString().Split('\n').ToList();
+        codeString.Insert(157, "scr_save_achievements();");
+        importGroup.QueueReplace(code, string.Join('\n', codeString));
+    }
 }
 
 { // Global function to call when you get an achievement
@@ -191,6 +212,8 @@ foreach (Counter counter in counters) {
                 return;
             
             ds_map_replace(obj_inventory.ds_achievements, achievement_id, date_current_datetime());
+            obj_inventory.nb_achievements_got++;
+            scr_achievement_menueyecatch();
 
             with (obj_notification)
                 y -= 16;
@@ -215,6 +238,62 @@ foreach (Counter counter in counters) {
             return;
         
         ds_map_replace(obj_inventory.ds_achievements, achievement_id, undefined);
+        obj_inventory.nb_achievements_got--;
+        scr_achievement_menueyecatch();
+    }");
+}
+
+{ // Global function to update the pause menu art
+    UndertaleGlobalInit scr_achievement_menueyecatch = new UndertaleGlobalInit() {
+        Code = UndertaleCode.CreateEmptyEntry(Data, "gml_GlobalScript_scr_achievement_menueyecatch"),
+    };
+    Data.GlobalInitScripts.Add(scr_achievement_menueyecatch);
+    importGroup.QueueReplace(scr_achievement_menueyecatch.Code, @"function scr_achievement_menueyecatch() {
+        with (obj_inventory) {
+            var perc = nb_achievements_got / ds_map_size(ds_achievements);
+
+            var thresholds = [
+                0.04,
+                0.08,
+                0.12,
+                0.16,
+                0.20,
+                0.24,
+                0.28,
+                0.32,
+                0.36,
+                0.40,
+                0.44,
+                0.5,
+            ]
+
+            var sprites = [
+                spr_menu_achievements_a,
+                spr_menu_achievements_b,
+                spr_menu_achievements_c,
+                spr_menu_achievements_d,
+                spr_menu_achievements_e,
+                spr_menu_achievements_f,
+                spr_menu_achievements_g,
+                spr_menu_achievements_h,
+                spr_menu_achievements_i,
+                spr_menu_achievements_j,
+                spr_menu_achievements_k,
+                spr_menu_achievements_l,
+                spr_menu_achievements_m,
+            ]
+
+            for (var i = 0; i < array_length(thresholds); i++) {
+                if perc < thresholds[i] {
+                    with (obj_menu) {
+                        ds_grid_set(obj_menu.ds_menu_main, 3, 4, sprites[i]);
+                        return;
+                    }
+                }
+            }
+
+            ds_grid_set(obj_menu.ds_menu_main, 3, 4, sprites[array_length(sprites) - 1]);
+        }
     }");
 }
 
@@ -235,7 +314,9 @@ foreach (Counter counter in counters) {
         return;
     
     ds_map_replace(obj_inventory.ds_achievements, achievement_id, date_current_datetime());
-
+    obj_inventory.nb_achievements_got++;
+    scr_achievement_menueyecatch();
+    
     with (obj_notification)
         y -= 16;
 
@@ -419,14 +500,7 @@ foreach (Counter counter in counters) {
         }
         instance_create_depth(0, 0, depth - 2, obj_achievement_zoom);
         ordered_by_date = false
-        array_sort(achievement_ids, true);
-        nb_achievements_got = 0;
-        achievement_dates = ds_map_values_to_array(obj_inventory.ds_achievements);
-        for (var i = 0 ; i < array_length(achievement_dates); i++) {
-            if !is_undefined(achievement_dates[i]) {
-                nb_achievements_got++;
-            }
-        }");
+        array_sort(achievement_ids, true);");
         importGroup.QueueAppend(obj_achievements_list.EventHandlerFor(EventType.Step, Data), 
         @"input_left_p = scr_input_check_pressed(0);
         input_right_p = scr_input_check_pressed(1);
@@ -555,7 +629,7 @@ foreach (Counter counter in counters) {
         draw_set_font(fnt_past2);
         draw_set_valign(fa_center);
         draw_set_halign(fa_right);
-        draw_text_color(224 - 24, 144 - 12, string(""{0} / {1}"", nb_achievements_got, nb_achievements), c_gray, c_gray, c_gray, c_gray, 1);
+        draw_text_color(224 - 24, 144 - 12, string(""{0} / {1}"", obj_inventory.nb_achievements_got, nb_achievements), c_gray, c_gray, c_gray, c_gray, 1);
         draw_sprite(spr_ex_medal_c, image_index, 224 - 12, 144 - 11);
         
         var back_color = c_gray
@@ -590,7 +664,7 @@ foreach (Counter counter in counters) {
         UndertaleCode obj_menu_Create_0 = Data.GameObjects.ByName("obj_menu").EventHandlerFor(EventType.Create, (uint) 0, Data);
         var decompileContext = new DecompileContext(globalDecompileContext, obj_menu_Create_0, decompilerSettings);
         var codeLines = decompileContext.DecompileToString().Split('\n');
-        codeLines[32] = "ds_menu_main = create_menu_page([scrScript(12), UnknownEnum.Value_0, \"resume_game\", 821], [scrScript(84), UnknownEnum.Value_1, UnknownEnum.Value_6, 2834], [scrScript(82), UnknownEnum.Value_7, UnknownEnum.Value_9, 417], [scrScript(13), UnknownEnum.Value_1, UnknownEnum.Value_1, 823], [\"ACHIEVEMENTS\", UnknownEnum.Value_10, UnknownEnum.Value_9, spr_placeholder], [scrScript(14), UnknownEnum.Value_0, \"end_game\", 1402]);";
+        codeLines[32] = "ds_menu_main = create_menu_page([scrScript(12), UnknownEnum.Value_0, \"resume_game\", 821], [scrScript(84), UnknownEnum.Value_1, UnknownEnum.Value_6, 2834], [scrScript(82), UnknownEnum.Value_7, UnknownEnum.Value_9, 417], [scrScript(13), UnknownEnum.Value_1, UnknownEnum.Value_1, 823], [\"ACHIEVEMENTS\", UnknownEnum.Value_10, UnknownEnum.Value_9, spr_menu_achievements_a], [scrScript(14), UnknownEnum.Value_0, \"end_game\", 1402]);";
         codeLines[153] = "Value_9, Value_10";
         importGroup.QueueReplace(obj_menu_Create_0, string.Join('\n', codeLines));
     }
@@ -622,6 +696,152 @@ foreach (Counter counter in counters) {
     codeLines[13] = "obj_inventory.ds_achievements = ds_map_create();";
     importGroup.QueueReplace(key, string.Join('\n', codeLines));
 }
+
+{
+    {
+        var key = "gml_Object_obj_secret_exit_Create_0";
+        UndertaleCode obj = Data.Code.ByName(key);
+        var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+        var codeLines = decompileContext.DecompileToString().Split('\n').ToList();
+        codeLines.Insert(146, @"str_answer_m = ""1111111111111111110001111111111101010111111111010001111111110101011111111100010111111111111000111111111111111111""
+        for (var a = 0; a < 112; a += 1)
+        {
+            str_value = string_char_at(str_answer_m, 1 + a);
+            var str_real = real(str_value);
+            answer_array_m[a] = str_real;
+        }");
+        importGroup.QueueReplace(key, string.Join('\n', codeLines));
+    }
+
+    {
+        var key = "gml_Object_obj_secret_exit_Step_0";
+        UndertaleCode obj = Data.Code.ByName(key);
+        var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+        var codeLines = decompileContext.DecompileToString().Split('\n');
+        codeLines[26] = "if (array_equals(current_array, answer_array_001) || array_equals(current_array, answer_array_002) || array_equals(current_array, answer_array_003) || array_equals(current_array, answer_array_004) || array_equals(current_array, answer_array_005) || array_equals(current_array, answer_array_006) || array_equals(current_array, answer_array_007) || array_equals(current_array, answer_array_008) || array_equals(current_array, answer_array_009) || array_equals(current_array, answer_array_010) || array_equals(current_array, answer_array_011) || array_equals(current_array, answer_array_999) || array_equals(current_array, answer_array_m) || end_secret == 1)";
+        codeLines[109] = "else if array_equals(current_array, answer_array_999) || array_equals(current_array, answer_array_m)";
+        importGroup.QueueReplace(key, string.Join('\n', codeLines));
+    }
+
+    {
+        var key = "gml_Object_obj_secret_exit_Alarm_5";
+        UndertaleCode obj = Data.Code.ByName(key);
+        var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+        var codeLines = decompileContext.DecompileToString().Split('\n').ToList();
+        codeLines.Insert(105, @"else if array_equals(current_array, answer_array_m) {
+            with (obj_darkness) {
+                instance_destroy()
+            }
+            instance_create_layer(0, 0, ""Effects2"", obj_miku_cif);
+        }");
+        importGroup.QueueReplace(key, string.Join('\n', codeLines));
+    }
+
+    {
+        var key = "gml_Object_obj_puumerkki_Other_11";
+        UndertaleCode obj = Data.Code.ByName(key);
+        var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+        var codeLines = decompileContext.DecompileToString().Split('\n').ToList();
+        codeLines.Insert(578, @"else if (brand_string == ""1111111111111111110001111111111101010111111111010001111111110101011111111100010111111111111000111111111111111111"")
+        {
+            str_script = 7108;
+            ready_state = 2;
+            confirm_state = 0;
+        }");
+        importGroup.QueueReplace(key, string.Join('\n', codeLines));
+    }
+}
+
+{ // Achievement notification object
+    var obj_miku_cif = new UndertaleGameObject() {
+        Name = Data.Strings.MakeString("obj_miku_cif"),
+        Persistent = true
+    };
+    Data.GameObjects.Add(obj_miku_cif);
+
+    importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Create, Data), @"
+    alarm[0] = 1000;
+    alarm[1] = 1120;
+    audio_group_stop_all(1);
+    audio_group_stop_all(2);
+    scr_audio_group_set_gain_vs(1, 0, 0);
+    scr_audio_group_set_gain_vs(2, 0, 0);
+    counter = 0;
+    image_speed = 0.01;
+    a1 = 0
+    px = 112 - 8;
+    py = 74 - 8;
+    py2 = 0;
+    py3 = 0;
+    py4 = 0;
+    py5 = 0;
+    py6 = 0;");
+    importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Alarm, (uint) 0, Data), @"instance_create_depth(0, 0, depth-1, obj_darkwall);");
+    importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Alarm, (uint) 1, Data), @"game_end()");
+    importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Draw, Data), 
+    @"draw_rectangle_color(0, 0, 226, 146, c_black, c_black, c_black, c_black, false);
+
+    draw_set_alpha(a1);
+    if counter < 360 {
+        draw_sprite(spr_miku_sleep, image_index, px, py);
+    }
+    draw_set_alpha(1);
+    
+    if counter > 390 && counter < 450 {
+        draw_sprite(spr_miku_wakey, image_index, px, py);
+    }
+    
+    if counter > 480 && counter <= 520 {
+        draw_sprite(spr_miku_down, image_index, px, py);
+    }
+    if counter > 520 && counter <= 536 {
+        draw_sprite(spr_miku_left, image_index, px, py);
+    }
+    if counter > 536 && counter <= 552 {
+        draw_sprite(spr_miku_right, image_index, px, py);
+    }
+    if counter > 552 && counter <= 580 {
+        draw_sprite(spr_miku_right, image_index, px, py);
+    }
+    if counter > 580 && counter <= 640 {
+        draw_sprite(spr_miku_down, image_index, px, py);
+    }
+    if counter > 640 && counter <= 860 {
+        draw_sprite(spr_miku_up, image_index, px, py);
+    }
+
+    if counter > 860 {
+        draw_sprite(spr_miku_cif, 0, 0, 144 - py2)
+        draw_sprite(spr_miku_cif, 1, 0, 144 - py3)
+        draw_sprite(spr_miku_cif, 2, 0, 144 - py4)
+        draw_sprite(spr_miku_cif, 3, 0, 144 - py5)
+        draw_sprite(spr_miku_cif, 4, 0, 144 - py6)
+    }
+    
+    ");
+    importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Step, (uint) 0, Data), 
+    @"
+    if counter < 240 {
+        a1 += 1.0 / 240.0;
+    } else {
+        a1 = 1
+    }
+
+    if counter > 700 && counter < 860 {
+        py += 0.5
+    }
+
+    if counter > 860 {
+        py2 = lerp(py2, 144, 0.1);
+        py3 = lerp(py3, 144, 0.05);
+        py4 = lerp(py4, 144, 0.07);
+        py5 = lerp(py5, 144, 0.05);
+        py6 = lerp(py6, 144, 0.06);
+    }
+    counter += 1;");
+}
+
+
 
 importGroup.Import();
 
