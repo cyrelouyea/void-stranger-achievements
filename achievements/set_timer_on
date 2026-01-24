@@ -1,0 +1,5 @@
+title: Timer
+description: Activate the timer
+
+// PATCH gml_GlobalScript_toggle_timer 6
+{+achievement}

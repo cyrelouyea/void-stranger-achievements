@@ -1,0 +1,5 @@
+title: Your favorite snacks!
+description: Find the note B003's chest
+
+// PATCH gml_Object_obj_chest_small_Step_0 503
+{+achievement}

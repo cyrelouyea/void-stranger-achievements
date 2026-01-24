@@ -1,0 +1,6 @@
+title: Give them a good shove
+description: Talk to Gor as Gray before pushing the starving ones
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 0 && !gor_sleep && bully == 0 && !gor_playerpit && !gor_voidrod && !gor_voidblade && talk_count == 5 && (instance_position(152, 104, obj_npc_famished) || instance_position(200, 56, obj_npc_famished))
+{+achievement}

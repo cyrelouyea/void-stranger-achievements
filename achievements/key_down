@@ -1,0 +1,6 @@
+title: Down
+description: Press the down button
+
+// PATCH gml_Object_obj_game_Step_0 1
+if global.inputs[3] >= 1
+{+achievement}

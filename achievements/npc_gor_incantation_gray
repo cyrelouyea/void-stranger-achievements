@@ -1,0 +1,6 @@
+title: Make sure to remember it
+description: Learn about the special incantation from Gor
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 0 && !gor_sleep && bully == 0 && !gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count == 1
+{+achievement}

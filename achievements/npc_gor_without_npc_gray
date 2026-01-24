@@ -1,0 +1,6 @@
+title: The route is clear
+description: Talk to Gor as Gray after pushing the starving ones
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 0 && !gor_sleep && bully == 0 && !gor_playerpit && !gor_voidrod && !gor_voidblade && talk_count == 8
+{+achievement}

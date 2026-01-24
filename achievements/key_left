@@ -1,0 +1,6 @@
+title: Left
+description: Press the left key
+
+// PATCH gml_Object_obj_game_Step_0 1
+if global.inputs[0] >= 1
+{+achievement}

@@ -1,0 +1,6 @@
+title: They might still be alive.
+description: Talk about Mon with Gor
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 2 && !gor_sleep && bully == 0 && !gor_playerpit && talk_count == 6
+{+achievement}

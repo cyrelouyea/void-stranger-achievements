@@ -1,0 +1,5 @@
+title: Counter
+description: Activate the step counter
+
+// PATCH gml_GlobalScript_toggle_counter 6
+{+achievement}

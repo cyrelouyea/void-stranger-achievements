@@ -1,0 +1,6 @@
+title: Action
+description: Press the action key
+
+// PATCH gml_Object_obj_game_Step_0 1
+if global.inputs[4] >= 1
+{+achievement}

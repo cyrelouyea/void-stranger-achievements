@@ -1,0 +1,6 @@
+title: How bothersome...
+description: Talk to Gor as Gray
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 0 && !gor_sleep && !gor_voidrod && !gor_voidblade && !gor_playerpit && talk_count == 0
+{+achievement}

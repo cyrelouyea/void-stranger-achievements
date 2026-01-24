@@ -1,0 +1,6 @@
+title: Kill me, pretty please.
+description: Hear about Gor's wish as Lillie
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 1 && !gor_sleep && bully == 0 && !gor_playerpit && gor_voidblade && vb_talk_count == 4
+{+achievement}

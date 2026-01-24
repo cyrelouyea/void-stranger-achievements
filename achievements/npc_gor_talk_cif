@@ -1,0 +1,6 @@
+title: Zzzzzzz...
+description: Talk to Gor as Cif
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 2 && !gor_sleep && !gor_playerpit && talk_count == 0
+{+achievement}

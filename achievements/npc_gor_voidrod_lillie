@@ -1,0 +1,6 @@
+title: Not interested
+description: Tell Gor that you are not interested about their request as Lillie
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 1 && !gor_sleep && bully == 0 && !gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count == 1
+{+achievement}

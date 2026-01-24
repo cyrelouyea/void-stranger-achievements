@@ -1,0 +1,10 @@
+title: Shady trick
+description: Learn about the smirking statue trick from Gor as Gray
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 0 && !gor_sleep && bully == 0 && !gor_playerpit && !gor_voidrod && !gor_voidblade && talk_count == 3
+{+achievement}
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 0 && !gor_sleep && bully == 0 && !gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count == 7 && talk_count <= 3
+{+achievement}

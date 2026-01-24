@@ -1,0 +1,6 @@
+title: Up
+description: Press the up key
+
+// PATCH gml_Object_obj_game_Step_0 1
+if global.inputs[2] >= 1
+{+achievement}

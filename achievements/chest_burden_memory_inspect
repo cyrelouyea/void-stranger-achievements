@@ -1,0 +1,8 @@
+title: My memory of you
+description: Find the note in Add's chamber
+
+// PATCH gml_Object_obj_chest_small_Step_0 454
+{+achievement}
+
+// PATCH gml_Object_obj_chest_small_Step_0 439
+{+achievement}

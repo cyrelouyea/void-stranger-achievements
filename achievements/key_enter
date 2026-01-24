@@ -1,0 +1,6 @@
+title: Enter
+description: Press the enter key
+
+// PATCH gml_Object_obj_game_Step_0 1
+if global.inputs[5] >= 1
+{+achievement}

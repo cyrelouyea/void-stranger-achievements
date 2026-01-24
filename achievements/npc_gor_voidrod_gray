@@ -1,0 +1,6 @@
+title: For nothing
+description: Tell Gor that you have no idea how to use the incantation as Gray
+
+// PATCH gml_Object_obj_npc_gor_Step_0 1124
+if global.stranger == 0 && !gor_sleep && bully == 0 && !gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count == 5
+{+achievement}
