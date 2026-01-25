@@ -1,3 +1,6 @@
+// Source code from UndertaleModTool's ImportGraphics script
+// https://github.com/UnderminersTeam/UndertaleModTool/blob/master/UndertaleModTool/Scripts/Resource%20Importers/ImportGraphics.csx
+
 // Texture packer by Samuel Roy
 // Uses code from https://github.com/mfascia/TexturePacker
 

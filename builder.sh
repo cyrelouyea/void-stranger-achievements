@@ -15,11 +15,16 @@ echo "Merging into Void Stranger"
 echo "--------------------------"
 
 
-rm "$VOID_STRANGER_PATH/_tmp_data.win"
+rm "_tmp_data.win"
 
-"$UNDERTALEMODCLI_PATH" load "$VOID_STRANGER_PATH/clean_data.win"  --scripts "ImportGraphics.csx" --scripts "patcher.csx" --output "$VOID_STRANGER_PATH/_tmp_data.win"
+if [ ! -f "$VOID_STRANGER_PATH/clean_data.win" ]; then
+  echo "clean_data.win not found, copying data.win"
+  cp "$VOID_STRANGER_PATH/data.win" "$VOID_STRANGER_PATH/clean_data.win"
+fi
+
+"$UNDERTALEMODCLI_PATH" load "$VOID_STRANGER_PATH/clean_data.win"  --scripts "ImportGraphics.csx" --scripts "patcher.csx" --output "_tmp_data.win"
 rm "$VOID_STRANGER_PATH/data.win"
-cp "$VOID_STRANGER_PATH/_tmp_data.win" "$VOID_STRANGER_PATH/data.win"
-cp "$VOID_STRANGER_PATH/_tmp_data.win" "./data.win"
-rm "$VOID_STRANGER_PATH/_tmp_data.win"
+cp "_tmp_data.win" "$VOID_STRANGER_PATH/data.win"
+cp "_tmp_data.win" "./data.win"
+rm "_tmp_data.win"
 echo All done!
