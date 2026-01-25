@@ -492,7 +492,7 @@ foreach (Counter counter in counters) {
         image_speed = 0.1;
         achievement_ids = ds_map_keys_to_array(obj_inventory.ds_achievements);
         nb_achievements = array_length(achievement_ids);
-        nb_pages = nb_achievements div items_per_page;
+        nb_pages = ceil(nb_achievements / items_per_page);
         hold_reveal_counter = 0;
         achievement_items = [];
         for (var i = 0 ; i < items_per_page; i++) {
@@ -500,15 +500,23 @@ foreach (Counter counter in counters) {
         }
         instance_create_depth(0, 0, depth - 2, obj_achievement_zoom);
         ordered_by_date = false
-        array_sort(achievement_ids, true);");
+        array_sort(achievement_ids, true);
+        input_hold_time = 0
+        first_input_enter = scr_input_check(4)");
         importGroup.QueueAppend(obj_achievements_list.EventHandlerFor(EventType.Step, Data), 
-        @"input_left_p = scr_input_check_pressed(0);
+        @"input_left = scr_input_check(0);
+        input_left_p = scr_input_check_pressed(0);
+        input_right = scr_input_check(1);
         input_right_p = scr_input_check_pressed(1);
         input_up_p = scr_input_check_pressed(2);
         input_down_p = scr_input_check_pressed(3);
         input_enter_p = scr_input_check_pressed(4);
         input_enter = scr_input_check(4);
         input_pause_p = scr_input_check_pressed(5);
+
+        if first_input_enter && !input_enter {
+            first_input_enter = false
+        }
         
         if input_enter_p {
             if selected_index == items_per_page {
@@ -527,7 +535,7 @@ foreach (Counter counter in counters) {
             }
         }
 
-        if input_enter {
+        if input_enter && !first_input_enter {
             if selected_index < items_per_page 
             && !achievement_items[selected_index].revealed {
                 hold_reveal_counter++;
@@ -562,12 +570,18 @@ foreach (Counter counter in counters) {
                 }
 
                 if selected_index < items_per_page {
-                    if input_right_p {
+                    if input_right || input_left {
+                        input_hold_time++;
+                    } else {
+                        input_hold_time = 0;
+                    }
+
+                    if input_right_p || (input_right && input_hold_time > 20 && input_hold_time % 3 == 0) {
                         page += 1;
                         if audio_is_playing(snd_pageturn)
                             audio_stop_sound(snd_pageturn);
                         audio_play_sound(snd_pageturn, 1, false, 1, 0.5);
-                    } else if input_left_p {
+                    } else if input_left_p || (input_left && input_hold_time > 20 && input_hold_time % 3 == 0) {
                         page -= 1;
                         if audio_is_playing(snd_pageturn)
                             audio_stop_sound(snd_pageturn);
@@ -603,7 +617,11 @@ foreach (Counter counter in counters) {
         }
 
         for (var i = 0 ; i < items_per_page; i++) {
-            var achievement_id = achievement_ids[i + page * items_per_page];
+            var achievement_id = """"
+            if (i + page * items_per_page < array_length(achievement_ids)) {
+                achievement_id = achievement_ids[i + page * items_per_page];
+            }
+
             achievement_items[i].achievement_id = achievement_id;
             achievement_items[i].hovered = selected_index == i;
             achievement_items[i].revealed = (
@@ -732,6 +750,7 @@ foreach (Counter counter in counters) {
             with (obj_darkness) {
                 instance_destroy()
             }
+            room_instance_clear(room)
             instance_create_layer(0, 0, ""Effects2"", obj_miku_cif);
         }");
         importGroup.QueueReplace(key, string.Join('\n', codeLines));
@@ -841,7 +860,40 @@ foreach (Counter counter in counters) {
     counter += 1;");
 }
 
+// { // Change the save file location
+//     {
+//         var key = "gml_GlobalScript_any_save_file_exists";
+//         UndertaleCode obj = Data.Code.ByName(key);
+//         var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+//         var codeLines = decompileContext.DecompileToString();
+//         codeLines.Replace("\"save.vs\", "\"save_ach.vs\"")
+//         codeLines.Replace("\"save_backup_1.vs\", "\"save_backup_1_ach.vs\"")
+//         codeLines.Replace("\"save_backup_2.vs\", "\"save_backup_2_ach.vs\"")
+//         importGroup.QueueReplace(key, codeLines);
+//     }
 
+//     {
+//         var key = "gml_GlobalScript_scr_savegame";
+//         UndertaleCode obj = Data.Code.ByName(key);
+//         var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+//         var codeLines = decompileContext.DecompileToString();
+//         codeLines.Replace("\"save.vs\", "\"save_ach.vs\"")
+//         codeLines.Replace("\"save_backup_1.vs\", "\"save_backup_1_ach.vs\"")
+//         codeLines.Replace("\"save_backup_2.vs\", "\"save_backup_2_ach.vs\"")
+//         importGroup.QueueReplace(key, codeLines);
+//     }
+
+//     {
+//         var key = "gml_Object_obj_npc_dr_ab___on_Other_12";
+//         UndertaleCode obj = Data.Code.ByName(key);
+//         var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+//         var codeLines = decompileContext.DecompileToString();
+//         codeLines.Replace("\"save.vs\", "\"save_ach.vs\"")
+//         codeLines.Replace("\"save_backup_1.vs\", "\"save_backup_1_ach.vs\"")
+//         codeLines.Replace("\"save_backup_2.vs\", "\"save_backup_2_ach.vs\"")
+//         importGroup.QueueReplace(key, codeLines);
+//     }
+// }
 
 importGroup.Import();
 

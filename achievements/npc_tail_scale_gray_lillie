@@ -1,5 +1,5 @@
 title: Be careful there
-description: Interact with Tail's scales as Cif
+description: Interact with Tail's scales as Gray or Lillie
 
 // PATCH gml_Object_obj_npc_tail_tail_Alarm_0 1
 if global.stranger <= 1

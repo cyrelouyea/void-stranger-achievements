@@ -1,5 +1,7 @@
 cli/
+Packager/
+
 *.win
+*.xdelta
 variables.bat
 variables.sh
-Packager/

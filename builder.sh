@@ -20,5 +20,6 @@ rm "$VOID_STRANGER_PATH/_tmp_data.win"
 "$UNDERTALEMODCLI_PATH" load "$VOID_STRANGER_PATH/clean_data.win"  --scripts "ImportGraphics.csx" --scripts "patcher.csx" --output "$VOID_STRANGER_PATH/_tmp_data.win"
 rm "$VOID_STRANGER_PATH/data.win"
 cp "$VOID_STRANGER_PATH/_tmp_data.win" "$VOID_STRANGER_PATH/data.win"
+cp "$VOID_STRANGER_PATH/_tmp_data.win" "./data.win"
 rm "$VOID_STRANGER_PATH/_tmp_data.win"
 echo All done!
