@@ -737,7 +737,7 @@ foreach (Counter counter in counters) {
         var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
         var codeLines = decompileContext.DecompileToString().Split('\n');
         codeLines[26] = "if (array_equals(current_array, answer_array_001) || array_equals(current_array, answer_array_002) || array_equals(current_array, answer_array_003) || array_equals(current_array, answer_array_004) || array_equals(current_array, answer_array_005) || array_equals(current_array, answer_array_006) || array_equals(current_array, answer_array_007) || array_equals(current_array, answer_array_008) || array_equals(current_array, answer_array_009) || array_equals(current_array, answer_array_010) || array_equals(current_array, answer_array_011) || array_equals(current_array, answer_array_999) || array_equals(current_array, answer_array_m) || end_secret == 1)";
-        codeLines[109] = "else if array_equals(current_array, answer_array_999) || array_equals(current_array, answer_array_m)";
+        codeLines[109] = "else if array_equals(current_array, answer_array_999)";
         importGroup.QueueReplace(key, string.Join('\n', codeLines));
     }
 
