@@ -10,6 +10,15 @@ A mod to include achievements in Void Stranger
     - Built and tested with 0.8.3.0 and 0.8.4.1
 - Void Stranger 1.1.3
 
+### Common Instruction
+
+Ensure that you didn't install any mod or modified your `data.win` beforehand.
+
+A copy of your `data.win` will be created as `clean_data.win` the first time. 
+`clean_data.win` will be the one loaded by the builder script the next times you run it.
+
+Delete `clean_data.win` if you want the script to copy your `data.win` again.
+
 ### Windows
 
 - Create a `variables.bat` file by copying `.variables.structure.bat` and fill in the variables
@@ -70,7 +79,7 @@ If you want to count and save the number of times a certain event happened (for 
 
 Adding a file will automatically create a counter named `<filename>_counter` in `obj_inventory`. Loading and saving will automatically be done from/to the `achievements.vs` save file. 
 
-In your counter file, you can add as many PATCH block as you want to update the counter like this:
+In your counter file, you can add as many PATCH blocks as you want to update the counter like this:
 
 ```
 // PATCH gml_Object_obj_enemy_co_Step_0 168
