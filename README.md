@@ -61,7 +61,7 @@ For patches targeting the same file:
 
 Utility macros for the `code` block:
 - `{+achievement}`: to trigger the achievement corresponding to this file
-- `{+achievement:60}`: to add a delay (number of frames) to when the achievement will be triggered. In this example, the achievement will appear 60 frames after it reaches this part of the code.
+- `{+achievement:60}`: to add a delay (number of frames) to when the achievement will be triggered. In this example, the achievement will appear 60 frames after it's called.
 - `{-achievement}`: to remove the achievement corresponding to this file.
 
 ### Counters folder
