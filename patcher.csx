@@ -144,6 +144,7 @@ foreach (Counter counter in counters) {
             }
         }
 
+        obj_inventory.nb_achievements_got = 0;
         achievement_dates = ds_map_values_to_array(obj_inventory.ds_achievements);
         for (var i = 0 ; i < array_length(achievement_dates); i++) {
             if !is_undefined(achievement_dates[i]) {
