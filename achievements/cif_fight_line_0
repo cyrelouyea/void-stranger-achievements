@@ -1,8 +1,0 @@
-title: Add...
-description: Fight against Cif's true form
-
-// PATCH gml_Object_obj_cif_message_Step_0 11
-if cm_n == 0 {
-    {-achievement}
-    {+achievement}
-}

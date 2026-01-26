@@ -739,7 +739,9 @@ foreach (Counter counter in counters) {
         var codeLines = decompileContext.DecompileToString().Split('\n');
         codeLines[26] = "if (array_equals(current_array, answer_array_001) || array_equals(current_array, answer_array_002) || array_equals(current_array, answer_array_003) || array_equals(current_array, answer_array_004) || array_equals(current_array, answer_array_005) || array_equals(current_array, answer_array_006) || array_equals(current_array, answer_array_007) || array_equals(current_array, answer_array_008) || array_equals(current_array, answer_array_009) || array_equals(current_array, answer_array_010) || array_equals(current_array, answer_array_011) || array_equals(current_array, answer_array_999) || array_equals(current_array, answer_array_m) || end_secret == 1)";
         codeLines[109] = "else if array_equals(current_array, answer_array_999)";
-        importGroup.QueueReplace(key, string.Join('\n', codeLines));
+        var newCodeLines =  string.Join('\n', codeLines);
+        newCodeLines += "\nif array_equals(current_array, answer_array_m) { lborder_speed = 8; }";
+        importGroup.QueueReplace(key, newCodeLines);
     }
 
     {
@@ -798,6 +800,10 @@ foreach (Counter counter in counters) {
     py6 = 0;");
     importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Alarm, (uint) 0, Data), @"instance_create_depth(0, 0, depth-1, obj_darkwall);");
     importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Alarm, (uint) 1, Data), @"game_end()");
+    importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Step, (uint) 0, Data), @"global.cantsave = true;
+    with (obj_gameover) {
+        instance_destroy();
+    }");
     importGroup.QueueAppend(obj_miku_cif.EventHandlerFor(EventType.Draw, Data), 
     @"draw_rectangle_color(0, 0, 226, 146, c_black, c_black, c_black, c_black, false);
 
