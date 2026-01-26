@@ -1,6 +1,6 @@
 title: Thank you.
 description: Clear 0stRanger IF
 
-// PATCH gml_Object_obj_stg_scoretally_Step_0 413
-if nr_counter == 36 && global.stg_difficulty != 0 && global.stg_tlb_secret != 0 && global.stg_training == 0 && score_state == 2
+// PATCH gml_Object_obj_stg_scoretally_Step_0 103
+if global.stg_tlb_secret != 0
 {+achievement}

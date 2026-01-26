@@ -1,11 +1,14 @@
 title: This isn't real
 description: Kill the lost child
 
-// PATCH gml_Object_obj_npc_child_Step_0 23
+// PATCH gml_Object_obj_npc_child_Step_0 22
 {+achievement}
 
-// PATCH gml_Object_obj_npc_child_Step_0 35
+// PATCH gml_Object_obj_npc_child_Step_0 33
 {+achievement}
 
-// PATCH gml_Object_obj_npc_child_Step_0 47
+// PATCH gml_Object_obj_npc_child_Step_0 42
+{+achievement}
+
+// PATCH gml_Object_obj_npc_child_Step_0 163
 {+achievement}
