@@ -128,6 +128,14 @@ foreach (Counter counter in counters) {
     Data.GlobalInitScripts.Add(scr_load_achievements);
 
     var codeStr = @"function scr_load_achievements() {
+        if obj_inventory.achievements_loaded {
+            // scr_load_achievements can be called again if you go back to the brand menu,
+            // which can happen if you return to title from 0stranger, the sound test 
+            // room or Cif's Challenge.
+            // Not returning here would reload erase the achievements you obtained there.
+            return;
+        }
+
         var filename = ""achievements.vs"";
         if (file_exists(filename)) {
             var _tmp_ds_achievement = ds_map_create();
