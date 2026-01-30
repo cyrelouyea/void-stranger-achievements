@@ -2,5 +2,5 @@ title: N-Noooooooooo!
 description: Make Ninnie p-panic
 
 // PATCH gml_Object_obj_npc_friend_Other_12 1
-if (friend_state != 0)
+if (friend_state != 0) && (friend_state < 999) 
     {+achievement}
