@@ -2,8 +2,8 @@ title: Fiiine...
 description: Talk to Gor with 0 locust when they are irritated
 
 // PATCH gml_Object_obj_npc_gor_Step_0 1124
-if global.stranger == 0 && !gor_sleep && bully == 0 && gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count >= 8 && talk_count < 3
+if global.stranger == 0 && !gor_sleep && bully == 0 && !gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count >= 8 && p_locust == 0
 {+achievement}
 
-if global.stranger == 1 && !gor_sleep && bully == 0 && gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count >= 5 && talk_count < 6
+if global.stranger == 1 && !gor_sleep && bully == 0 && !gor_playerpit && gor_voidrod && !gor_voidblade && vr_talk_count >= 5 && p_locust == 0
 {+achievement}
