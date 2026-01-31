@@ -1,6 +1,0 @@
-title: Menu Art (Dev)
-description: Look at the Dev art in the pause menu.
-
-// PATCH gml_Object_obj_menu_Step_0 21
-if ds_grid_get(ds_, 3, menu_option[page]) == spr_menu_continue_nolla
-    {+achievement}
