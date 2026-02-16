@@ -720,8 +720,12 @@ foreach (Counter counter in counters) {
     UndertaleCode obj_npc_dr_ab___on_Other_12 = Data.Code.ByName(key);
     var decompileContext = new DecompileContext(globalDecompileContext, obj_npc_dr_ab___on_Other_12, decompilerSettings);
     var codeLines = decompileContext.DecompileToString().Split('\n');
-    codeLines[13] = "obj_inventory.ds_achievements = ds_map_create();";
+    codeLines[13] = "obj_inventory.ds_achievements = ds_map_create();\n";
+    foreach (Counter counter in counters) {
+        codeLines[13] += $"obj_inventory.{counter.Id}_counter = 0;\n";
+    }
     importGroup.QueueReplace(key, string.Join('\n', codeLines));
+
 }
 
 {
@@ -875,40 +879,29 @@ foreach (Counter counter in counters) {
     counter += 1;");
 }
 
-// { // Change the save file location
-//     {
-//         var key = "gml_GlobalScript_any_save_file_exists";
-//         UndertaleCode obj = Data.Code.ByName(key);
-//         var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
-//         var codeLines = decompileContext.DecompileToString();
-//         codeLines.Replace("\"save.vs\", "\"save_ach.vs\"")
-//         codeLines.Replace("\"save_backup_1.vs\", "\"save_backup_1_ach.vs\"")
-//         codeLines.Replace("\"save_backup_2.vs\", "\"save_backup_2_ach.vs\"")
-//         importGroup.QueueReplace(key, codeLines);
-//     }
+importGroup.Import();
 
-//     {
-//         var key = "gml_GlobalScript_scr_savegame";
-//         UndertaleCode obj = Data.Code.ByName(key);
-//         var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
-//         var codeLines = decompileContext.DecompileToString();
-//         codeLines.Replace("\"save.vs\", "\"save_ach.vs\"")
-//         codeLines.Replace("\"save_backup_1.vs\", "\"save_backup_1_ach.vs\"")
-//         codeLines.Replace("\"save_backup_2.vs\", "\"save_backup_2_ach.vs\"")
-//         importGroup.QueueReplace(key, codeLines);
-//     }
+{ // Change the save/load files location
 
-//     {
-//         var key = "gml_Object_obj_npc_dr_ab___on_Other_12";
-//         UndertaleCode obj = Data.Code.ByName(key);
-//         var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
-//         var codeLines = decompileContext.DecompileToString();
-//         codeLines.Replace("\"save.vs\", "\"save_ach.vs\"")
-//         codeLines.Replace("\"save_backup_1.vs\", "\"save_backup_1_ach.vs\"")
-//         codeLines.Replace("\"save_backup_2.vs\", "\"save_backup_2_ach.vs\"")
-//         importGroup.QueueReplace(key, codeLines);
-//     }
-// }
+    string[] keys = [
+        "gml_GlobalScript_any_save_file_exists",
+        "gml_GlobalScript_scr_loadgame",
+        "gml_GlobalScript_scr_savegame",
+        "gml_GlobalScript_scr_savebackup",
+        "gml_Object_obj_npc_dr_ab___on_Other_12",
+    ];
+
+    foreach (string key in keys) {
+        UndertaleCode obj = Data.Code.ByName(key);
+        var decompileContext = new DecompileContext(globalDecompileContext, obj, decompilerSettings);
+        var codeLines = decompileContext.DecompileToString();
+
+        importGroup.QueueReplace(key, codeLines
+            .Replace("\"save.vs\"", "\"save_ach.vs\"")
+            .Replace("\"save_backup_", "\"save_ach_backup_"));
+    }
+
+}
 
 importGroup.Import();
 
