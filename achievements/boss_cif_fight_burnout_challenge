@@ -1,5 +1,5 @@
 title: Farewell, Add. (+)
-description: Defeat Cif the hard way without using the upgraded rod or your wings.
+description: Defeat Cif the hard way without using the upgraded rod and your wings.
 
 // PATCH gml_Object_obj_cif_death_Step_0 125
 if !global.wings_used && !global.endless_used
