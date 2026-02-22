@@ -1,5 +1,5 @@
 FORMAT = """title: {title}
-description: Create a totle of {number} tiles from the effect of a certain statue
+description: Create a total of {number} tiles from the effect of a certain statue
 
 // PATCH gml_Object_obj_boulder_Step_0 830
 if obj_inventory.tile_maker_counter >= {number}

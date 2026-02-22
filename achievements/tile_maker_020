@@ -1,5 +1,5 @@
 title: Tile layer (20/250)
-description: Create a totle of 20 tiles from the effect of a certain statue
+description: Create a total of 20 tiles from the effect of a certain statue
 
 // PATCH gml_Object_obj_boulder_Step_0 830
 if obj_inventory.tile_maker_counter >= 20

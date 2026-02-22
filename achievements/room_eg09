@@ -1,5 +1,5 @@
 title: EG09
-description: Go to egg escort room no. 1  
+description: Go to EX Mode's tree room  
 
 // PATCH gml_Room_rm_test2_073_Create 1
 if ds_grid_get(obj_inventory.ds_player_info, 22, 1) != 1000
